@@ -1,0 +1,26 @@
+🌿 SAN CIPRIANO - Reserva Natural Comunitaria
+=============================================
+
+¡Hola {{ inquiry.full_name }}!
+
+Gracias por tu interés en visitar San Cipriano. Hemos recibido tu solicitud y estamos muy emocionados de que quieras conocer nuestra reserva natural.
+
+¿QUÉ SIGUE?
+-----------
+1. Un miembro de nuestra comunidad revisará tu solicitud.
+2. Te contactaremos por WhatsApp o correo con información personalizada.
+3. Recibirás detalles sobre costos, disponibilidad y cómo confirmar tu reserva.
+
+RESUMEN DE TU SOLICITUD
+-----------------------
+Fechas: {% if inquiry.estimated_arrival %}{{ inquiry.estimated_arrival|date:"d/m/Y" }}{% else %}Por definir{% endif %}{% if inquiry.estimated_departure %} - {{ inquiry.estimated_departure|date:"d/m/Y" }}{% endif %}
+Personas: {{ inquiry.number_of_people }}{% if inquiry.number_of_children %} ({{ inquiry.number_of_children }} menores){% endif %}
+
+📌 IMPORTANTE: Te recomendamos revisar nuestras normas de seguridad y reglas de protección antes de tu visita.
+
+Si tienes alguna pregunta urgente, no dudes en contactarnos por WhatsApp:
+📱 +57 311 311 1669
+
+---
+¡Te esperamos en San Cipriano!
+Turismo comunitario • Conservación ambiental • Valle del Cauca, Colombia

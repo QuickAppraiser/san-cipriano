@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Consulta de Visitante</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: linear-gradient(135deg, #166534 0%, #0369a1 100%); padding: 30px; text-align: center; border-radius: 10px 10px 0 0;">
+        <h1 style="color: white; margin: 0; font-size: 24px;">🌿 San Cipriano</h1>
+        <p style="color: #bbf7d0; margin: 10px 0 0 0;">Nueva Consulta de Visitante</p>
+    </div>
+
+    <div style="background: #f9fafb; padding: 30px; border: 1px solid #e5e7eb; border-top: none;">
+        <h2 style="color: #166534; margin-top: 0;">Información del Visitante</h2>
+
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;"><strong>Nombre:</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;">{{ inquiry.full_name }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;"><strong>Teléfono:</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;">
+                    <a href="https://wa.me/{{ inquiry.phone|slice:'1:' }}" style="color: #16a34a;">{{ inquiry.phone }}</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;"><strong>Email:</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;">
+                    <a href="mailto:{{ inquiry.email }}" style="color: #0369a1;">{{ inquiry.email }}</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;"><strong>Ciudad/País:</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;">{{ inquiry.city }}, {{ inquiry.country }}</td>
+            </tr>
+        </table>
+
+        <h2 style="color: #166534; margin-top: 30px;">Detalles de la Visita</h2>
+
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;"><strong>Fecha llegada:</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;">
+                    {% if inquiry.estimated_arrival %}{{ inquiry.estimated_arrival|date:"d/m/Y" }}{% else %}No especificada{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;"><strong>Fecha salida:</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;">
+                    {% if inquiry.estimated_departure %}{{ inquiry.estimated_departure|date:"d/m/Y" }}{% else %}No especificada{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;"><strong>Personas:</strong></td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb;">
+                    {{ inquiry.number_of_people }} adultos{% if inquiry.number_of_children %}, {{ inquiry.number_of_children }} menores{% endif %}
+                </td>
+            </tr>
+        </table>
+
+        <h2 style="color: #166534; margin-top: 30px;">Servicios de Interés</h2>
+        <ul style="background: #f0fdf4; padding: 15px 15px 15px 35px; border-radius: 8px; margin: 0;">
+            {% for service in inquiry.services_display %}
+            <li style="padding: 5px 0;">{{ service }}</li>
+            {% empty %}
+            <li>No especificados</li>
+            {% endfor %}
+        </ul>
+
+        {% if inquiry.special_requests %}
+        <h2 style="color: #166534; margin-top: 30px;">Solicitudes Especiales</h2>
+        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+            {{ inquiry.special_requests }}
+        </div>
+        {% endif %}
+
+        <div style="margin-top: 30px; padding: 20px; background: #166534; border-radius: 8px; text-align: center;">
+            <a href="https://wa.me/{{ inquiry.phone|slice:'1:' }}"
+               style="display: inline-block; padding: 12px 30px; background: #22c55e; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+                📱 Contactar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div style="background: #1f2937; padding: 20px; text-align: center; border-radius: 0 0 10px 10px;">
+        <p style="color: #9ca3af; margin: 0; font-size: 12px;">
+            Consulta recibida el {{ inquiry.created_at|date:"d/m/Y" }} a las {{ inquiry.created_at|time:"H:i" }}
+        </p>
+        <p style="color: #6b7280; margin: 10px 0 0 0; font-size: 11px;">
+            Este correo fue generado automáticamente por el sitio web de San Cipriano.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+🌿 SAN CIPRIANO - Nueva Consulta de Visitante
+============================================
+
+INFORMACIÓN DEL VISITANTE
+-------------------------
+Nombre: {{ inquiry.full_name }}
+Teléfono: {{ inquiry.phone }}
+Email: {{ inquiry.email }}
+Ciudad/País: {{ inquiry.city }}, {{ inquiry.country }}
+
+DETALLES DE LA VISITA
+---------------------
+Fecha llegada: {% if inquiry.estimated_arrival %}{{ inquiry.estimated_arrival|date:"d/m/Y" }}{% else %}No especificada{% endif %}
+Fecha salida: {% if inquiry.estimated_departure %}{{ inquiry.estimated_departure|date:"d/m/Y" }}{% else %}No especificada{% endif %}
+Personas: {{ inquiry.number_of_people }} adultos{% if inquiry.number_of_children %}, {{ inquiry.number_of_children }} menores{% endif %}
+
+SERVICIOS DE INTERÉS
+--------------------
+{% for service in inquiry.services_display %}- {{ service }}
+{% empty %}No especificados
+{% endfor %}
+
+{% if inquiry.special_requests %}SOLICITUDES ESPECIALES
+----------------------
+{{ inquiry.special_requests }}
+{% endif %}
+
+---
+Consulta recibida: {{ inquiry.created_at|date:"d/m/Y H:i" }}
+WhatsApp directo: https://wa.me/{{ inquiry.phone|slice:'1:' }}

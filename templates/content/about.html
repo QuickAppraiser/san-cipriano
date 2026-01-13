@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Sobre San Cipriano" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-selva-700 to-selva-900 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">🌿</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {% trans "Sobre San Cipriano" %}
+        </h1>
+        <p class="text-selva-100 text-lg max-w-2xl mx-auto">
+            {% trans "Una reserva natural comunitaria en el corazón del Pacífico colombiano." %}
+        </p>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-4xl mb-4 block">📍</span>
+                <h2 class="font-display text-3xl font-bold text-selva-900 mb-4">
+                    {% trans "Ubicación" %}
+                </h2>
+                <p class="text-gray-600 mb-4">
+                    {% trans "San Cipriano se encuentra en el departamento del Valle del Cauca, en la región del Pacífico colombiano, a pocos kilómetros de Buenaventura." %}
+                </p>
+                <p class="text-gray-600 mb-4">
+                    {% trans "Rodeado de selva húmeda tropical, ríos cristalinos y una biodiversidad impresionante, San Cipriano es un santuario natural protegido por su comunidad." %}
+                </p>
+                <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
+                    <p class="text-amber-800 text-sm">
+                        <strong>{% trans "Nota:" %}</strong> {% trans "Las indicaciones exactas de llegada se proporcionan después del registro para proteger la reserva." %}
+                    </p>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-selva-100 to-rio-100 rounded-2xl h-64 flex items-center justify-center">
+                <!-- Placeholder for map or image -->
+                <div class="text-center text-selva-600">
+                    <span class="text-6xl block mb-2">🗺️</span>
+                    <p class="text-sm">{% trans "Valle del Cauca, Colombia" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- History Section -->
+<section class="py-16 px-4 bg-tierra-50">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-4xl mb-4 block">📜</span>
+            <h2 class="font-display text-3xl font-bold text-tierra-900">
+                {% trans "Nuestra Historia" %}
+            </h2>
+        </div>
+
+        <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+                {% trans "San Cipriano es una comunidad afrodescendiente que ha habitado estas tierras por generaciones. Durante décadas, nuestra gente vivió de la pesca, la agricultura y los recursos naturales que la selva nos proporciona." %}
+            </p>
+            <p>
+                {% trans "Con el tiempo, reconocimos el valor único de nuestro hogar: ríos de aguas cristalinas, bosques vírgenes y una biodiversidad que pocos lugares en el mundo pueden igualar. Decidimos entonces abrir nuestras puertas al turismo, pero con un enfoque diferente." %}
+            </p>
+            <p>
+                {% trans "El turismo en San Cipriano es comunitario. Cada servicio, cada hospedaje, cada tour es gestionado por familias locales. El visitante no viene a consumir un producto, viene a vivir una experiencia auténtica y a contribuir directamente al bienestar de nuestra comunidad." %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="py-16 px-4">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="font-display text-3xl font-bold text-selva-900">
+                {% trans "Nuestros Pilares" %}
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Conservation -->
+            <div class="text-center">
+                <div class="w-20 h-20 bg-selva-100 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                    🌳
+                </div>
+                <h3 class="font-display text-xl font-bold text-selva-900 mb-3">
+                    {% trans "Conservación" %}
+                </h3>
+                <p class="text-gray-600">
+                    {% trans "Protegemos activamente nuestra selva, ríos y especies. El turismo nos ayuda a financiar la conservación y crear conciencia ambiental." %}
+                </p>
+            </div>
+
+            <!-- Responsible Tourism -->
+            <div class="text-center">
+                <div class="w-20 h-20 bg-rio-100 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                    🧭
+                </div>
+                <h3 class="font-display text-xl font-bold text-rio-900 mb-3">
+                    {% trans "Turismo Responsable" %}
+                </h3>
+                <p class="text-gray-600">
+                    {% trans "Buscamos visitantes que respeten la naturaleza y nuestra cultura. Calidad sobre cantidad, experiencias sobre masificación." %}
+                </p>
+            </div>
+
+            <!-- Community Economy -->
+            <div class="text-center">
+                <div class="w-20 h-20 bg-tierra-100 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                    💚
+                </div>
+                <h3 class="font-display text-xl font-bold text-tierra-900 mb-3">
+                    {% trans "Economía Comunitaria" %}
+                </h3>
+                <p class="text-gray-600">
+                    {% trans "Cada peso que gastas aquí se queda en la comunidad. Apoyas a familias locales, no a corporaciones externas." %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brujitas Section -->
+<section class="py-16 px-4 bg-rio-50">
+    <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="bg-gradient-to-br from-rio-200 to-rio-300 rounded-2xl h-64 flex items-center justify-center">
+                <!-- Placeholder for brujitas photo -->
+                <span class="text-8xl">🚃</span>
+            </div>
+            <div>
+                <span class="text-4xl mb-4 block">✨</span>
+                <h2 class="font-display text-3xl font-bold text-rio-900 mb-4">
+                    {% trans "Las Brujitas" %}
+                </h2>
+                <p class="text-gray-600 mb-4">
+                    {% trans "Un símbolo de San Cipriano son las 'brujitas': pequeños carros sobre rieles impulsados por motocicletas. Este medio de transporte único nació de la creatividad de nuestra comunidad." %}
+                </p>
+                <p class="text-gray-600">
+                    {% trans "El viaje en brujita es una experiencia inolvidable: atraviesas la selva, cruzas puentes sobre ríos y llegas a un mundo alejado del ruido de la ciudad." %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-4 bg-gradient-to-br from-selva-700 to-rio-800 text-white">
+    <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-display text-3xl font-bold mb-4">
+            {% trans "¿Listo para conocernos?" %}
+        </h2>
+        <p class="text-selva-200 mb-8">
+            {% trans "Te invitamos a vivir la experiencia San Cipriano de manera responsable y auténtica." %}
+        </p>
+        <a href="{% url 'visitors:inquiry_form' %}"
+           class="inline-flex items-center gap-2 px-8 py-4 bg-white text-selva-800 text-lg font-semibold rounded-xl shadow-lg hover:bg-selva-50 transition-all">
+            {% trans "Planifica tu Visita" %}
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+        </a>
+    </div>
+</section>
+{% endblock %}

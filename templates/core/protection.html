@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Protección de la Reserva" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-amber-600 to-amber-800 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">🛡️</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {% trans "Protección de la Reserva" %}
+        </h1>
+        <p class="text-amber-100 text-lg max-w-2xl mx-auto">
+            {% trans "San Cipriano es un ecosistema único y frágil. Cada visitante tiene la responsabilidad de protegerlo para las futuras generaciones." %}
+        </p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Introduction -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-6 mb-12">
+            <p class="text-amber-900 text-lg">
+                {% trans "La reserva de San Cipriano es protegida por su comunidad. Tu visita responsable es esencial para mantener este paraíso natural. Por favor, lee y respeta todas las normas." %}
+            </p>
+        </div>
+
+        <!-- Environmental Care Section -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-selva-100 rounded-xl flex items-center justify-center text-2xl">🌳</div>
+                <h2 class="font-display text-2xl font-bold text-selva-900">{% trans "Cuidado del Entorno Natural" %}</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex gap-4">
+                    <span class="text-3xl">🗑️</span>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">{% trans "Cada visitante se lleva su basura" %}</h3>
+                        <p class="text-gray-600">{% trans "No existen sistemas de recolección en la reserva. Todo lo que traigas, lo llevas de regreso contigo." %}</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex gap-4">
+                    <span class="text-3xl">🌿</span>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">{% trans "Respeta la vegetación" %}</h3>
+                        <p class="text-gray-600">{% trans "No cortes plantas, no arranques flores, no dañes los árboles. Cada planta es parte del ecosistema." %}</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm flex gap-4">
+                    <span class="text-3xl">🔊</span>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">{% trans "Mantén el silencio natural" %}</h3>
+                        <p class="text-gray-600">{% trans "Evita ruidos fuertes y música alta. Los animales y otros visitantes merecen disfrutar la paz del bosque." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prohibited Items Section -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-2xl">🚫</div>
+                <h2 class="font-display text-2xl font-bold text-red-900">{% trans "Prohibido Extraer" %}</h2>
+            </div>
+
+            <div class="bg-red-50 rounded-2xl p-6 border border-red-200">
+                <p class="text-red-800 mb-4 font-medium">{% trans "Está terminantemente prohibido extraer de la reserva:" %}</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 text-red-700">
+                        <span class="text-2xl">🐸</span>
+                        <span>{% trans "Animales o especies" %}</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-red-700">
+                        <span class="text-2xl">🪨</span>
+                        <span>{% trans "Piedras del río" %}</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-red-700">
+                        <span class="text-2xl">🌺</span>
+                        <span>{% trans "Plantas o flores" %}</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-red-700">
+                        <span class="text-2xl">🪵</span>
+                        <span>{% trans "Objetos naturales" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prohibited Entry Section -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-2xl">⛔</div>
+                <h2 class="font-display text-2xl font-bold text-red-900">{% trans "Prohibido Ingresar" %}</h2>
+            </div>
+
+            <div class="bg-red-50 rounded-2xl p-6 border border-red-200">
+                <p class="text-red-800 mb-4 font-medium">{% trans "No se permite el ingreso a la reserva con:" %}</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-xl p-4 text-center border border-red-200">
+                        <span class="text-3xl">🚬</span>
+                        <p class="text-red-700 font-medium mt-2">{% trans "Drogas" %}</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-4 text-center border border-red-200">
+                        <span class="text-3xl">🍺</span>
+                        <p class="text-red-700 font-medium mt-2">{% trans "Alcohol" %}</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-4 text-center border border-red-200">
+                        <span class="text-3xl">🔪</span>
+                        <p class="text-red-700 font-medium mt-2">{% trans "Objetos cortopunzantes" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Responsible Tourism Section -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-selva-100 rounded-xl flex items-center justify-center text-2xl">💚</div>
+                <h2 class="font-display text-2xl font-bold text-selva-900">{% trans "Turismo Consciente y Respetuoso" %}</h2>
+            </div>
+
+            <div class="bg-selva-50 rounded-2xl p-6 border border-selva-200">
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-selva-800">{% trans "Camina solo por los senderos establecidos" %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-selva-800">{% trans "Observa los animales a distancia, sin molestarlos" %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-selva-800">{% trans "No alimentes a los animales silvestres" %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-selva-800">{% trans "Usa productos biodegradables (protector solar, repelente)" %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-6 h-6 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-selva-800">{% trans "Respeta a la comunidad local y sus tradiciones" %}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Community Message -->
+        <div class="bg-gradient-to-br from-selva-700 to-selva-900 rounded-2xl p-8 text-white text-center">
+            <span class="text-4xl mb-4 block">🙏</span>
+            <h3 class="font-display text-2xl font-bold mb-3">{% trans "Gracias por cuidar nuestra casa" %}</h3>
+            <p class="text-selva-200 max-w-xl mx-auto">
+                {% trans "San Cipriano es el hogar de nuestra comunidad y de miles de especies. Tu respeto y cuidado nos ayudan a preservarlo para las generaciones futuras." %}
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-12 px-4 bg-gray-100">
+    <div class="max-w-2xl mx-auto text-center">
+        <a href="{% url 'core:safety' %}" class="inline-flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-xl transition-colors">
+            {% trans "Ver Normas de Seguridad" %}
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+        </a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Servicios" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-tierra-600 to-tierra-800 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">🎯</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {{ page_title }}
+        </h1>
+        <p class="text-tierra-100 text-lg max-w-2xl mx-auto">
+            {% trans "Servicios gestionados directamente por la comunidad de San Cipriano." %}
+        </p>
+    </div>
+</section>
+
+<!-- Info Banner -->
+<section class="bg-amber-50 border-b border-amber-200 py-4 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex items-center justify-center gap-3 text-amber-800">
+            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-sm font-medium">
+                {% trans "Los detalles y costos exactos se envían de forma personalizada después del registro." %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for service in services %}
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div class="h-32 bg-gradient-to-br from-selva-400 to-rio-500 flex items-center justify-center">
+                    <span class="text-6xl">{{ service.icon }}</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-gray-900 mb-2">{{ service.name }}</h3>
+                    <p class="text-gray-600">{{ service.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pricing Notice -->
+        <div class="mt-12 bg-selva-50 rounded-2xl p-8 border border-selva-200">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="w-20 h-20 bg-selva-100 rounded-full flex items-center justify-center text-4xl flex-shrink-0">
+                    💰
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="font-display text-xl font-bold text-selva-900 mb-2">
+                        {% trans "¿Cuánto cuesta?" %}
+                    </h3>
+                    <p class="text-selva-700 mb-4">
+                        {% trans "Los precios se manejan de forma personalizada según tus necesidades, número de personas y fechas. Completa el formulario y te enviaremos toda la información detallada." %}
+                    </p>
+                    <a href="{% url 'visitors:inquiry_form' %}"
+                       class="inline-flex items-center gap-2 px-6 py-3 bg-selva-600 hover:bg-selva-700 text-white font-medium rounded-xl transition-colors">
+                        {% trans "Solicitar Información" %}
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reservation Info -->
+<section class="py-12 px-4 bg-gray-100">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="font-display text-2xl font-bold text-gray-900 mb-6 text-center">
+            {% trans "Proceso de Reserva" %}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl p-6 text-center">
+                <div class="w-12 h-12 bg-rio-100 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                    1️⃣
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-2">{% trans "Completa el formulario" %}</h3>
+                <p class="text-gray-600 text-sm">{% trans "Cuéntanos sobre tu visita y servicios de interés." %}</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 text-center">
+                <div class="w-12 h-12 bg-rio-100 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                    2️⃣
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-2">{% trans "Te contactamos" %}</h3>
+                <p class="text-gray-600 text-sm">{% trans "Recibirás información personalizada con precios y disponibilidad." %}</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 text-center">
+                <div class="w-12 h-12 bg-rio-100 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                    3️⃣
+                </div>
+                <h3 class="font-semibold text-gray-900 mb-2">{% trans "Confirma tu reserva" %}</h3>
+                <p class="text-gray-600 text-sm">{% trans "La reserva se confirma mediante contacto directo con la comunidad." %}</p>
+            </div>
+        </div>
+
+        <div class="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
+            <p class="text-amber-800 text-sm">
+                <svg class="w-5 h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                {% trans "La confirmación de reserva puede requerir un anticipo. Los detalles se informan después del contacto inicial." %}
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

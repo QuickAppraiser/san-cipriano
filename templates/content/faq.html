@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Preguntas Frecuentes" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-rio-600 to-rio-800 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">❓</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {{ page_title }}
+        </h1>
+        <p class="text-rio-100 text-lg">
+            {% trans "Respuestas a las dudas más comunes sobre tu visita a San Cipriano." %}
+        </p>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto space-y-4">
+        {% if faqs %}
+            {% for faq in faqs %}
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        onclick="this.parentElement.classList.toggle('open')">
+                    <span class="font-semibold text-gray-900">{{ faq.question }}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-4 hidden">
+                    <p class="text-gray-600">{{ faq.answer }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <!-- Default FAQs -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden open">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        onclick="this.parentElement.classList.toggle('open')">
+                    <span class="font-semibold text-gray-900">{% trans "¿Cómo llego a San Cipriano?" %}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-4">
+                    <p class="text-gray-600">{% trans "Las indicaciones exactas de llegada se proporcionan después de completar el formulario de registro. Esto nos ayuda a proteger la reserva y garantizar una visita organizada." %}</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        onclick="this.parentElement.classList.toggle('open')">
+                    <span class="font-semibold text-gray-900">{% trans "¿Cuánto cuesta visitar San Cipriano?" %}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-4 hidden">
+                    <p class="text-gray-600">{% trans "Los costos varían según los servicios que necesites, el número de personas y la duración de tu estadía. Una vez completes el formulario, te enviaremos información personalizada con precios exactos." %}</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        onclick="this.parentElement.classList.toggle('open')">
+                    <span class="font-semibold text-gray-900">{% trans "¿Necesito reservar con anticipación?" %}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-4 hidden">
+                    <p class="text-gray-600">{% trans "Sí, recomendamos contactarnos con al menos una semana de anticipación, especialmente en temporada alta y fines de semana. Esto nos permite organizar mejor tu experiencia." %}</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        onclick="this.parentElement.classList.toggle('open')">
+                    <span class="font-semibold text-gray-900">{% trans "¿Puedo llevar niños?" %}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-4 hidden">
+                    <p class="text-gray-600">{% trans "Sí, San Cipriano es apto para familias. Sin embargo, los niños deben estar siempre supervisados por un adulto y usar chaleco salvavidas en todas las actividades acuáticas." %}</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        onclick="this.parentElement.classList.toggle('open')">
+                    <span class="font-semibold text-gray-900">{% trans "¿Qué debo llevar?" %}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-4 hidden">
+                    <p class="text-gray-600">{% trans "Recomendamos: ropa cómoda, zapatos para agua, traje de baño, protector solar biodegradable, repelente, toalla, y una bolsa para tu basura. Te enviaremos una lista completa al confirmar tu reserva." %}</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        onclick="this.parentElement.classList.toggle('open')">
+                    <span class="font-semibold text-gray-900">{% trans "¿Hay señal de celular?" %}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-4 hidden">
+                    <p class="text-gray-600">{% trans "La señal de celular es limitada en San Cipriano. Esto es parte de la experiencia de desconexión con la naturaleza. Algunos hospedajes tienen WiFi básico." %}</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                        onclick="this.parentElement.classList.toggle('open')">
+                    <span class="font-semibold text-gray-900">{% trans "¿Qué son las 'brujitas'?" %}</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-content px-6 pb-4 hidden">
+                    <p class="text-gray-600">{% trans "Las brujitas son pequeños carros sobre rieles impulsados por motocicletas. Son el transporte tradicional para llegar a San Cipriano y una experiencia única en sí misma." %}</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Still have questions -->
+<section class="py-12 px-4 bg-gray-100">
+    <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-display text-2xl font-bold text-gray-900 mb-4">
+            {% trans "¿Tienes más preguntas?" %}
+        </h2>
+        <p class="text-gray-600 mb-6">
+            {% trans "Contáctanos directamente o completa el formulario y responderemos todas tus dudas." %}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{% url 'visitors:inquiry_form' %}"
+               class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-selva-600 hover:bg-selva-700 text-white font-medium rounded-xl transition-colors">
+                {% trans "Completar Formulario" %}
+            </a>
+            <a href="https://wa.me/{{ community_whatsapp|slice:'1:' }}" target="_blank"
+               class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-xl transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                {% trans "WhatsApp" %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        });
+    });
+
+    // Initialize open FAQs
+    document.querySelectorAll('.open').forEach(faq => {
+        const content = faq.querySelector('.faq-content');
+        const icon = faq.querySelector('.faq-icon');
+        if (content) content.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180');
+    });
+</script>
+{% endblock %}

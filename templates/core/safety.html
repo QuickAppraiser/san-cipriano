@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Seguridad y Normas" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-red-600 to-red-800 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">⚠️</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {% trans "Seguridad y Normas" %}
+        </h1>
+        <p class="text-red-100 text-lg max-w-2xl mx-auto">
+            {% trans "Tu seguridad es nuestra prioridad. Lee atentamente estas normas antes de tu visita." %}
+        </p>
+    </div>
+</section>
+
+<!-- Critical Warning -->
+<section class="bg-red-900 text-white py-6 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex items-center justify-center gap-3">
+            <svg class="w-8 h-8 text-red-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+            </svg>
+            <p class="text-lg font-semibold text-center">
+                {% trans "SECCIÓN CRÍTICA: El incumplimiento de estas normas puede poner en riesgo tu vida." %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Guide Requirement -->
+        <div class="mb-12">
+            <div class="bg-amber-50 border-2 border-amber-400 rounded-2xl p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                        🧭
+                    </div>
+                    <div>
+                        <h2 class="font-display text-2xl font-bold text-amber-900 mb-2">
+                            {% trans "Recorrido Solo con Guías" %}
+                        </h2>
+                        <p class="text-amber-800 text-lg">
+                            {% trans "El recorrido por la reserva SOLO se realiza con guías autorizados de la comunidad. No está permitido adentrarse solo en los senderos o áreas naturales." %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mandatory Requirements -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">📋</div>
+                <h2 class="font-display text-2xl font-bold text-blue-900">{% trans "Obligaciones del Visitante" %}</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-200 flex gap-4">
+                    <span class="text-3xl">👂</span>
+                    <div>
+                        <h3 class="font-semibold text-blue-900 mb-1">{% trans "Seguir instrucciones del guía" %}</h3>
+                        <p class="text-blue-700">{% trans "Las indicaciones del guía son obligatorias. Ellos conocen los riesgos y las rutas seguras." %}</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-200 flex gap-4">
+                    <span class="text-3xl">🦺</span>
+                    <div>
+                        <h3 class="font-semibold text-blue-900 mb-1">{% trans "Usar chaleco salvavidas" %}</h3>
+                        <p class="text-blue-700">{% trans "El uso de chaleco salvavidas y flotadores es OBLIGATORIO en todas las actividades acuáticas." %}</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-200 flex gap-4">
+                    <span class="text-3xl">👥</span>
+                    <div>
+                        <h3 class="font-semibold text-blue-900 mb-1">{% trans "Permanecer en grupo" %}</h3>
+                        <p class="text-blue-700">{% trans "No te separes del grupo ni del guía en ningún momento durante el recorrido." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Water Risk Warning -->
+        <div class="mb-12">
+            <div class="bg-red-50 border-2 border-red-400 rounded-2xl overflow-hidden">
+                <div class="bg-red-600 text-white px-6 py-4">
+                    <div class="flex items-center gap-3">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                        <h2 class="font-display text-2xl font-bold">{% trans "Riesgo de Ahogamiento" %}</h2>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-5xl">🌊</span>
+                        <p class="text-red-800 text-lg font-medium">
+                            {% trans "Los ríos de San Cipriano tienen corrientes naturales y profundidades variables. El riesgo de ahogamiento es REAL si no se siguen las instrucciones de seguridad." %}
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-red-700">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>{% trans "No nades en áreas no autorizadas" %}</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>{% trans "No saltes de rocas al agua sin autorización" %}</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>{% trans "No ingreses al agua bajo efectos de alcohol" %}</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>{% trans "Respeta los límites de las áreas de baño" %}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Minors Section -->
+        <div class="mb-12">
+            <div class="bg-purple-50 border-2 border-purple-400 rounded-2xl overflow-hidden">
+                <div class="bg-purple-600 text-white px-6 py-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-3xl">👶</span>
+                        <h2 class="font-display text-2xl font-bold">{% trans "Menores de Edad" %}</h2>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                            <p class="text-purple-800 font-medium">
+                                {% trans "La responsabilidad de los menores de edad es TOTAL de sus padres o acudientes." %}
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                            <p class="text-purple-800 font-medium">
+                                {% trans "Los menores NO pueden estar sin supervisión adulta en NINGÚN momento." %}
+                            </p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                            <p class="text-purple-800 font-medium">
+                                {% trans "Los menores deben usar chaleco salvavidas en TODO momento cerca del agua." %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="mb-12">
+            <div class="bg-gray-900 text-white rounded-2xl p-6">
+                <div class="flex items-start gap-4">
+                    <svg class="w-8 h-8 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">{% trans "Descargo de Responsabilidad" %}</h3>
+                        <p class="text-gray-300">
+                            {% trans "La comunidad de San Cipriano no se hace responsable por accidentes o incidentes que ocurran como consecuencia del incumplimiento de estas normas de seguridad. Al visitar la reserva, aceptas seguir todas las indicaciones de seguridad." %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acknowledgment -->
+        <div class="text-center">
+            <p class="text-gray-600 mb-6">
+                {% trans "Al planificar tu visita, confirmas que has leído y aceptas estas normas de seguridad." %}
+            </p>
+            <a href="{% url 'visitors:inquiry_form' %}"
+               class="inline-flex items-center gap-2 px-8 py-4 bg-selva-600 hover:bg-selva-700 text-white text-lg font-semibold rounded-xl transition-colors">
+                {% trans "He leído las normas - Planificar Visita" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

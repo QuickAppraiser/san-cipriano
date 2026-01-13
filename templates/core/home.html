@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Inicio" %}{% endblock %}
+
+{% block meta_description %}{% trans "Bienvenidos a San Cipriano, una reserva natural cuidada por su comunidad. Turismo responsable en el Pacífico colombiano." %}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <!-- Background Image Placeholder -->
+    <div class="absolute inset-0 bg-gradient-to-br from-selva-900 via-selva-800 to-rio-900">
+        <!-- Placeholder for real photo of San Cipriano -->
+        <div class="absolute inset-0 opacity-30" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="absolute inset-0 hero-gradient"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
+        <div class="mb-6">
+            <span class="inline-block text-6xl mb-4">🌿</span>
+        </div>
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 text-shadow">
+            {% trans "Bienvenidos a San Cipriano" %}
+        </h1>
+        <p class="text-xl md:text-2xl text-selva-100 mb-4 max-w-2xl mx-auto">
+            {{ site_config.welcome_message|default:"Una reserva natural cuidada por su comunidad." }}
+        </p>
+        <p class="text-lg text-selva-200 mb-8">
+            {% trans "Turismo responsable • Conservación ambiental • Economía comunitaria" %}
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="{% url 'visitors:inquiry_form' %}"
+               class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-rio-500 hover:bg-rio-600 text-white text-lg font-semibold rounded-xl shadow-lg transition-all hover:scale-105">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                {% trans "Planifica tu Visita" %}
+            </a>
+            <a href="{% url 'content:about' %}"
+               class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-lg font-semibold rounded-xl border border-white/30 transition-all">
+                {% trans "Conoce San Cipriano" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Quick Info Cards -->
+<section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Nature Card -->
+            <div class="bg-selva-50 rounded-2xl p-6 border border-selva-100 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-selva-100 rounded-xl flex items-center justify-center text-3xl mb-4">
+                    🌳
+                </div>
+                <h3 class="font-display text-xl font-bold text-selva-900 mb-2">
+                    {% trans "Reserva Natural" %}
+                </h3>
+                <p class="text-gray-600">
+                    {% trans "Un santuario de biodiversidad en el Pacífico colombiano, hogar de cientos de especies de aves, anfibios y flora única." %}
+                </p>
+            </div>
+
+            <!-- Community Card -->
+            <div class="bg-tierra-50 rounded-2xl p-6 border border-tierra-100 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-tierra-100 rounded-xl flex items-center justify-center text-3xl mb-4">
+                    👨‍👩‍👧‍👦
+                </div>
+                <h3 class="font-display text-xl font-bold text-tierra-900 mb-2">
+                    {% trans "Turismo Comunitario" %}
+                </h3>
+                <p class="text-gray-600">
+                    {% trans "Cada visita apoya directamente a las familias locales. El turismo es gestionado por y para la comunidad." %}
+                </p>
+            </div>
+
+            <!-- River Card -->
+            <div class="bg-rio-50 rounded-2xl p-6 border border-rio-100 hover:shadow-lg transition-shadow">
+                <div class="w-14 h-14 bg-rio-100 rounded-xl flex items-center justify-center text-3xl mb-4">
+                    🚃
+                </div>
+                <h3 class="font-display text-xl font-bold text-rio-900 mb-2">
+                    {% trans "Las Brujitas" %}
+                </h3>
+                <p class="text-gray-600">
+                    {% trans "Vive la experiencia única de viajar en los tradicionales carros sobre rieles, una aventura que solo encontrarás aquí." %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Protection Alert Section -->
+<section class="py-16 px-4 bg-amber-50 border-y border-amber-200">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+            <span class="inline-block text-5xl mb-4">🛡️</span>
+            <h2 class="font-display text-3xl font-bold text-amber-900 mb-2">
+                {% trans "Protección de la Reserva" %}
+            </h2>
+            <p class="text-amber-700">
+                {% trans "San Cipriano es un ecosistema frágil. Tu compromiso es esencial." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm">
+                <span class="text-3xl">🗑️</span>
+                <p class="text-sm font-medium text-gray-700 mt-2">{% trans "Lleva tu basura" %}</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm">
+                <span class="text-3xl">🚫</span>
+                <p class="text-sm font-medium text-gray-700 mt-2">{% trans "No extraer especies" %}</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm">
+                <span class="text-3xl">🍃</span>
+                <p class="text-sm font-medium text-gray-700 mt-2">{% trans "Respeta la naturaleza" %}</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 text-center shadow-sm">
+                <span class="text-3xl">🧭</span>
+                <p class="text-sm font-medium text-gray-700 mt-2">{% trans "Solo con guías" %}</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="{% url 'core:protection' %}" class="inline-flex items-center gap-2 text-amber-700 hover:text-amber-900 font-medium">
+                {% trans "Ver todas las normas de protección" %}
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Experiences Preview -->
+<section class="py-16 px-4 nature-pattern">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="inline-block text-5xl mb-4">🦜</span>
+            <h2 class="font-display text-3xl font-bold text-selva-900 mb-2">
+                {% trans "Experiencias Naturales" %}
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                {% trans "Descubre la magia del bosque húmedo tropical, sus ríos cristalinos y la increíble biodiversidad que nos rodea." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Experience Cards -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div class="h-48 bg-gradient-to-br from-selva-400 to-selva-600 flex items-center justify-center">
+                    <span class="text-6xl">🐦</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Avistamiento de Aves" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Más de 200 especies de aves habitan en nuestra reserva. Un paraíso para los observadores." %}</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div class="h-48 bg-gradient-to-br from-rio-400 to-rio-600 flex items-center justify-center">
+                    <span class="text-6xl">🏊</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Ríos Cristalinos" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Báñate en aguas puras rodeado de selva. Charcos naturales y cascadas te esperan." %}</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div class="h-48 bg-gradient-to-br from-tierra-400 to-tierra-600 flex items-center justify-center">
+                    <span class="text-6xl">🐸</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Ranas y Anfibios" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Hogar de ranas venenosas y especies únicas. Un espectáculo de colores en la naturaleza." %}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center">
+            <a href="{% url 'content:biodiversity' %}"
+               class="inline-flex items-center gap-2 px-6 py-3 bg-selva-600 hover:bg-selva-700 text-white font-medium rounded-xl transition-colors">
+                {% trans "Explorar Biodiversidad" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 px-4 bg-gradient-to-br from-selva-800 to-rio-900 text-white">
+    <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-5xl mb-6">📋</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+            {% trans "¿Listo para vivir la experiencia?" %}
+        </h2>
+        <p class="text-selva-200 text-lg mb-8 max-w-xl mx-auto">
+            {% trans "Completa el formulario y la comunidad te enviará toda la información personalizada para tu visita." %}
+        </p>
+        <a href="{% url 'visitors:inquiry_form' %}"
+           class="inline-flex items-center gap-2 px-8 py-4 bg-white text-selva-800 text-lg font-semibold rounded-xl shadow-lg hover:bg-selva-50 transition-all hover:scale-105">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+            </svg>
+            {% trans "Planifica tu Visita" %}
+        </a>
+        <p class="mt-4 text-selva-300 text-sm">
+            {% trans "Los detalles y costos se envían de forma personalizada después del registro." %}
+        </p>
+    </div>
+</section>
+{% endblock %}

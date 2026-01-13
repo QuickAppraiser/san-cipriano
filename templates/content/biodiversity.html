@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Biodiversidad y Experiencias" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-selva-600 to-rio-700 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">🦜</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {{ page_title }}
+        </h1>
+        <p class="text-selva-100 text-lg max-w-2xl mx-auto">
+            {% trans "Descubre la increíble diversidad de vida que habita en nuestra reserva natural." %}
+        </p>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section class="py-12 px-4 bg-selva-50">
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="text-lg text-selva-800">
+            {% trans "San Cipriano es hogar de cientos de especies de aves, anfibios, mamíferos y plantas. Cada visita es una oportunidad para conectar con la naturaleza en su estado más puro." %}
+        </p>
+    </div>
+</section>
+
+<!-- Biodiversity Categories -->
+<section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+
+        {% if categories %}
+            {% for category_name, entries in categories.items %}
+            <div class="mb-16">
+                <h2 class="font-display text-2xl font-bold text-selva-900 mb-6 flex items-center gap-3">
+                    {% if category_name == "Aves" %}🐦{% endif %}
+                    {% if category_name == "Anfibios" %}🐸{% endif %}
+                    {% if category_name == "Mamíferos" %}🦝{% endif %}
+                    {% if category_name == "Reptiles" %}🦎{% endif %}
+                    {% if category_name == "Peces" %}🐟{% endif %}
+                    {% if category_name == "Insectos" %}🦋{% endif %}
+                    {% if category_name == "Flora" %}🌺{% endif %}
+                    {{ category_name }}
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {% for entry in entries %}
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                        {% if entry.image %}
+                        <img src="{{ entry.image.url }}" alt="{{ entry.name }}" class="w-full h-40 object-cover">
+                        {% else %}
+                        <div class="w-full h-40 bg-gradient-to-br from-selva-100 to-rio-100 flex items-center justify-center">
+                            <span class="text-5xl opacity-50">
+                                {% if category_name == "Aves" %}🐦{% endif %}
+                                {% if category_name == "Anfibios" %}🐸{% endif %}
+                                {% if category_name == "Mamíferos" %}🦝{% endif %}
+                                {% if category_name == "Reptiles" %}🦎{% endif %}
+                                {% if category_name == "Peces" %}🐟{% endif %}
+                                {% if category_name == "Insectos" %}🦋{% endif %}
+                                {% if category_name == "Flora" %}🌺{% endif %}
+                            </span>
+                        </div>
+                        {% endif %}
+                        <div class="p-4">
+                            <h3 class="font-semibold text-gray-900">{{ entry.name }}</h3>
+                            {% if entry.scientific_name %}
+                            <p class="text-sm text-gray-500 italic">{{ entry.scientific_name }}</p>
+                            {% endif %}
+                            <p class="text-gray-600 text-sm mt-2">{{ entry.description|truncatewords:20 }}</p>
+                            {% if entry.conservation_status %}
+                            <span class="inline-block mt-2 px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded-full">
+                                {{ entry.conservation_status }}
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <!-- Default content when no database entries exist -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <!-- Birds -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                <div class="h-48 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                    <span class="text-8xl">🐦</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-3">{% trans "Aves" %}</h3>
+                    <p class="text-gray-600 mb-4">
+                        {% trans "Más de 200 especies de aves habitan en San Cipriano. Tucanes, colibríes, tangaras y muchas más esperan ser descubiertas por los amantes de la observación de aves." %}
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• {% trans "Tucanes" %}</li>
+                        <li>• {% trans "Colibríes" %}</li>
+                        <li>• {% trans "Tangaras" %}</li>
+                        <li>• {% trans "Loros y pericos" %}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Amphibians -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                <div class="h-48 bg-gradient-to-br from-lime-400 to-green-500 flex items-center justify-center">
+                    <span class="text-8xl">🐸</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-display text-2xl font-bold text-gray-900 mb-3">{% trans "Anfibios" %}</h3>
+                    <p class="text-gray-600 mb-4">
+                        {% trans "Nuestra reserva es hogar de especies únicas de ranas, incluyendo las famosas ranas venenosas de colores brillantes. Un espectáculo natural impresionante." %}
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• {% trans "Ranas venenosas (Dendrobates)" %}</li>
+                        <li>• {% trans "Ranas de cristal" %}</li>
+                        <li>• {% trans "Salamandras" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- More biodiversity -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-tierra-50 rounded-xl p-6 border border-tierra-200">
+                <span class="text-4xl block mb-3">🦝</span>
+                <h4 class="font-semibold text-tierra-900 mb-2">{% trans "Mamíferos" %}</h4>
+                <p class="text-tierra-700 text-sm">{% trans "Monos, perezosos, armadillos y más habitan nuestros bosques." %}</p>
+            </div>
+            <div class="bg-rio-50 rounded-xl p-6 border border-rio-200">
+                <span class="text-4xl block mb-3">🦋</span>
+                <h4 class="font-semibold text-rio-900 mb-2">{% trans "Insectos" %}</h4>
+                <p class="text-rio-700 text-sm">{% trans "Miles de especies de mariposas e insectos llenan de vida la selva." %}</p>
+            </div>
+            <div class="bg-selva-50 rounded-xl p-6 border border-selva-200">
+                <span class="text-4xl block mb-3">🌺</span>
+                <h4 class="font-semibold text-selva-900 mb-2">{% trans "Flora" %}</h4>
+                <p class="text-selva-700 text-sm">{% trans "Orquídeas, heliconias, bromelias y árboles centenarios." %}</p>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+
+<!-- Experiences Section -->
+<section class="py-16 px-4 bg-rio-50">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-5xl mb-4 block">🌿</span>
+            <h2 class="font-display text-3xl font-bold text-rio-900">
+                {% trans "Experiencias Naturales" %}
+            </h2>
+            <p class="text-rio-700 mt-2">
+                {% trans "Vive la naturaleza de manera responsable con nuestros guías locales." %}
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {% if experiences %}
+                {% for experience in experiences %}
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-rio-100 flex gap-4">
+                    <div class="w-16 h-16 bg-rio-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                        {{ experience.icon }}
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">{{ experience.name }}</h3>
+                        <p class="text-gray-600 text-sm mb-2">{{ experience.description }}</p>
+                        {% if experience.duration_info %}
+                        <span class="text-xs text-rio-600 bg-rio-50 px-2 py-1 rounded-full">{{ experience.duration_info }}</span>
+                        {% endif %}
+                        {% if experience.difficulty %}
+                        <span class="text-xs text-gray-500 ml-2">{{ experience.difficulty }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <!-- Default experiences -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-rio-100 flex gap-4">
+                    <div class="w-16 h-16 bg-rio-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                        🐦
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">{% trans "Avistamiento de Aves" %}</h3>
+                        <p class="text-gray-600 text-sm">{% trans "Recorridos al amanecer con guías expertos para observar las aves de la región." %}</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-rio-100 flex gap-4">
+                    <div class="w-16 h-16 bg-rio-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                        🥾
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">{% trans "Senderismo en la Selva" %}</h3>
+                        <p class="text-gray-600 text-sm">{% trans "Caminatas guiadas por senderos ancestrales, conociendo la flora y fauna local." %}</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-rio-100 flex gap-4">
+                    <div class="w-16 h-16 bg-rio-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                        🏊
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">{% trans "Baño en el Río" %}</h3>
+                        <p class="text-gray-600 text-sm">{% trans "Disfruta de las aguas cristalinas en charcos naturales supervisados." %}</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-rio-100 flex gap-4">
+                    <div class="w-16 h-16 bg-rio-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                        🌙
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">{% trans "Tour Nocturno" %}</h3>
+                        <p class="text-gray-600 text-sm">{% trans "Descubre la vida nocturna de la selva: ranas, insectos y sonidos mágicos." %}</p>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Conservation Message -->
+<section class="py-12 px-4 bg-amber-50 border-y border-amber-200">
+    <div class="max-w-3xl mx-auto text-center">
+        <span class="text-4xl mb-4 block">🛡️</span>
+        <h3 class="font-display text-xl font-bold text-amber-900 mb-3">
+            {% trans "Turismo Educativo y de Conservación" %}
+        </h3>
+        <p class="text-amber-800">
+            {% trans "Todas nuestras experiencias tienen un enfoque educativo. Aprenderás sobre la importancia de conservar estos ecosistemas y cómo cada especie cumple un rol vital en el equilibrio natural." %}
+        </p>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-display text-2xl font-bold text-gray-900 mb-4">
+            {% trans "¿Quieres vivir estas experiencias?" %}
+        </h2>
+        <p class="text-gray-600 mb-6">
+            {% trans "Completa el formulario y te enviaremos información sobre disponibilidad y cómo participar." %}
+        </p>
+        <a href="{% url 'visitors:inquiry_form' %}"
+           class="inline-flex items-center gap-2 px-8 py-4 bg-selva-600 hover:bg-selva-700 text-white text-lg font-semibold rounded-xl shadow-lg transition-all">
+            {% trans "Planifica tu Visita" %}
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+        </a>
+    </div>
+</section>
+{% endblock %}

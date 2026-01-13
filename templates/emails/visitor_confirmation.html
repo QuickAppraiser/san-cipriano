@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>¡Gracias por tu interés en San Cipriano!</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: linear-gradient(135deg, #166534 0%, #0369a1 100%); padding: 30px; text-align: center; border-radius: 10px 10px 0 0;">
+        <h1 style="color: white; margin: 0; font-size: 28px;">🌿 San Cipriano</h1>
+        <p style="color: #bbf7d0; margin: 10px 0 0 0; font-size: 16px;">Reserva Natural Comunitaria</p>
+    </div>
+
+    <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e7eb; border-top: none;">
+        <h2 style="color: #166534; margin-top: 0;">¡Hola {{ inquiry.full_name }}!</h2>
+
+        <p style="font-size: 16px;">
+            Gracias por tu interés en visitar San Cipriano. Hemos recibido tu solicitud y estamos muy emocionados de que quieras conocer nuestra reserva natural.
+        </p>
+
+        <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #22c55e;">
+            <h3 style="color: #166534; margin-top: 0;">¿Qué sigue?</h3>
+            <ol style="padding-left: 20px; margin: 0;">
+                <li style="padding: 5px 0;">Un miembro de nuestra comunidad revisará tu solicitud.</li>
+                <li style="padding: 5px 0;">Te contactaremos por WhatsApp o correo con información personalizada.</li>
+                <li style="padding: 5px 0;">Recibirás detalles sobre costos, disponibilidad y cómo confirmar tu reserva.</li>
+            </ol>
+        </div>
+
+        <h3 style="color: #166534;">Resumen de tu solicitud</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+            <tr>
+                <td style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><strong>Fechas:</strong></td>
+                <td style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;">
+                    {% if inquiry.estimated_arrival %}{{ inquiry.estimated_arrival|date:"d/m/Y" }}{% else %}Por definir{% endif %}
+                    {% if inquiry.estimated_departure %} - {{ inquiry.estimated_departure|date:"d/m/Y" }}{% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;"><strong>Personas:</strong></td>
+                <td style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;">{{ inquiry.number_of_people }}{% if inquiry.number_of_children %} ({{ inquiry.number_of_children }} menores){% endif %}</td>
+            </tr>
+        </table>
+
+        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 20px 0;">
+            <p style="margin: 0; font-size: 14px;">
+                <strong>📌 Importante:</strong> Te recomendamos revisar nuestras
+                <a href="#" style="color: #166534;">normas de seguridad</a> y
+                <a href="#" style="color: #166534;">reglas de protección</a> antes de tu visita.
+            </p>
+        </div>
+
+        <p style="font-size: 14px; color: #6b7280;">
+            Si tienes alguna pregunta urgente, no dudes en contactarnos por WhatsApp.
+        </p>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://wa.me/573113111669"
+               style="display: inline-block; padding: 14px 30px; background: #22c55e; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;">
+                📱 Escribir por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div style="background: #166534; padding: 25px; text-align: center; border-radius: 0 0 10px 10px;">
+        <p style="color: white; margin: 0 0 10px 0; font-size: 16px;">
+            ¡Te esperamos en San Cipriano!
+        </p>
+        <p style="color: #bbf7d0; margin: 0; font-size: 13px;">
+            Turismo comunitario • Conservación ambiental • Valle del Cauca, Colombia
+        </p>
+    </div>
+
+    <p style="text-align: center; color: #9ca3af; font-size: 11px; margin-top: 20px;">
+        Este correo fue enviado porque completaste el formulario de visita en nuestro sitio web.
+    </p>
+</body>
+</html>
