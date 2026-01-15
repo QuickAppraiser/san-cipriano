@@ -109,6 +109,10 @@ USE_TZ = True
 LANGUAGES = [
     ("es", "Español"),
     ("en", "English"),
+    ("fr", "Français"),
+    ("de", "Deutsch"),
+    ("it", "Italiano"),
+    ("pt", "Português"),
 ]
 
 LOCALE_PATHS = [BASE_DIR / "locale"]
@@ -142,6 +146,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
     "https://*.onrender.com",
+    "https://san-cipriano.onrender.com",
 ]
 
 # CORS
