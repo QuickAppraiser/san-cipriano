@@ -37,8 +37,8 @@ else:
         }
     }
 
-# Static files with WhiteNoise
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# Static files with WhiteNoise (use simple storage to avoid manifest issues)
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 STATIC_ROOT = BASE_DIR / "staticfiles"  # noqa: F405
 
 # Security settings
