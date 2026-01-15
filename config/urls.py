@@ -8,7 +8,6 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
-from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from apps.core.views import RobotsTxtView, SitemapView
 
@@ -23,17 +22,28 @@ urlpatterns = [
     path("sitemap.xml", SitemapView.as_view(), name="sitemap"),
     path("robots.txt", RobotsTxtView.as_view(), name="robots_txt"),
 
-    # API Documentation
-    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
-    path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
-
-    # API endpoints
-    path("api/v1/visitors/", include("apps.visitors.api_urls")),
-    path("api/v1/content/", include("apps.content.api_urls")),
-
     # Language switcher
     path("i18n/", include("django.conf.urls.i18n")),
 ]
+
+# API Documentation (optional - only if drf_spectacular is installed)
+try:
+    from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
+    urlpatterns += [
+        path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+        path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
+    ]
+except ImportError:
+    pass
+
+# API endpoints (optional)
+try:
+    urlpatterns += [
+        path("api/v1/visitors/", include("apps.visitors.api_urls")),
+        path("api/v1/content/", include("apps.content.api_urls")),
+    ]
+except Exception:
+    pass
 
 # i18n URLs (with language prefix)
 urlpatterns += i18n_patterns(
