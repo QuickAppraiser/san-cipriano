@@ -3,6 +3,76 @@
 
 {% block title %}{% trans "Preguntas Frecuentes" %}{% endblock %}
 
+{% block meta_description %}{% trans "Preguntas frecuentes sobre San Cipriano: cómo llegar, qué llevar, precios, seguridad y más. Todo lo que necesitas saber antes de tu visita." %}{% endblock %}
+
+{% block extra_head %}
+<!-- FAQ Schema.org structured data for SEO -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "{% trans '¿Cómo llego a San Cipriano?' %}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{% trans 'Las indicaciones exactas de llegada se proporcionan después de completar el formulario de registro. Esto nos ayuda a proteger la reserva y garantizar una visita organizada.' %}"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "{% trans '¿Cuánto cuesta visitar San Cipriano?' %}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{% trans 'Los costos varían según los servicios que necesites, el número de personas y la duración de tu estadía. Una vez completes el formulario, te enviaremos información personalizada con precios exactos.' %}"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "{% trans '¿Necesito reservar con anticipación?' %}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{% trans 'Sí, recomendamos contactarnos con al menos una semana de anticipación, especialmente en temporada alta y fines de semana. Esto nos permite organizar mejor tu experiencia.' %}"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "{% trans '¿Puedo llevar niños?' %}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{% trans 'Sí, San Cipriano es apto para familias. Sin embargo, los niños deben estar siempre supervisados por un adulto y usar chaleco salvavidas en todas las actividades acuáticas.' %}"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "{% trans '¿Qué debo llevar?' %}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{% trans 'Recomendamos: ropa cómoda de colores claros, manga larga para protección contra insectos, zapatos para agua, traje de baño, gorra o sombrero (NO protector solar ni repelente químico - contaminan el río), careta de snorkel, toalla, y una bolsa para tu basura.' %}"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "{% trans '¿Hay señal de celular?' %}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{% trans 'La señal de celular es limitada en San Cipriano. Esto es parte de la experiencia de desconexión con la naturaleza. Algunos hospedajes tienen WiFi básico.' %}"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "{% trans '¿Qué son las brujitas?' %}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{% trans 'Las brujitas son pequeños carros sobre rieles impulsados por motocicletas. Son el transporte tradicional para llegar a San Cipriano y una experiencia única en sí misma.' %}"
+            }
+        }
+    ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
 <!-- Header with Background Image -->
 <section class="relative bg-gradient-to-br from-rio-600 to-rio-800 text-white py-20 px-4 overflow-hidden">

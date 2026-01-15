@@ -223,7 +223,7 @@
                      data-src="{% static 'images/gallery/cascada.jpg' %}"
                      data-title="{% trans 'Cascadas' %}"
                      data-desc="{% trans 'Aguas cristalinas en un entorno mágico' %}">
-                    <img src="{% static 'images/gallery/cascada.jpg' %}" alt="{% trans 'Cascada en San Cipriano' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="{% static 'images/gallery/cascada.jpg' %}" alt="{% trans 'Cascada en San Cipriano' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div class="absolute bottom-4 left-4 text-white">
                         <h3 class="font-semibold text-lg">{% trans "Cascadas" %}</h3>
@@ -243,7 +243,7 @@
                      data-src="{% static 'images/gallery/rio-cristalino.jpg' %}"
                      data-title="{% trans 'Ríos Cristalinos' %}"
                      data-desc="{% trans 'Aguas transparentes del Pacífico colombiano' %}">
-                    <img src="{% static 'images/gallery/rio-cristalino.jpg' %}" alt="{% trans 'Río cristalino' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="{% static 'images/gallery/rio-cristalino.jpg' %}" alt="{% trans 'Río cristalino' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     <div class="absolute bottom-3 left-3 text-white">
                         <p class="text-sm font-medium">{% trans "Ríos" %}</p>
@@ -262,7 +262,7 @@
                      data-src="{% static 'images/gallery/piedras-rio.jpg' %}"
                      data-title="{% trans 'Piedras del Río' %}"
                      data-desc="{% trans 'Formaciones naturales en aguas cristalinas' %}">
-                    <img src="{% static 'images/gallery/piedras-rio.jpg' %}" alt="{% trans 'Piedras del río' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="{% static 'images/gallery/piedras-rio.jpg' %}" alt="{% trans 'Piedras del río' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     <div class="absolute bottom-3 left-3 text-white">
                         <p class="text-sm font-medium">{% trans "Aguas Puras" %}</p>
@@ -281,7 +281,7 @@
                      data-src="{% static 'images/gallery/rio-selva.jpg' %}"
                      data-title="{% trans 'Selva Tropical' %}"
                      data-desc="{% trans 'Río serpenteando a través de la selva' %}">
-                    <img src="{% static 'images/gallery/rio-selva.jpg' %}" alt="{% trans 'Río en la selva' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="{% static 'images/gallery/rio-selva.jpg' %}" alt="{% trans 'Río en la selva' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     <div class="absolute bottom-3 left-3 text-white">
                         <p class="text-sm font-medium">{% trans "Selva" %}</p>
@@ -300,7 +300,7 @@
                      data-src="{% static 'images/gallery/hotel-restaurante.jpg' %}"
                      data-title="{% trans 'Hospedaje Comunitario' %}"
                      data-desc="{% trans 'Alojamiento gestionado por la comunidad local' %}">
-                    <img src="{% static 'images/gallery/hotel-restaurante.jpg' %}" alt="{% trans 'Hotel y restaurante comunitario' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="{% static 'images/gallery/hotel-restaurante.jpg' %}" alt="{% trans 'Hotel y restaurante comunitario' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     <div class="absolute bottom-3 left-3 text-white">
                         <p class="text-sm font-medium">{% trans "Hospedaje" %}</p>
@@ -317,19 +317,19 @@
 </section>
 
 <!-- Lightbox Modal -->
-<div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-sm">
-    <button id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 z-10">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 z-10" aria-label="{% trans 'Cerrar galería' %}">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
     </button>
-    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10">
-        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10" aria-label="{% trans 'Imagen anterior' %}">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
         </svg>
     </button>
-    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10">
-        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10" aria-label="{% trans 'Imagen siguiente' %}">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
         </svg>
     </button>

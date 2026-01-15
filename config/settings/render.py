@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Security
 SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-render-default-key")
-DEBUG = True  # Set to False after testing works
+DEBUG = False
 
 ALLOWED_HOSTS = [
     ".onrender.com",
@@ -149,8 +149,11 @@ CSRF_TRUSTED_ORIGINS = [
     "https://san-cipriano.onrender.com",
 ]
 
-# CORS
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS - Restringido a dominios específicos
+CORS_ALLOWED_ORIGINS = [
+    "https://san-cipriano.onrender.com",
+]
+CORS_ALLOW_ALL_ORIGINS = False
 
 # Email
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
