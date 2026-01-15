@@ -160,7 +160,7 @@ class VisitorCounter(models.Model):
 
     base_count = models.PositiveIntegerField(
         _("contador base"),
-        default=180,
+        default=45,
         help_text=_("Número inicial del contador")
     )
     inquiry_count = models.PositiveIntegerField(
@@ -193,7 +193,7 @@ class VisitorCounter(models.Model):
         counter, created = cls.objects.get_or_create(pk=1)
         if created:
             counter.base_count = getattr(
-                settings, "VISITOR_COUNTER_INITIAL", 180
+                settings, "VISITOR_COUNTER_INITIAL", 45
             )
             counter.save()
         return counter

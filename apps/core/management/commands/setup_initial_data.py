@@ -24,7 +24,7 @@ class Command(BaseCommand):
                 "welcome_message": "Bienvenidos a San Cipriano, una reserva natural cuidada por su comunidad.",
                 "community_whatsapp": "+573113111669",
                 "community_email": "lordmauricio22@gmail.com",
-                "visitor_counter_base": 180,
+                "visitor_counter_base": 45,
             }
         )
         if created:
@@ -36,12 +36,12 @@ class Command(BaseCommand):
         counter, created = VisitorCounter.objects.get_or_create(
             pk=1,
             defaults={
-                "base_count": 180,
+                "base_count": 45,
                 "inquiry_count": 0,
             }
         )
         if created:
-            self.stdout.write(self.style.SUCCESS("✓ Visitor counter created (starts at 180)"))
+            self.stdout.write(self.style.SUCCESS("✓ Visitor counter created (starts at 45)"))
         else:
             self.stdout.write(f"  Visitor counter exists: {counter.total_count}")
 

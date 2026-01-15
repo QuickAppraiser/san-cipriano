@@ -48,7 +48,7 @@ class SiteConfiguration(models.Model):
     )
     visitor_counter_base = models.PositiveIntegerField(
         _("contador base de visitantes"),
-        default=180,
+        default=45,
         help_text=_("Número base para el contador de visitantes interesados")
     )
     is_active = models.BooleanField(_("activo"), default=True)

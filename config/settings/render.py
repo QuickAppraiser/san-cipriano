@@ -160,7 +160,7 @@ SITE_NAME = "San Cipriano"
 SITE_TAGLINE = "Reserva Natural Comunitaria"
 COMMUNITY_EMAIL = "lordmauricio22@gmail.com"
 COMMUNITY_WHATSAPP = "+573113111669"
-VISITOR_COUNTER_INITIAL = 180
+VISITOR_COUNTER_INITIAL = 45
 
 # Logging
 LOGGING = {

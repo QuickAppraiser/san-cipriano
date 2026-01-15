@@ -47,7 +47,7 @@ coverage.xml
 .pytest_cache/
 
 # Translations
-*.mo
+# Keep .mo files for deployment (no gettext on Render)
 *.pot
 
 # Django stuff
