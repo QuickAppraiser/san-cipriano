@@ -23,7 +23,7 @@ class Command(BaseCommand):
                 "tagline": "Reserva Natural Comunitaria",
                 "welcome_message": "Bienvenidos a San Cipriano, una reserva natural cuidada por su comunidad.",
                 "community_whatsapp": "+573113111669",
-                "community_email": "contacto@sancipriano.co",
+                "community_email": "lordmauricio22@gmail.com",
                 "visitor_counter_base": 180,
             }
         )
@@ -239,7 +239,7 @@ class Command(BaseCommand):
             },
             {
                 "question": "¿Qué debo llevar?",
-                "answer": "Recomendamos: ropa cómoda y ligera, zapatos para agua (sandalias con agarre), traje de baño, protector solar BIODEGRADABLE, repelente de insectos, toalla, cámara con funda impermeable, y muy importante: una bolsa para llevarte tu basura. Te enviaremos una lista completa al confirmar tu reserva.",
+                "answer": "Recomendamos: ropa cómoda de colores claros, manga larga para protección natural contra insectos, zapatos para agua (sandalias con agarre), traje de baño, gorra o sombrero (NO protector solar ni repelente químico - contaminan el río), careta de snorkel, toalla, cámara con funda impermeable, y muy importante: una bolsa para llevarte tu basura.",
                 "order": 5,
             },
             {

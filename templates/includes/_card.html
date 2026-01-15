@@ -1,0 +1,39 @@
+{% comment %}
+Card Component
+Usage: {% include 'includes/_card.html' with title="Title" description="Description" icon="🌿" %}
+
+Parameters:
+- title: Card title
+- description: Card description text
+- icon: Optional emoji icon
+- image_url: Optional image URL
+- link_url: Optional link URL
+- link_text: Optional link text
+{% endcomment %}
+
+<div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow">
+    {% if image_url %}
+    <div class="aspect-video bg-gray-100">
+        <img src="{{ image_url }}" alt="{{ title }}" class="w-full h-full object-cover">
+    </div>
+    {% endif %}
+    <div class="p-6">
+        {% if icon %}
+        <span class="inline-block text-4xl mb-3">{{ icon }}</span>
+        {% endif %}
+        {% if title %}
+        <h3 class="font-display text-xl font-semibold text-gray-900 mb-2">{{ title }}</h3>
+        {% endif %}
+        {% if description %}
+        <p class="text-gray-600">{{ description }}</p>
+        {% endif %}
+        {% if link_url %}
+        <a href="{{ link_url }}" class="inline-flex items-center mt-4 text-selva-600 hover:text-selva-700 font-medium">
+            {{ link_text|default:"Ver más" }}
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </a>
+        {% endif %}
+    </div>
+</div>

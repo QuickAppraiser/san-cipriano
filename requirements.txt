@@ -1,0 +1,38 @@
+# Django Core
+Django>=4.2,<5.0
+djangorestframework>=3.14.0
+django-cors-headers>=4.3.0
+
+# Database
+psycopg2-binary>=2.9.9
+dj-database-url>=2.1.0
+
+# Image Processing
+Pillow>=10.0.0
+
+# Internationalization
+django-modeltranslation>=0.18.0
+
+# Utilities
+django-extensions>=3.2.0
+python-decouple>=3.8
+whitenoise>=6.6.0
+
+# WhatsApp Integration
+httpx>=0.26.0
+
+# Validation
+phonenumbers>=8.13.0
+
+# Production Server
+gunicorn>=21.2.0
+
+# API Documentation (required by base.py)
+drf-spectacular>=0.27.0
+
+# Celery (required by base.py)
+celery>=5.3.0
+django-celery-beat>=2.5.0
+
+# Email (required by base.py)
+django-anymail>=10.2

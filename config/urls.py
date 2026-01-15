@@ -10,6 +10,8 @@ from django.contrib import admin
 from django.urls import include, path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
+from apps.core.views import RobotsTxtView, SitemapView
+
 # Admin customization
 admin.site.site_header = "San Cipriano - Administración"
 admin.site.site_title = "San Cipriano Admin"
@@ -17,6 +19,10 @@ admin.site.index_title = "Panel de Administración Comunitaria"
 
 # Non-i18n URLs
 urlpatterns = [
+    # SEO files (must be at root, no language prefix)
+    path("sitemap.xml", SitemapView.as_view(), name="sitemap"),
+    path("robots.txt", RobotsTxtView.as_view(), name="robots_txt"),
+
     # API Documentation
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),

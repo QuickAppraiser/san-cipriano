@@ -4,9 +4,13 @@
 {% block title %}{% trans "Seguridad y Normas" %}{% endblock %}
 
 {% block content %}
-<!-- Header -->
-<section class="bg-gradient-to-br from-red-600 to-red-800 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
+<!-- Header with Background Image -->
+<section class="relative bg-gradient-to-br from-red-600 to-red-800 text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 opacity-35">
+        <img src="{% static 'images/gallery/piedras-rio.jpg' %}" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-red-900/60 to-red-900/80"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
         <span class="inline-block text-6xl mb-4">⚠️</span>
         <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
             {% trans "Seguridad y Normas" %}

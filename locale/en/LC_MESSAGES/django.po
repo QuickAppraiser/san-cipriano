@@ -1,0 +1,1099 @@
+# English translations for San Cipriano project.
+# Copyright (C) 2024
+# This file is distributed under the same license as the San Cipriano package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: San Cipriano 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: Auto\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Navigation
+msgid "Sobre Nosotros"
+msgstr "About Us"
+
+msgid "Protección"
+msgstr "Protection"
+
+msgid "Seguridad"
+msgstr "Safety"
+
+msgid "Biodiversidad"
+msgstr "Biodiversity"
+
+msgid "Servicios"
+msgstr "Services"
+
+msgid "Planifica tu Visita"
+msgstr "Plan Your Visit"
+
+# Home page
+msgid "Inicio"
+msgstr "Home"
+
+msgid "Bienvenidos a San Cipriano"
+msgstr "Welcome to San Cipriano"
+
+msgid "Turismo responsable • Conservación ambiental • Economía comunitaria"
+msgstr "Responsible tourism • Environmental conservation • Community economy"
+
+msgid "Conoce San Cipriano"
+msgstr "Discover San Cipriano"
+
+msgid "Reserva Natural"
+msgstr "Nature Reserve"
+
+msgid "Un santuario de biodiversidad en el Pacífico colombiano, hogar de cientos de especies de aves, anfibios y flora única."
+msgstr "A biodiversity sanctuary in the Colombian Pacific, home to hundreds of species of birds, amphibians and unique flora."
+
+msgid "Turismo Comunitario"
+msgstr "Community Tourism"
+
+msgid "Cada visita apoya directamente a las familias locales. El turismo es gestionado por y para la comunidad."
+msgstr "Every visit directly supports local families. Tourism is managed by and for the community."
+
+msgid "Las Brujitas"
+msgstr "The Brujitas"
+
+msgid "Vive la experiencia única de viajar en los tradicionales carros sobre rieles, una aventura que solo encontrarás aquí."
+msgstr "Experience the unique adventure of traveling on traditional rail carts, an experience you'll only find here."
+
+msgid "Protección de la Reserva"
+msgstr "Reserve Protection"
+
+msgid "San Cipriano es un ecosistema frágil. Tu compromiso es esencial."
+msgstr "San Cipriano is a fragile ecosystem. Your commitment is essential."
+
+msgid "Lleva tu basura"
+msgstr "Take your trash"
+
+msgid "No extraer especies"
+msgstr "Do not extract species"
+
+msgid "Respeta la naturaleza"
+msgstr "Respect nature"
+
+msgid "Solo con guías"
+msgstr "Only with guides"
+
+msgid "Ver todas las normas de protección"
+msgstr "View all protection rules"
+
+msgid "Experiencias Naturales"
+msgstr "Natural Experiences"
+
+msgid "Descubre la magia del bosque húmedo tropical, sus ríos cristalinos y la increíble biodiversidad que nos rodea."
+msgstr "Discover the magic of the tropical rainforest, its crystal-clear rivers and the incredible biodiversity that surrounds us."
+
+msgid "Avistamiento de Aves"
+msgstr "Bird Watching"
+
+msgid "Más de 200 especies de aves habitan en nuestra reserva. Un paraíso para los observadores."
+msgstr "More than 200 bird species inhabit our reserve. A paradise for birdwatchers."
+
+msgid "Ríos Cristalinos"
+msgstr "Crystal-Clear Rivers"
+
+msgid "Báñate en aguas puras rodeado de selva. Charcos naturales y cascadas te esperan."
+msgstr "Swim in pure waters surrounded by jungle. Natural pools and waterfalls await you."
+
+msgid "Ranas y Anfibios"
+msgstr "Frogs and Amphibians"
+
+msgid "Hogar de ranas venenosas y especies únicas. Un espectáculo de colores en la naturaleza."
+msgstr "Home to poison dart frogs and unique species. A colorful spectacle in nature."
+
+msgid "Explorar Biodiversidad"
+msgstr "Explore Biodiversity"
+
+msgid "¿Listo para vivir la experiencia?"
+msgstr "Ready to live the experience?"
+
+msgid "Completa el formulario y la comunidad te enviará toda la información personalizada para tu visita."
+msgstr "Complete the form and the community will send you all the personalized information for your visit."
+
+# Footer
+msgid "Una reserva natural cuidada por su comunidad. Turismo responsable y conservación ambiental en el corazón del Pacífico colombiano."
+msgstr "A nature reserve cared for by its community. Responsible tourism and environmental conservation in the heart of the Colombian Pacific."
+
+msgid "Enlaces"
+msgstr "Links"
+
+msgid "Protección de la Reserva"
+msgstr "Reserve Protection"
+
+msgid "Seguridad y Normas"
+msgstr "Safety and Rules"
+
+msgid "Preguntas Frecuentes"
+msgstr "FAQ"
+
+msgid "Contacto"
+msgstr "Contact"
+
+msgid "Personas interesadas"
+msgstr "Interested people"
+
+msgid "Sitio oficial de la comunidad."
+msgstr "Official community website."
+
+msgid "Turismo comunitario y conservación ambiental."
+msgstr "Community tourism and environmental conservation."
+
+# About page
+msgid "Sobre San Cipriano"
+msgstr "About San Cipriano"
+
+msgid "Una reserva natural comunitaria en el corazón del Pacífico colombiano."
+msgstr "A community nature reserve in the heart of the Colombian Pacific."
+
+msgid "Ubicación"
+msgstr "Location"
+
+msgid "San Cipriano se encuentra en el departamento del Valle del Cauca, en la región del Pacífico colombiano, a pocos kilómetros de Buenaventura."
+msgstr "San Cipriano is located in the Valle del Cauca department, in the Colombian Pacific region, a few kilometers from Buenaventura."
+
+msgid "Rodeado de selva húmeda tropical, ríos cristalinos y una biodiversidad impresionante, San Cipriano es un santuario natural protegido por su comunidad."
+msgstr "Surrounded by tropical rainforest, crystal-clear rivers and impressive biodiversity, San Cipriano is a natural sanctuary protected by its community."
+
+msgid "Coordenadas GPS:"
+msgstr "GPS Coordinates:"
+
+msgid "Cómo llegar:"
+msgstr "How to get there:"
+
+msgid "Desde Cali: Tomar la vía al mar hacia Buenaventura (~3 horas)"
+msgstr "From Cali: Take the road to the sea towards Buenaventura (~3 hours)"
+
+msgid "Pasar Buenaventura y continuar hacia Córdoba (~20 min)"
+msgstr "Pass Buenaventura and continue towards Córdoba (~20 min)"
+
+msgid "Detenerse en la estación de las Brujitas"
+msgstr "Stop at the Brujitas station"
+
+msgid "Tomar la brujita hacia San Cipriano (~30 min)"
+msgstr "Take the brujita to San Cipriano (~30 min)"
+
+msgid "Valle del Cauca, Colombia"
+msgstr "Valle del Cauca, Colombia"
+
+msgid "A 100 km de Cali"
+msgstr "100 km from Cali"
+
+msgid "A 20 km de Buenaventura"
+msgstr "20 km from Buenaventura"
+
+msgid "Ver en Google Maps"
+msgstr "View on Google Maps"
+
+msgid "Nuestra Historia"
+msgstr "Our History"
+
+msgid "San Cipriano es una comunidad afrodescendiente que ha habitado estas tierras por generaciones. Durante décadas, nuestra gente vivió de la pesca, la agricultura y los recursos naturales que la selva nos proporciona."
+msgstr "San Cipriano is an Afro-descendant community that has inhabited these lands for generations. For decades, our people lived from fishing, agriculture and the natural resources that the jungle provides us."
+
+msgid "Con el tiempo, reconocimos el valor único de nuestro hogar: ríos de aguas cristalinas, bosques vírgenes y una biodiversidad que pocos lugares en el mundo pueden igualar. Decidimos entonces abrir nuestras puertas al turismo, pero con un enfoque diferente."
+msgstr "Over time, we recognized the unique value of our home: crystal-clear rivers, virgin forests and biodiversity that few places in the world can match. We then decided to open our doors to tourism, but with a different approach."
+
+msgid "El turismo en San Cipriano es comunitario. Cada servicio, cada hospedaje, cada tour es gestionado por familias locales. El visitante no viene a consumir un producto, viene a vivir una experiencia auténtica y a contribuir directamente al bienestar de nuestra comunidad."
+msgstr "Tourism in San Cipriano is community-based. Every service, every lodging, every tour is managed by local families. The visitor does not come to consume a product, but to live an authentic experience and directly contribute to the well-being of our community."
+
+msgid "Nuestros Pilares"
+msgstr "Our Pillars"
+
+msgid "Conservación"
+msgstr "Conservation"
+
+msgid "Protegemos activamente nuestra selva, ríos y especies. El turismo nos ayuda a financiar la conservación y crear conciencia ambiental."
+msgstr "We actively protect our jungle, rivers and species. Tourism helps us finance conservation and create environmental awareness."
+
+msgid "Turismo Responsable"
+msgstr "Responsible Tourism"
+
+msgid "Buscamos visitantes que respeten la naturaleza y nuestra cultura. Calidad sobre cantidad, experiencias sobre masificación."
+msgstr "We seek visitors who respect nature and our culture. Quality over quantity, experiences over mass tourism."
+
+msgid "Economía Comunitaria"
+msgstr "Community Economy"
+
+msgid "Cada peso que gastas aquí se queda en la comunidad. Apoyas a familias locales, no a corporaciones externas."
+msgstr "Every peso you spend here stays in the community. You support local families, not external corporations."
+
+msgid "¿Listo para conocernos?"
+msgstr "Ready to meet us?"
+
+msgid "Te invitamos a vivir la experiencia San Cipriano de manera responsable y auténtica."
+msgstr "We invite you to experience San Cipriano in a responsible and authentic way."
+
+# Inquiry form
+msgid "Completa el formulario y recibirás información personalizada sobre tu visita a San Cipriano."
+msgstr "Complete the form and you will receive personalized information about your visit to San Cipriano."
+
+msgid "Precios de Referencia (por persona)"
+msgstr "Reference Prices (per person)"
+
+msgid "Hospedaje"
+msgstr "Lodging"
+
+msgid "Alimentación"
+msgstr "Food"
+
+msgid "Brujita (ida y vuelta)"
+msgstr "Brujita (round trip)"
+
+msgid "Tour guiado"
+msgstr "Guided tour"
+
+msgid "Precios en pesos colombianos (COP). Un fin de semana completo: aproximadamente $130,000 COP por persona."
+msgstr "Prices in Colombian pesos (COP). A full weekend: approximately $130,000 COP per person."
+
+msgid "Información Personal"
+msgstr "Personal Information"
+
+msgid "Nombre completo"
+msgstr "Full name"
+
+msgid "Tu nombre completo"
+msgstr "Your full name"
+
+msgid "Teléfono / WhatsApp"
+msgstr "Phone / WhatsApp"
+
+msgid "Correo electrónico"
+msgstr "Email"
+
+msgid "Ciudad"
+msgstr "City"
+
+msgid "Bogotá, Cali..."
+msgstr "Bogota, Cali..."
+
+msgid "País"
+msgstr "Country"
+
+msgid "Detalles de la Visita"
+msgstr "Visit Details"
+
+msgid "Fecha estimada de llegada"
+msgstr "Estimated arrival date"
+
+msgid "Fecha estimada de salida"
+msgstr "Estimated departure date"
+
+msgid "Número de personas"
+msgstr "Number of people"
+
+msgid "Menores de 18 años"
+msgstr "Under 18 years old"
+
+msgid "Servicios de Interés"
+msgstr "Services of Interest"
+
+msgid "Selecciona los servicios que te interesan"
+msgstr "Select the services you are interested in"
+
+msgid "Transporte (Brujitas)"
+msgstr "Transport (Brujitas)"
+
+msgid "Alimentación + Transporte"
+msgstr "Food + Transport"
+
+msgid "Guía turístico"
+msgstr "Tourist guide"
+
+msgid "Parqueadero"
+msgstr "Parking"
+
+msgid "Entrada a la reserva"
+msgstr "Reserve entrance"
+
+msgid "Tours guiados"
+msgstr "Guided tours"
+
+msgid "Experiencias naturales"
+msgstr "Natural experiences"
+
+msgid "Otros"
+msgstr "Other"
+
+msgid "Solicitudes Especiales"
+msgstr "Special Requests"
+
+msgid "¿Tienes alguna pregunta, alergia o necesidad especial?"
+msgstr "Do you have any questions, allergies or special needs?"
+
+msgid "Acepto que mis datos sean utilizados para contactarme y recibir información sobre mi visita a San Cipriano."
+msgstr "I agree that my data will be used to contact me and receive information about my visit to San Cipriano."
+
+msgid "Enviar Solicitud"
+msgstr "Submit Request"
+
+msgid "Una vez recibamos tus datos, la comunidad te contactará para confirmar disponibilidad y coordinar tu visita."
+msgstr "Once we receive your information, the community will contact you to confirm availability and coordinate your visit."
+
+msgid "Por favor selecciona al menos un servicio de interés."
+msgstr "Please select at least one service of interest."
+
+# Thank you page
+msgid "¡Gracias por tu interés!"
+msgstr "Thank you for your interest!"
+
+msgid "¡Gracias! Hemos recibido tu solicitud. La comunidad te contactará pronto."
+msgstr "Thank you! We have received your request. The community will contact you soon."
+
+# Services
+msgid "Transporte en brujitas"
+msgstr "Brujita transport"
+
+msgid "Hoteles y alojamientos comunitarios en armonía con la naturaleza."
+msgstr "Hotels and community lodging in harmony with nature."
+
+msgid "Gastronomía local preparada por la comunidad con productos frescos."
+msgstr "Local gastronomy prepared by the community with fresh products."
+
+msgid "La experiencia única de viajar en los famosos carros sobre rieles."
+msgstr "The unique experience of traveling on the famous rail carts."
+
+msgid "Estacionamiento seguro y vigilado para tu vehículo."
+msgstr "Safe and supervised parking for your vehicle."
+
+msgid "Entrada a la Reserva"
+msgstr "Reserve Entrance"
+
+msgid "Acceso a los senderos, ríos y espacios naturales de la reserva."
+msgstr "Access to the trails, rivers and natural spaces of the reserve."
+
+msgid "Tours Guiados"
+msgstr "Guided Tours"
+
+msgid "Recorridos con guías locales que conocen cada rincón de la reserva."
+msgstr "Tours with local guides who know every corner of the reserve."
+
+msgid "Avistamiento de aves, senderismo, y contacto directo con la biodiversidad."
+msgstr "Bird watching, hiking, and direct contact with biodiversity."
+
+# Biodiversity
+msgid "Aves"
+msgstr "Birds"
+
+msgid "Anfibios"
+msgstr "Amphibians"
+
+msgid "Mamíferos"
+msgstr "Mammals"
+
+msgid "Reptiles"
+msgstr "Reptiles"
+
+msgid "Peces"
+msgstr "Fish"
+
+msgid "Insectos"
+msgstr "Insects"
+
+msgid "Flora"
+msgstr "Flora"
+
+# Status
+msgid "Pendiente"
+msgstr "Pending"
+
+msgid "Contactado"
+msgstr "Contacted"
+
+msgid "Confirmado"
+msgstr "Confirmed"
+
+msgid "Completado"
+msgstr "Completed"
+
+msgid "Cancelado"
+msgstr "Cancelled"
+
+# Validation
+msgid "La fecha de salida debe ser posterior a la fecha de llegada"
+msgstr "Departure date must be after arrival date"
+
+msgid "Número de teléfono inválido"
+msgstr "Invalid phone number"
+
+
+msgid "La comunidad te contactará para coordinar los detalles de tu visita."
+msgstr "The community will contact you to coordinate the details of your visit."
+
+# Terms and Conditions page
+msgid "Términos y Condiciones"
+msgstr "Terms and Conditions"
+
+msgid "Al reservar o visitar San Cipriano, usted acepta los siguientes términos y condiciones."
+msgstr "By booking or visiting San Cipriano, you accept the following terms and conditions."
+
+msgid "Aviso Importante"
+msgstr "Important Notice"
+
+msgid "Al realizar una reserva o visitar San Cipriano, usted declara haber leído, comprendido y aceptado todos los términos y condiciones aquí establecidos."
+msgstr "By making a reservation or visiting San Cipriano, you declare that you have read, understood and accepted all the terms and conditions set forth herein."
+
+msgid "Asunción de Riesgo"
+msgstr "Assumption of Risk"
+
+msgid "San Cipriano es una reserva natural con actividades al aire libre que conllevan riesgos inherentes. Al visitar nuestra reserva, el visitante:"
+msgstr "San Cipriano is a nature reserve with outdoor activities that carry inherent risks. By visiting our reserve, the visitor:"
+
+msgid "Reconoce y acepta voluntariamente todos los riesgos asociados con actividades en entornos naturales, incluyendo pero no limitado a: senderismo, natación en ríos, contacto con fauna silvestre, y transporte en brujitas."
+msgstr "Acknowledges and voluntarily accepts all risks associated with activities in natural environments, including but not limited to: hiking, swimming in rivers, contact with wildlife, and transportation on brujitas."
+
+msgid "Asume total responsabilidad por su propia seguridad y bienestar, así como la de los menores bajo su supervisión."
+msgstr "Assumes full responsibility for their own safety and well-being, as well as that of minors under their supervision."
+
+msgid "Declara estar en condiciones físicas adecuadas para participar en las actividades ofrecidas."
+msgstr "Declares being in adequate physical condition to participate in the activities offered."
+
+msgid "Exoneración de Responsabilidad"
+msgstr "Liability Waiver"
+
+msgid "La comunidad de San Cipriano, sus miembros, representantes, guías y prestadores de servicios:"
+msgstr "The community of San Cipriano, its members, representatives, guides and service providers:"
+
+msgid "No serán responsables por lesiones personales, accidentes, enfermedades, pérdida o daño de pertenencias que puedan ocurrir durante la visita."
+msgstr "Will not be liable for personal injuries, accidents, illnesses, loss or damage to belongings that may occur during the visit."
+
+msgid "No serán responsables por eventos fuera de su control, incluyendo condiciones climáticas adversas, desastres naturales, o acciones de terceros."
+msgstr "Will not be liable for events beyond their control, including adverse weather conditions, natural disasters, or actions of third parties."
+
+msgid "Quedan exonerados de cualquier reclamación, demanda o acción legal derivada de la visita a la reserva."
+msgstr "Are exempt from any claim, demand or legal action arising from the visit to the reserve."
+
+msgid "Obligaciones del Visitante"
+msgstr "Visitor Responsibilities"
+
+msgid "El visitante se compromete a:"
+msgstr "The visitor agrees to:"
+
+msgid "Cumplir con todas las normas de protección y seguridad de la reserva."
+msgstr "Comply with all reserve protection and safety rules."
+
+msgid "Seguir las instrucciones de los guías locales en todo momento."
+msgstr "Follow the instructions of local guides at all times."
+
+msgid "No ingresar bajo efectos de alcohol o sustancias psicoactivas."
+msgstr "Not enter under the influence of alcohol or psychoactive substances."
+
+msgid "Supervisar a los menores de edad bajo su cargo en todo momento."
+msgstr "Supervise minors under their care at all times."
+
+msgid "Respetar el medio ambiente y la comunidad local."
+msgstr "Respect the environment and the local community."
+
+msgid "Salud y Seguridad"
+msgstr "Health and Safety"
+
+msgid "El visitante debe informar sobre cualquier condición médica, alergia o limitación física antes de realizar actividades."
+msgstr "Visitors must report any medical condition, allergy or physical limitation before engaging in activities."
+
+msgid "Se recomienda contar con seguro de viaje y/o seguro médico personal."
+msgstr "Travel insurance and/or personal medical insurance is recommended."
+
+msgid "La reserva no cuenta con servicios médicos de emergencia en el sitio. El centro médico más cercano se encuentra en Buenaventura."
+msgstr "The reserve does not have emergency medical services on site. The nearest medical center is located in Buenaventura."
+
+msgid "Reservas y Cancelaciones"
+msgstr "Reservations and Cancellations"
+
+msgid "Las reservas están sujetas a disponibilidad y confirmación por parte de la comunidad."
+msgstr "Reservations are subject to availability and confirmation by the community."
+
+msgid "Los precios son referenciales y pueden variar según temporada y servicios específicos."
+msgstr "Prices are for reference only and may vary according to season and specific services."
+
+msgid "La comunidad se reserva el derecho de modificar o cancelar servicios por condiciones climáticas u otras circunstancias."
+msgstr "The community reserves the right to modify or cancel services due to weather conditions or other circumstances."
+
+msgid "Aceptación de Términos"
+msgstr "Acceptance of Terms"
+
+msgid "Al realizar una reserva o ingresar a la reserva de San Cipriano, el visitante confirma que ha leído, comprendido y acepta íntegramente estos términos y condiciones, así como las normas de protección y seguridad de la reserva."
+msgstr "By making a reservation or entering the San Cipriano reserve, the visitor confirms that they have read, understood and fully accept these terms and conditions, as well as the reserve's protection and safety rules."
+
+msgid "Ver Normas de Protección"
+msgstr "View Protection Rules"
+
+msgid "Ver Normas de Seguridad"
+msgstr "View Safety Rules"
+
+# Photo Gallery
+msgid "Galería de San Cipriano"
+msgstr "San Cipriano Gallery"
+
+msgid "Imágenes reales de nuestra reserva natural. Ríos cristalinos, cascadas y la belleza del Pacífico colombiano."
+msgstr "Real images from our nature reserve. Crystal clear rivers, waterfalls, and the beauty of the Colombian Pacific."
+
+msgid "Cascadas"
+msgstr "Waterfalls"
+
+msgid "Aguas cristalinas"
+msgstr "Crystal clear waters"
+
+msgid "Ríos"
+msgstr "Rivers"
+
+msgid "Aguas Puras"
+msgstr "Pure Waters"
+
+msgid "Selva"
+msgstr "Jungle"
+
+msgid "Cascadas Naturales"
+msgstr "Natural Waterfalls"
+
+msgid "Descubre cascadas escondidas en la selva. Aguas cristalinas en un entorno mágico."
+msgstr "Discover hidden waterfalls in the jungle. Crystal clear waters in a magical setting."
+
+msgid "Selva y río de San Cipriano"
+msgstr "San Cipriano jungle and river"
+
+msgid "Río cristalino de San Cipriano"
+msgstr "Crystal clear river of San Cipriano"
+
+msgid "Cascada en San Cipriano"
+msgstr "Waterfall in San Cipriano"
+
+msgid "Piedras del río"
+msgstr "River stones"
+
+msgid "Río en la selva"
+msgstr "River in the jungle"
+
+msgid "Hotel y restaurante comunitario"
+msgstr "Community hotel and restaurant"
+
+# Lightbox and Gallery
+msgid "Haz clic en las fotos para ampliar"
+msgstr "Click on photos to enlarge"
+
+msgid "Aguas cristalinas en un entorno mágico"
+msgstr "Crystal clear waters in a magical setting"
+
+msgid "Ríos Cristalinos"
+msgstr "Crystal Clear Rivers"
+
+msgid "Aguas transparentes del Pacífico colombiano"
+msgstr "Transparent waters of the Colombian Pacific"
+
+msgid "Piedras del Río"
+msgstr "River Stones"
+
+msgid "Formaciones naturales en aguas cristalinas"
+msgstr "Natural formations in crystal clear waters"
+
+msgid "Selva Tropical"
+msgstr "Tropical Jungle"
+
+msgid "Río serpenteando a través de la selva"
+msgstr "River winding through the jungle"
+
+msgid "Hospedaje Comunitario"
+msgstr "Community Lodging"
+
+msgid "Alojamiento gestionado por la comunidad local"
+msgstr "Accommodation managed by the local community"
+
+# Testimonials Section
+msgid "Lo que dicen nuestros visitantes"
+msgstr "What our visitors say"
+
+msgid "Experiencias reales de quienes han visitado San Cipriano"
+msgstr "Real experiences from those who have visited San Cipriano"
+
+msgid "Una experiencia inolvidable. Los ríos cristalinos y la brujita son únicos en el mundo. La comunidad nos recibió con los brazos abiertos."
+msgstr "An unforgettable experience. The crystal clear rivers and the brujita are unique in the world. The community welcomed us with open arms."
+
+msgid "Bogotá, Colombia"
+msgstr "Bogotá, Colombia"
+
+msgid "El paraíso escondido de Colombia. Las cascadas, la selva y la amabilidad de la gente hacen de este lugar algo especial."
+msgstr "Colombia's hidden paradise. The waterfalls, the jungle, and the kindness of the people make this place special."
+
+msgid "Medellín, Colombia"
+msgstr "Medellín, Colombia"
+
+msgid "Viajamos desde España y valió cada momento. El turismo comunitario es el futuro y San Cipriano es el ejemplo perfecto."
+msgstr "We traveled from Spain and it was worth every moment. Community tourism is the future and San Cipriano is the perfect example."
+
+msgid "Madrid, España"
+msgstr "Madrid, Spain"
+
+# Protection page
+msgid "San Cipriano es un ecosistema único y frágil. Cada visitante tiene la responsabilidad de protegerlo para las futuras generaciones."
+msgstr "San Cipriano is a unique and fragile ecosystem. Every visitor has the responsibility to protect it for future generations."
+
+msgid "La reserva de San Cipriano es protegida por su comunidad. Tu visita responsable es esencial para mantener este paraíso natural. Por favor, lee y respeta todas las normas."
+msgstr "The San Cipriano reserve is protected by its community. Your responsible visit is essential to maintain this natural paradise. Please read and respect all the rules."
+
+msgid "Cuidado del Entorno Natural"
+msgstr "Environmental Care"
+
+msgid "Cada visitante se lleva su basura"
+msgstr "Every visitor takes their trash with them"
+
+msgid "No existen sistemas de recolección en la reserva. Todo lo que traigas, lo llevas de regreso contigo."
+msgstr "There are no collection systems in the reserve. Everything you bring, you take back with you."
+
+msgid "Respeta la vegetación"
+msgstr "Respect the vegetation"
+
+msgid "No cortes plantas, no arranques flores, no dañes los árboles. Cada planta es parte del ecosistema."
+msgstr "Do not cut plants, do not pick flowers, do not damage trees. Every plant is part of the ecosystem."
+
+msgid "Mantén el silencio natural"
+msgstr "Maintain natural silence"
+
+msgid "Evita ruidos fuertes y música alta. Los animales y otros visitantes merecen disfrutar la paz del bosque."
+msgstr "Avoid loud noises and loud music. Animals and other visitors deserve to enjoy the peace of the forest."
+
+msgid "Prohibido Extraer"
+msgstr "Extraction Prohibited"
+
+msgid "Está terminantemente prohibido extraer de la reserva:"
+msgstr "It is strictly prohibited to extract from the reserve:"
+
+msgid "Animales o especies"
+msgstr "Animals or species"
+
+msgid "Plantas o flores"
+msgstr "Plants or flowers"
+
+msgid "Objetos naturales"
+msgstr "Natural objects"
+
+msgid "Prohibido Ingresar"
+msgstr "Entry Prohibited"
+
+msgid "No se permite el ingreso a la reserva con:"
+msgstr "Entry to the reserve is not allowed with:"
+
+msgid "Drogas"
+msgstr "Drugs"
+
+msgid "Objetos cortopunzantes"
+msgstr "Sharp objects"
+
+msgid "Turismo Consciente y Respetuoso"
+msgstr "Conscious and Respectful Tourism"
+
+msgid "Camina solo por los senderos establecidos"
+msgstr "Walk only on established trails"
+
+msgid "Observa los animales a distancia, sin molestarlos"
+msgstr "Observe animals from a distance, without disturbing them"
+
+msgid "No alimentes a los animales silvestres"
+msgstr "Do not feed wild animals"
+
+msgid "No uses protector solar - los químicos contaminan el río. Usa gorra, camisa manga larga o sombrilla"
+msgstr "Do not use sunscreen - chemicals contaminate the river. Use a hat, long-sleeved shirt or umbrella"
+
+msgid "Respeta a la comunidad local y sus tradiciones"
+msgstr "Respect the local community and their traditions"
+
+msgid "Gracias por cuidar nuestra casa"
+msgstr "Thank you for taking care of our home"
+
+msgid "San Cipriano es el hogar de nuestra comunidad y de miles de especies. Tu respeto y cuidado nos ayudan a preservarlo para las generaciones futuras."
+msgstr "San Cipriano is home to our community and thousands of species. Your respect and care help us preserve it for future generations."
+
+# Safety page
+msgid "Tu seguridad es nuestra prioridad. Lee atentamente estas normas antes de tu visita."
+msgstr "Your safety is our priority. Read these rules carefully before your visit."
+
+msgid "SECCIÓN CRÍTICA: El incumplimiento de estas normas puede poner en riesgo tu vida."
+msgstr "CRITICAL SECTION: Failure to comply with these rules may put your life at risk."
+
+msgid "Recorrido Solo con Guías"
+msgstr "Tours Only with Guides"
+
+msgid "El recorrido por la reserva SOLO se realiza con guías autorizados de la comunidad. No está permitido adentrarse solo en los senderos o áreas naturales."
+msgstr "Tours through the reserve are ONLY conducted with authorized community guides. It is not allowed to venture alone into trails or natural areas."
+
+msgid "Obligaciones del Visitante"
+msgstr "Visitor Obligations"
+
+msgid "Seguir instrucciones del guía"
+msgstr "Follow guide instructions"
+
+msgid "Las indicaciones del guía son obligatorias. Ellos conocen los riesgos y las rutas seguras."
+msgstr "The guide's instructions are mandatory. They know the risks and safe routes."
+
+msgid "Usar chaleco salvavidas"
+msgstr "Wear a life jacket"
+
+msgid "El uso de chaleco salvavidas y flotadores es OBLIGATORIO en todas las actividades acuáticas."
+msgstr "The use of life jackets and floats is MANDATORY in all water activities."
+
+msgid "Permanecer en grupo"
+msgstr "Stay with the group"
+
+msgid "No te separes del grupo ni del guía en ningún momento durante el recorrido."
+msgstr "Do not separate from the group or guide at any time during the tour."
+
+msgid "Riesgo de Ahogamiento"
+msgstr "Drowning Risk"
+
+msgid "Los ríos de San Cipriano tienen corrientes naturales y profundidades variables. El riesgo de ahogamiento es REAL si no se siguen las instrucciones de seguridad."
+msgstr "San Cipriano's rivers have natural currents and variable depths. The risk of drowning is REAL if safety instructions are not followed."
+
+msgid "No nades en áreas no autorizadas"
+msgstr "Do not swim in unauthorized areas"
+
+msgid "No saltes de rocas al agua sin autorización"
+msgstr "Do not jump from rocks into water without authorization"
+
+msgid "No ingreses al agua bajo efectos de alcohol"
+msgstr "Do not enter the water under the influence of alcohol"
+
+msgid "Respeta los límites de las áreas de baño"
+msgstr "Respect the limits of swimming areas"
+
+msgid "Menores de Edad"
+msgstr "Minors"
+
+msgid "La responsabilidad de los menores de edad es TOTAL de sus padres o acudientes."
+msgstr "The responsibility for minors is ENTIRELY that of their parents or guardians."
+
+msgid "Los menores NO pueden estar sin supervisión adulta en NINGÚN momento."
+msgstr "Minors CANNOT be without adult supervision at ANY time."
+
+msgid "Los menores deben usar chaleco salvavidas en TODO momento cerca del agua."
+msgstr "Minors must wear a life jacket at ALL times near water."
+
+msgid "Descargo de Responsabilidad"
+msgstr "Disclaimer"
+
+msgid "La comunidad de San Cipriano no se hace responsable por accidentes o incidentes que ocurran como consecuencia del incumplimiento de estas normas de seguridad. Al visitar la reserva, aceptas seguir todas las indicaciones de seguridad."
+msgstr "The San Cipriano community is not responsible for accidents or incidents that occur as a result of non-compliance with these safety rules. By visiting the reserve, you agree to follow all safety instructions."
+
+msgid "Al planificar tu visita, confirmas que has leído y aceptas estas normas de seguridad."
+msgstr "By planning your visit, you confirm that you have read and accept these safety rules."
+
+msgid "He leído las normas - Planificar Visita"
+msgstr "I have read the rules - Plan Visit"
+
+# Biodiversity page
+msgid "Biodiversidad y Experiencias"
+msgstr "Biodiversity and Experiences"
+
+msgid "Descubre la increíble diversidad de vida que habita en nuestra reserva natural."
+msgstr "Discover the incredible diversity of life that inhabits our nature reserve."
+
+msgid "San Cipriano es hogar de cientos de especies de aves, anfibios, mamíferos y plantas. Cada visita es una oportunidad para conectar con la naturaleza en su estado más puro."
+msgstr "San Cipriano is home to hundreds of species of birds, amphibians, mammals and plants. Every visit is an opportunity to connect with nature in its purest state."
+
+msgid "Más de 200 especies de aves habitan en San Cipriano. Tucanes, colibríes, tangaras y muchas más esperan ser descubiertas por los amantes de la observación de aves."
+msgstr "More than 200 bird species inhabit San Cipriano. Toucans, hummingbirds, tanagers and many more await discovery by bird watching enthusiasts."
+
+msgid "Tucanes"
+msgstr "Toucans"
+
+msgid "Colibríes"
+msgstr "Hummingbirds"
+
+msgid "Tangaras"
+msgstr "Tanagers"
+
+msgid "Loros y pericos"
+msgstr "Parrots and parakeets"
+
+msgid "Nuestra reserva es hogar de especies únicas de ranas, incluyendo las famosas ranas venenosas de colores brillantes. Un espectáculo natural impresionante."
+msgstr "Our reserve is home to unique frog species, including the famous brightly colored poison dart frogs. An impressive natural spectacle."
+
+msgid "Ranas venenosas (Dendrobates)"
+msgstr "Poison dart frogs (Dendrobates)"
+
+msgid "Ranas de cristal"
+msgstr "Glass frogs"
+
+msgid "Salamandras"
+msgstr "Salamanders"
+
+msgid "Monos, perezosos, armadillos y más habitan nuestros bosques."
+msgstr "Monkeys, sloths, armadillos and more inhabit our forests."
+
+msgid "Miles de especies de mariposas e insectos llenan de vida la selva."
+msgstr "Thousands of butterfly and insect species fill the jungle with life."
+
+msgid "Orquídeas, heliconias, bromelias y árboles centenarios."
+msgstr "Orchids, heliconias, bromeliads and century-old trees."
+
+msgid "Vive la naturaleza de manera responsable con nuestros guías locales."
+msgstr "Experience nature responsibly with our local guides."
+
+msgid "Senderismo en la Selva"
+msgstr "Jungle Hiking"
+
+msgid "Caminatas guiadas por senderos ancestrales, conociendo la flora y fauna local."
+msgstr "Guided hikes through ancestral trails, discovering local flora and fauna."
+
+msgid "Baño en el Río"
+msgstr "River Swimming"
+
+msgid "Disfruta de las aguas cristalinas en charcos naturales supervisados."
+msgstr "Enjoy crystal clear waters in supervised natural pools."
+
+msgid "Tour Nocturno"
+msgstr "Night Tour"
+
+msgid "Descubre la vida nocturna de la selva: ranas, insectos y sonidos mágicos."
+msgstr "Discover the nightlife of the jungle: frogs, insects and magical sounds."
+
+msgid "Turismo Educativo y de Conservación"
+msgstr "Educational and Conservation Tourism"
+
+msgid "Todas nuestras experiencias tienen un enfoque educativo. Aprenderás sobre la importancia de conservar estos ecosistemas y cómo cada especie cumple un rol vital en el equilibrio natural."
+msgstr "All our experiences have an educational focus. You will learn about the importance of conserving these ecosystems and how each species plays a vital role in the natural balance."
+
+msgid "¿Quieres vivir estas experiencias?"
+msgstr "Do you want to live these experiences?"
+
+msgid "Completa el formulario y te enviaremos información sobre disponibilidad y cómo participar."
+msgstr "Complete the form and we will send you information about availability and how to participate."
+
+msgid "Recorridos al amanecer con guías expertos para observar las aves de la región."
+msgstr "Dawn tours with expert guides to observe the birds of the region."
+
+# Services page
+msgid "Servicios y Precios"
+msgstr "Services and Prices"
+
+msgid "Servicios gestionados directamente por la comunidad de San Cipriano. Precios promedio por persona."
+msgstr "Services managed directly by the San Cipriano community. Average prices per person."
+
+msgid "Hoteles y alojamientos comunitarios en armonía con la naturaleza. Incluye habitación privada o compartida con ventilador."
+msgstr "Hotels and community lodging in harmony with nature. Includes private or shared room with fan."
+
+msgid "Por persona/noche"
+msgstr "Per person/night"
+
+msgid "Alimentacion"
+msgstr "Food"
+
+msgid "Gastronomia local preparada por la comunidad. Desayuno, almuerzo y cena con productos frescos del Pacifico."
+msgstr "Local gastronomy prepared by the community. Breakfast, lunch and dinner with fresh Pacific products."
+
+msgid "Por comida"
+msgstr "Per meal"
+
+msgid "Brujitas"
+msgstr "Brujitas"
+
+msgid "La experiencia unica de viajar en los famosos carros sobre rieles. Recorrido de 3km atravesando la selva."
+msgstr "The unique experience of traveling on the famous rail carts. 3km journey through the jungle."
+
+msgid "Ida y vuelta"
+msgstr "Round trip"
+
+msgid "Estacionamiento seguro y vigilado para tu vehiculo en la entrada de la reserva, cerca de la estacion de brujitas."
+msgstr "Safe and guarded parking for your vehicle at the reserve entrance, near the brujitas station."
+
+msgid "Por dia"
+msgstr "Per day"
+
+msgid "Entrada Reserva"
+msgstr "Reserve Entry"
+
+msgid "Acceso a los senderos, rios cristalinos y espacios naturales de la reserva. Incluye uso de charcos y zonas de descanso."
+msgstr "Access to trails, crystal clear rivers and natural spaces of the reserve. Includes use of pools and rest areas."
+
+msgid "Por persona"
+msgstr "Per person"
+
+msgid "Recorridos con guias locales expertos. Senderismo, avistamiento de aves, caminata nocturna y visita a cascadas."
+msgstr "Tours with expert local guides. Hiking, bird watching, night walk and waterfall visit."
+
+msgid "Por tour"
+msgstr "Per tour"
+
+msgid "Ejemplo: Fin de Semana (2 dias/1 noche)"
+msgstr "Example: Weekend (2 days/1 night)"
+
+msgid "Precio estimado por persona incluyendo servicios basicos"
+msgstr "Estimated price per person including basic services"
+
+msgid "Aproximadamente $32 USD"
+msgstr "Approximately $32 USD"
+
+msgid "Reservar Ahora"
+msgstr "Book Now"
+
+msgid "Como Llegar"
+msgstr "How to Get There"
+
+msgid "Desde Cali"
+msgstr "From Cali"
+
+msgid "Tomar la via Cali - Buenaventura (aproximadamente 3 horas)"
+msgstr "Take the Cali - Buenaventura road (approximately 3 hours)"
+
+msgid "Antes de llegar a Buenaventura, desviarse hacia Cordoba (km 74)"
+msgstr "Before reaching Buenaventura, turn off towards Cordoba (km 74)"
+
+msgid "Llegar al parqueadero de la estacion de brujitas"
+msgstr "Arrive at the brujitas station parking lot"
+
+msgid "Tomar la brujita hacia San Cipriano (15-20 minutos)"
+msgstr "Take the brujita to San Cipriano (15-20 minutes)"
+
+msgid "Informacion Importante"
+msgstr "Important Information"
+
+msgid "Las brujitas operan desde las 6am hasta las 6pm"
+msgstr "The brujitas operate from 6am to 6pm"
+
+msgid "Se recomienda llegar antes de las 4pm para instalarse"
+msgstr "It is recommended to arrive before 4pm to settle in"
+
+msgid "Coordenadas GPS: 3.8167° N, 76.8833° W"
+msgstr "GPS Coordinates: 3.8167° N, 76.8833° W"
+
+msgid "El parqueadero tiene vigilancia 24 horas"
+msgstr "The parking lot has 24-hour surveillance"
+
+msgid "Que Llevar"
+msgstr "What to Bring"
+
+msgid "Esencial"
+msgstr "Essential"
+
+msgid "Ropa comoda y fresca"
+msgstr "Comfortable and cool clothing"
+
+msgid "Traje de bano"
+msgstr "Swimsuit"
+
+msgid "Zapatos para agua"
+msgstr "Water shoes"
+
+msgid "Gorra o sombrero"
+msgstr "Hat or cap"
+
+msgid "Careta de snorkel"
+msgstr "Snorkel mask"
+
+msgid "Ropa manga larga (protección contra insectos y sol)"
+msgstr "Long-sleeved clothing (insect and sun protection)"
+
+msgid "Toalla"
+msgstr "Towel"
+
+msgid "Recomendado"
+msgstr "Recommended"
+
+msgid "Linterna"
+msgstr "Flashlight"
+
+msgid "Camara fotografica"
+msgstr "Camera"
+
+msgid "Binoculares"
+msgstr "Binoculars"
+
+msgid "Botiquin basico"
+msgstr "Basic first aid kit"
+
+msgid "Efectivo o Nequi (no hay cajeros)"
+msgstr "Cash or Nequi (no ATMs)"
+
+msgid "Bolsas para basura"
+msgstr "Trash bags"
+
+msgid "Cargador portatil"
+msgstr "Portable charger"
+
+msgid "No Llevar"
+msgstr "Do Not Bring"
+
+msgid "Bebidas alcoholicas"
+msgstr "Alcoholic beverages"
+
+msgid "Parlantes grandes"
+msgstr "Large speakers"
+
+msgid "Plastico de un solo uso"
+msgstr "Single-use plastic"
+
+msgid "Mascotas"
+msgstr "Pets"
+
+msgid "Contacto Directo"
+msgstr "Direct Contact"
+
+msgid "Para reservas y consultas, contactanos directamente:"
+msgstr "For reservations and inquiries, contact us directly:"
+
+msgid "Enviar Email"
+msgstr "Send Email"
+
+# FAQ page
+msgid "Respuestas a las dudas más comunes sobre tu visita a San Cipriano."
+msgstr "Answers to the most common questions about your visit to San Cipriano."
+
+msgid "¿Cómo llego a San Cipriano?"
+msgstr "How do I get to San Cipriano?"
+
+msgid "Las indicaciones exactas de llegada se proporcionan después de completar el formulario de registro. Esto nos ayuda a proteger la reserva y garantizar una visita organizada."
+msgstr "Exact arrival directions are provided after completing the registration form. This helps us protect the reserve and ensure an organized visit."
+
+msgid "¿Cuánto cuesta visitar San Cipriano?"
+msgstr "How much does it cost to visit San Cipriano?"
+
+msgid "Los costos varían según los servicios que necesites, el número de personas y la duración de tu estadía. Una vez completes el formulario, te enviaremos información personalizada con precios exactos."
+msgstr "Costs vary depending on the services you need, the number of people and the length of your stay. Once you complete the form, we will send you personalized information with exact prices."
+
+msgid "¿Necesito reservar con anticipación?"
+msgstr "Do I need to book in advance?"
+
+msgid "Sí, recomendamos contactarnos con al menos una semana de anticipación, especialmente en temporada alta y fines de semana. Esto nos permite organizar mejor tu experiencia."
+msgstr "Yes, we recommend contacting us at least a week in advance, especially during high season and weekends. This allows us to better organize your experience."
+
+msgid "¿Puedo llevar niños?"
+msgstr "Can I bring children?"
+
+msgid "Sí, San Cipriano es apto para familias. Sin embargo, los niños deben estar siempre supervisados por un adulto y usar chaleco salvavidas en todas las actividades acuáticas."
+msgstr "Yes, San Cipriano is suitable for families. However, children must always be supervised by an adult and wear a life jacket in all water activities."
+
+msgid "¿Qué debo llevar?"
+msgstr "What should I bring?"
+
+msgid "Recomendamos: ropa cómoda de colores claros, manga larga para protección contra insectos, zapatos para agua, traje de baño, gorra o sombrero (NO protector solar ni repelente químico - contaminan el río), careta de snorkel, toalla, y una bolsa para tu basura."
+msgstr "We recommend: comfortable light-colored clothing, long sleeves for insect protection, water shoes, swimsuit, hat or cap (NO sunscreen or chemical repellent - they contaminate the river), snorkel mask, towel, and a bag for your trash."
+
+msgid "¿Hay señal de celular?"
+msgstr "Is there cell phone signal?"
+
+msgid "La señal de celular es limitada en San Cipriano. Esto es parte de la experiencia de desconexión con la naturaleza. Algunos hospedajes tienen WiFi básico."
+msgstr "Cell phone signal is limited in San Cipriano. This is part of the nature disconnection experience. Some accommodations have basic WiFi."
+
+msgid "¿Qué son las 'brujitas'?"
+msgstr "What are the 'brujitas'?"
+
+msgid "Las brujitas son pequeños carros sobre rieles impulsados por motocicletas. Son el transporte tradicional para llegar a San Cipriano y una experiencia única en sí misma."
+msgstr "The brujitas are small rail carts powered by motorcycles. They are the traditional transport to get to San Cipriano and a unique experience in itself."
+
+msgid "¿Tienes más preguntas?"
+msgstr "Do you have more questions?"
+
+msgid "Contáctanos directamente o completa el formulario y responderemos todas tus dudas."
+msgstr "Contact us directly or complete the form and we will answer all your questions."
+
+msgid "Completar Formulario"
+msgstr "Complete Form"
+
+msgid "WhatsApp"
+msgstr "WhatsApp"

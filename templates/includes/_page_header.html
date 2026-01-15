@@ -1,0 +1,27 @@
+{% comment %}
+Page Header Component
+Usage: {% include 'includes/_page_header.html' with emoji="🌿" title=page_title description=page_description gradient_from="selva-700" gradient_to="selva-900" %}
+
+Parameters:
+- emoji: The decorative emoji icon (default: "🌿")
+- title: Page title text
+- description: Optional subtitle/description text
+- gradient_from: Starting gradient color (default: "selva-700")
+- gradient_to: Ending gradient color (default: "selva-900")
+{% endcomment %}
+
+<section class="bg-gradient-to-br from-{{ gradient_from|default:'selva-700' }} to-{{ gradient_to|default:'selva-900' }} text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        {% if emoji %}
+        <span class="inline-block text-6xl mb-4">{{ emoji }}</span>
+        {% endif %}
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {{ title }}
+        </h1>
+        {% if description %}
+        <p class="text-selva-100 text-lg max-w-2xl mx-auto">
+            {{ description }}
+        </p>
+        {% endif %}
+    </div>
+</section>

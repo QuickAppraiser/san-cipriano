@@ -4,9 +4,13 @@
 {% block title %}{% trans "Sobre San Cipriano" %}{% endblock %}
 
 {% block content %}
-<!-- Header -->
-<section class="bg-gradient-to-br from-selva-700 to-selva-900 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
+<!-- Header with Background Image -->
+<section class="relative bg-gradient-to-br from-selva-700 to-selva-900 text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 opacity-40">
+        <img src="{% static 'images/gallery/cascada.jpg' %}" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-selva-900/60 to-selva-900/80"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
         <span class="inline-block text-6xl mb-4">🌿</span>
         <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
             {% trans "Sobre San Cipriano" %}
@@ -32,17 +36,42 @@
                 <p class="text-gray-600 mb-4">
                     {% trans "Rodeado de selva húmeda tropical, ríos cristalinos y una biodiversidad impresionante, San Cipriano es un santuario natural protegido por su comunidad." %}
                 </p>
-                <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
-                    <p class="text-amber-800 text-sm">
-                        <strong>{% trans "Nota:" %}</strong> {% trans "Las indicaciones exactas de llegada se proporcionan después del registro para proteger la reserva." %}
-                    </p>
+
+                <!-- GPS Coordinates -->
+                <div class="bg-selva-50 border border-selva-200 rounded-xl p-4 mb-4">
+                    <p class="text-selva-800 text-sm font-medium mb-2">{% trans "Coordenadas GPS:" %}</p>
+                    <p class="text-selva-700 font-mono text-lg">3.8167° N, 76.8833° W</p>
+                </div>
+
+                <!-- How to get there -->
+                <div class="bg-rio-50 border border-rio-200 rounded-xl p-4">
+                    <p class="text-rio-800 text-sm font-medium mb-2">{% trans "Cómo llegar:" %}</p>
+                    <ul class="text-rio-700 text-sm space-y-1">
+                        <li>{% trans "Desde Cali: Tomar la vía al mar hacia Buenaventura (~3 horas)" %}</li>
+                        <li>{% trans "Pasar Buenaventura y continuar hacia Córdoba (~20 min)" %}</li>
+                        <li>{% trans "Detenerse en la estación de las Brujitas" %}</li>
+                        <li>{% trans "Tomar la brujita hacia San Cipriano (~30 min)" %}</li>
+                    </ul>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-selva-100 to-rio-100 rounded-2xl h-64 flex items-center justify-center">
-                <!-- Placeholder for map or image -->
-                <div class="text-center text-selva-600">
-                    <span class="text-6xl block mb-2">🗺️</span>
-                    <p class="text-sm">{% trans "Valle del Cauca, Colombia" %}</p>
+            <div class="relative rounded-2xl overflow-hidden h-80">
+                <img src="{% static 'images/gallery/rio-cristalino.jpg' %}" alt="{% trans 'Río cristalino de San Cipriano' %}" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <p class="font-semibold text-lg mb-1">{% trans "Valle del Cauca, Colombia" %}</p>
+                    <div class="text-sm text-white/80 space-y-1 mb-3">
+                        <p>{% trans "A 100 km de Cali" %}</p>
+                        <p>{% trans "A 20 km de Buenaventura" %}</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=3.8167,-76.8833"
+                       target="_blank"
+                       class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-lg hover:bg-white/30 transition-colors border border-white/30">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        {% trans "Ver en Google Maps" %}
+                    </a>
                 </div>
             </div>
         </div>

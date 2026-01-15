@@ -164,3 +164,7 @@ nginx/ssl/
 # Temporary files
 tmp/
 temp/
+
+# Windows special files
+nul
+NUL

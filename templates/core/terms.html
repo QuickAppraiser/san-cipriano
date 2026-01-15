@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Términos y Condiciones" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-gray-700 to-gray-900 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">📜</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {% trans "Términos y Condiciones" %}
+        </h1>
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+            {% trans "Al reservar o visitar San Cipriano, usted acepta los siguientes términos y condiciones." %}
+        </p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Important Notice -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-6 mb-12">
+            <div class="flex items-start gap-3">
+                <span class="text-2xl">⚠️</span>
+                <div>
+                    <h2 class="font-bold text-amber-900 mb-2">{% trans "Aviso Importante" %}</h2>
+                    <p class="text-amber-800">
+                        {% trans "Al realizar una reserva o visitar San Cipriano, usted declara haber leído, comprendido y aceptado todos los términos y condiciones aquí establecidos." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assumption of Risk -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-2xl">🏔️</div>
+                <h2 class="font-display text-2xl font-bold text-gray-900">{% trans "Asunción de Riesgo" %}</h2>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+                <p class="text-gray-700 mb-4">
+                    {% trans "San Cipriano es una reserva natural con actividades al aire libre que conllevan riesgos inherentes. Al visitar nuestra reserva, el visitante:" %}
+                </p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-500 mt-1">•</span>
+                        <span>{% trans "Reconoce y acepta voluntariamente todos los riesgos asociados con actividades en entornos naturales, incluyendo pero no limitado a: senderismo, natación en ríos, contacto con fauna silvestre, y transporte en brujitas." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-500 mt-1">•</span>
+                        <span>{% trans "Asume total responsabilidad por su propia seguridad y bienestar, así como la de los menores bajo su supervisión." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-red-500 mt-1">•</span>
+                        <span>{% trans "Declara estar en condiciones físicas adecuadas para participar en las actividades ofrecidas." %}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Liability Waiver -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-2xl">⚖️</div>
+                <h2 class="font-display text-2xl font-bold text-gray-900">{% trans "Exoneración de Responsabilidad" %}</h2>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <p class="text-gray-700 mb-4">
+                    {% trans "La comunidad de San Cipriano, sus miembros, representantes, guías y prestadores de servicios:" %}
+                </p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-gray-500 mt-1">•</span>
+                        <span>{% trans "No serán responsables por lesiones personales, accidentes, enfermedades, pérdida o daño de pertenencias que puedan ocurrir durante la visita." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-gray-500 mt-1">•</span>
+                        <span>{% trans "No serán responsables por eventos fuera de su control, incluyendo condiciones climáticas adversas, desastres naturales, o acciones de terceros." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-gray-500 mt-1">•</span>
+                        <span>{% trans "Quedan exonerados de cualquier reclamación, demanda o acción legal derivada de la visita a la reserva." %}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Visitor Responsibilities -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-selva-100 rounded-xl flex items-center justify-center text-2xl">✅</div>
+                <h2 class="font-display text-2xl font-bold text-gray-900">{% trans "Obligaciones del Visitante" %}</h2>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+                <p class="text-gray-700 mb-4">{% trans "El visitante se compromete a:" %}</p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>{% trans "Cumplir con todas las normas de protección y seguridad de la reserva." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>{% trans "Seguir las instrucciones de los guías locales en todo momento." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>{% trans "No ingresar bajo efectos de alcohol o sustancias psicoactivas." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>{% trans "Supervisar a los menores de edad bajo su cargo en todo momento." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>{% trans "Respetar el medio ambiente y la comunidad local." %}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Health and Safety -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">🏥</div>
+                <h2 class="font-display text-2xl font-bold text-gray-900">{% trans "Salud y Seguridad" %}</h2>
+            </div>
+            <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span>{% trans "El visitante debe informar sobre cualquier condición médica, alergia o limitación física antes de realizar actividades." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span>{% trans "Se recomienda contar con seguro de viaje y/o seguro médico personal." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span>{% trans "La reserva no cuenta con servicios médicos de emergencia en el sitio. El centro médico más cercano se encuentra en Buenaventura." %}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Reservations and Cancellations -->
+        <div class="mb-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-2xl">📅</div>
+                <h2 class="font-display text-2xl font-bold text-gray-900">{% trans "Reservas y Cancelaciones" %}</h2>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-1">•</span>
+                        <span>{% trans "Las reservas están sujetas a disponibilidad y confirmación por parte de la comunidad." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-1">•</span>
+                        <span>{% trans "Los precios son referenciales y pueden variar según temporada y servicios específicos." %}</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-amber-500 mt-1">•</span>
+                        <span>{% trans "La comunidad se reserva el derecho de modificar o cancelar servicios por condiciones climáticas u otras circunstancias." %}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Acceptance -->
+        <div class="bg-gradient-to-br from-selva-700 to-selva-900 rounded-2xl p-8 text-white text-center">
+            <span class="text-4xl mb-4 block">✓</span>
+            <h3 class="font-display text-2xl font-bold mb-3">{% trans "Aceptación de Términos" %}</h3>
+            <p class="text-selva-200 max-w-xl mx-auto">
+                {% trans "Al realizar una reserva o ingresar a la reserva de San Cipriano, el visitante confirma que ha leído, comprendido y acepta íntegramente estos términos y condiciones, así como las normas de protección y seguridad de la reserva." %}
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Back Links -->
+<section class="py-8 px-4 bg-gray-100">
+    <div class="max-w-2xl mx-auto flex flex-wrap justify-center gap-4">
+        <a href="{% url 'core:protection' %}" class="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-xl transition-colors">
+            {% trans "Ver Normas de Protección" %}
+        </a>
+        <a href="{% url 'core:safety' %}" class="inline-flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-xl transition-colors">
+            {% trans "Ver Normas de Seguridad" %}
+        </a>
+    </div>
+</section>
+{% endblock %}
