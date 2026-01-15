@@ -336,13 +336,25 @@
 
         // Language dropdown toggle
         document.getElementById('lang-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
             document.getElementById('lang-dropdown').classList.toggle('hidden');
         });
 
         // Close dropdown when clicking outside
-        document.addEventListener('click', function() {
-            document.getElementById('lang-dropdown').classList.add('hidden');
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('lang-dropdown');
+            const toggle = document.getElementById('lang-toggle');
+            if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Prevent language form submissions from bubbling to other forms
+        document.querySelectorAll('#lang-dropdown form').forEach(function(form) {
+            form.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
         });
 
         // Animate visitor counter on load
