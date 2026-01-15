@@ -2,7 +2,7 @@
 Content views - Static pages
 """
 
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView
 
 from .models import BiodiversityEntry, Experience, FAQ, BiodiversityCategory
 
@@ -21,50 +21,60 @@ class AboutView(TemplateView):
         return context
 
 
-class BiodiversityView(ListView):
+class BiodiversityView(TemplateView):
     """
     Biodiversity and experiences page.
+    Uses TemplateView to avoid database dependency.
     """
 
-    model = BiodiversityEntry
     template_name = "content/biodiversity.html"
-    context_object_name = "entries"
-
-    def get_queryset(self):
-        return BiodiversityEntry.objects.filter(is_active=True)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["page_title"] = "Biodiversidad y Experiencias"
-
-        # Group entries by category
+        context["entries"] = []
         context["categories"] = {}
-        for cat_value, cat_label in BiodiversityCategory.choices:
-            entries = self.get_queryset().filter(category=cat_value)
-            if entries.exists():
-                context["categories"][cat_label] = entries
+        context["experiences"] = []
 
-        # Add experiences
-        context["experiences"] = Experience.objects.filter(is_active=True)
+        # Try to load from database, but don't fail if tables don't exist
+        try:
+            entries = BiodiversityEntry.objects.filter(is_active=True)
+            context["entries"] = entries
+
+            # Group entries by category
+            for cat_value, cat_label in BiodiversityCategory.choices:
+                cat_entries = entries.filter(category=cat_value)
+                if cat_entries.exists():
+                    context["categories"][cat_label] = cat_entries
+
+            # Add experiences
+            context["experiences"] = Experience.objects.filter(is_active=True)
+        except Exception:
+            # Database tables don't exist yet - template will show static content
+            pass
 
         return context
 
 
-class FAQView(ListView):
+class FAQView(TemplateView):
     """
     Frequently asked questions page.
+    Uses TemplateView to avoid database dependency.
     """
 
-    model = FAQ
     template_name = "content/faq.html"
-    context_object_name = "faqs"
-
-    def get_queryset(self):
-        return FAQ.objects.filter(is_active=True)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["page_title"] = "Preguntas Frecuentes"
+        context["faqs"] = []
+
+        # Try to load from database, but don't fail if tables don't exist
+        try:
+            context["faqs"] = FAQ.objects.filter(is_active=True)
+        except Exception:
+            pass
+
         return context
 
 
