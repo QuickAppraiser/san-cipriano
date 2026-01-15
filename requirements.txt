@@ -18,6 +18,10 @@ django-extensions>=3.2.0
 python-decouple>=3.8
 whitenoise>=6.6.0
 
+# Cache (required by base.py)
+django-redis>=5.4.0
+redis>=5.0.0
+
 # WhatsApp Integration
 httpx>=0.26.0
 
