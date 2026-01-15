@@ -6,7 +6,8 @@ import os
 import dj_database_url
 from .base import *  # noqa: F401, F403
 
-DEBUG = False
+# Enable DEBUG temporarily to see errors (change to False for production)
+DEBUG = True
 
 # Render provides the RENDER_EXTERNAL_HOSTNAME environment variable
 ALLOWED_HOSTS = []
