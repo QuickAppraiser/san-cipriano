@@ -928,25 +928,25 @@ msgstr "Aproximadamente $32 USD"
 msgid "Reservar Ahora"
 msgstr "Reservar Agora"
 
-msgid "Como Llegar"
+msgid "Cómo Llegar"
 msgstr "Como Chegar"
 
 msgid "Desde Cali"
 msgstr "De Cali"
 
-msgid "Tomar la via Cali - Buenaventura (aproximadamente 3 horas)"
+msgid "Tomar la vía Cali - Buenaventura (aproximadamente 3 horas)"
 msgstr "Pegar a estrada Cali - Buenaventura (aproximadamente 3 horas)"
 
-msgid "Antes de llegar a Buenaventura, desviarse hacia Cordoba (km 74)"
+msgid "Antes de llegar a Buenaventura, desviarse hacia Córdoba (km 74)"
 msgstr "Antes de chegar a Buenaventura, desviar para Córdoba (km 74)"
 
-msgid "Llegar al parqueadero de la estacion de brujitas"
+msgid "Llegar al parqueadero de la estación de brujitas"
 msgstr "Chegar ao estacionamento da estação das brujitas"
 
 msgid "Tomar la brujita hacia San Cipriano (15-20 minutos)"
 msgstr "Pegar a brujita para San Cipriano (15-20 minutos)"
 
-msgid "Informacion Importante"
+msgid "Información Importante"
 msgstr "Informações Importantes"
 
 msgid "Las brujitas operan desde las 6am hasta las 6pm"
@@ -961,16 +961,16 @@ msgstr "Coordenadas GPS: 3.8167° N, 76.8833° O"
 msgid "El parqueadero tiene vigilancia 24 horas"
 msgstr "O estacionamento tem vigilância 24 horas"
 
-msgid "Que Llevar"
+msgid "Qué Llevar"
 msgstr "O Que Levar"
 
 msgid "Esencial"
 msgstr "Essencial"
 
-msgid "Ropa comoda y fresca"
+msgid "Ropa cómoda y fresca"
 msgstr "Roupas confortáveis e frescas"
 
-msgid "Traje de bano"
+msgid "Traje de baño"
 msgstr "Roupa de banho"
 
 msgid "Zapatos para agua"
@@ -991,13 +991,13 @@ msgstr "Recomendado"
 msgid "Linterna"
 msgstr "Lanterna"
 
-msgid "Camara fotografica"
+msgid "Cámara fotográfica"
 msgstr "Câmera fotográfica"
 
 msgid "Binoculares"
 msgstr "Binóculos"
 
-msgid "Botiquin basico"
+msgid "Botiquín básico"
 msgstr "Kit de primeiros socorros"
 
 msgid "Efectivo (no hay cajeros)"
@@ -1024,7 +1024,7 @@ msgstr "Animais de estimação"
 msgid "Contacto Directo"
 msgstr "Contato Direto"
 
-msgid "Para reservas y consultas, contactanos directamente:"
+msgid "Para reservas y consultas, contáctanos directamente:"
 msgstr "Para reservas e consultas, entre em contato diretamente:"
 
 msgid "Enviar Email"
