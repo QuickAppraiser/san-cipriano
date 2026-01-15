@@ -20,9 +20,12 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        # Get visitor counter
-        counter = VisitorCounter.get_counter()
-        context["visitor_count"] = counter.total_count
+        # Get visitor counter (handle case where table doesn't exist yet)
+        try:
+            counter = VisitorCounter.get_counter()
+            context["visitor_count"] = counter.total_count
+        except Exception:
+            context["visitor_count"] = 180  # Default value
 
         return context
 
