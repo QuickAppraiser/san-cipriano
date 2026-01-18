@@ -1169,3 +1169,45 @@ msgstr "Ottieni prezzi migliori e garantisci il tuo soggiorno prenotando diretta
 
 msgid "Cotizar Ahora"
 msgstr "Richiedi Preventivo"
+
+msgid "Elige el paquete perfecto para tu aventura"
+msgstr "Scegli il pacchetto perfetto per la tua avventura"
+
+msgid "PAQUETE 1"
+msgstr "PACCHETTO 1"
+
+msgid "PAQUETE 2"
+msgstr "PACCHETTO 2"
+
+msgid "Estadía Básica"
+msgstr "Soggiorno Base"
+
+msgid "Experiencia Completa"
+msgstr "Esperienza Completa"
+
+msgid "3 comidas (desayuno, almuerzo, cena)"
+msgstr "3 pasti (colazione, pranzo, cena)"
+
+msgid "Tour completo incluye:"
+msgstr "Tour completo include:"
+
+msgid "Flotadores"
+msgstr "Galleggianti"
+
+msgid "Chalecos salvavidas"
+msgstr "Giubbotti salvagente"
+
+msgid "Tours a cascadas y pozos"
+msgstr "Tour alle cascate e piscine naturali"
+
+msgid "Recorridos guiados"
+msgstr "Visite guidate"
+
+msgid "Por persona - Todo incluido"
+msgstr "A persona - Tutto incluso"
+
+msgid "¡RECOMENDADO!"
+msgstr "CONSIGLIATO!"
+
+msgid "Los demás servicios (brujitas, parqueadero, entrada) se pagan por separado según los precios indicados arriba."
+msgstr "Gli altri servizi (brujitas, parcheggio, ingresso) si pagano separatamente secondo i prezzi indicati sopra."

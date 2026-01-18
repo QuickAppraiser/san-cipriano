@@ -1179,3 +1179,45 @@ msgstr "Get better prices and guarantee your stay by booking directly"
 
 msgid "Cotizar Ahora"
 msgstr "Get Quote"
+
+msgid "Elige el paquete perfecto para tu aventura"
+msgstr "Choose the perfect package for your adventure"
+
+msgid "PAQUETE 1"
+msgstr "PACKAGE 1"
+
+msgid "PAQUETE 2"
+msgstr "PACKAGE 2"
+
+msgid "Estadía Básica"
+msgstr "Basic Stay"
+
+msgid "Experiencia Completa"
+msgstr "Complete Experience"
+
+msgid "3 comidas (desayuno, almuerzo, cena)"
+msgstr "3 meals (breakfast, lunch, dinner)"
+
+msgid "Tour completo incluye:"
+msgstr "Complete tour includes:"
+
+msgid "Flotadores"
+msgstr "Floats"
+
+msgid "Chalecos salvavidas"
+msgstr "Life jackets"
+
+msgid "Tours a cascadas y pozos"
+msgstr "Tours to waterfalls and pools"
+
+msgid "Recorridos guiados"
+msgstr "Guided tours"
+
+msgid "Por persona - Todo incluido"
+msgstr "Per person - All inclusive"
+
+msgid "¡RECOMENDADO!"
+msgstr "RECOMMENDED!"
+
+msgid "Los demás servicios (brujitas, parqueadero, entrada) se pagan por separado según los precios indicados arriba."
+msgstr "Other services (brujitas, parking, entrance) are paid separately according to the prices listed above."

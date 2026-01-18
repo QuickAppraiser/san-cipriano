@@ -1169,3 +1169,45 @@ msgstr "Obtenez de meilleurs prix et garantissez votre séjour en réservant dir
 
 msgid "Cotizar Ahora"
 msgstr "Demander un Devis"
+
+msgid "Elige el paquete perfecto para tu aventura"
+msgstr "Choisissez le forfait parfait pour votre aventure"
+
+msgid "PAQUETE 1"
+msgstr "FORFAIT 1"
+
+msgid "PAQUETE 2"
+msgstr "FORFAIT 2"
+
+msgid "Estadía Básica"
+msgstr "Séjour Basique"
+
+msgid "Experiencia Completa"
+msgstr "Expérience Complète"
+
+msgid "3 comidas (desayuno, almuerzo, cena)"
+msgstr "3 repas (petit-déjeuner, déjeuner, dîner)"
+
+msgid "Tour completo incluye:"
+msgstr "Tour complet comprend:"
+
+msgid "Flotadores"
+msgstr "Bouées"
+
+msgid "Chalecos salvavidas"
+msgstr "Gilets de sauvetage"
+
+msgid "Tours a cascadas y pozos"
+msgstr "Tours aux cascades et bassins"
+
+msgid "Recorridos guiados"
+msgstr "Visites guidées"
+
+msgid "Por persona - Todo incluido"
+msgstr "Par personne - Tout compris"
+
+msgid "¡RECOMENDADO!"
+msgstr "RECOMMANDÉ!"
+
+msgid "Los demás servicios (brujitas, parqueadero, entrada) se pagan por separado según los precios indicados arriba."
+msgstr "Les autres services (brujitas, parking, entrée) sont payés séparément selon les prix indiqués ci-dessus."
