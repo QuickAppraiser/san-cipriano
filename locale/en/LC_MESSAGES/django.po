@@ -1097,3 +1097,85 @@ msgstr "Complete Form"
 
 msgid "WhatsApp"
 msgstr "WhatsApp"
+
+# Services page - New pricing messages
+msgid "¡Estos son precios promedio de referencia!"
+msgstr "These are average reference prices!"
+
+msgid "Los precios pueden variar según temporada y disponibilidad. Reserva con nosotros para garantizar tu estadía y evitar sobrecostos."
+msgstr "Prices may vary by season and availability. Book with us to guarantee your stay and avoid extra costs."
+
+msgid "Precios promedio individuales"
+msgstr "Average individual prices"
+
+msgid "Estos precios son referenciales si contratas cada servicio por separado. Con nuestros paquetes obtienes mejores precios y garantizas disponibilidad."
+msgstr "These prices are referential if you hire each service separately. With our packages you get better prices and guarantee availability."
+
+msgid "¡MEJOR PRECIO!"
+msgstr "BEST PRICE!"
+
+msgid "¡Reserva con Nosotros y Ahorra!"
+msgstr "Book with Us and Save!"
+
+msgid "Precios individuales (sin paquete)"
+msgstr "Individual prices (without package)"
+
+msgid "Total aproximado"
+msgstr "Approximate total"
+
+msgid "Con nuestro paquete"
+msgstr "With our package"
+
+msgid "Brujitas ida y vuelta"
+msgstr "Round trip brujitas"
+
+msgid "Hospedaje 1 noche"
+msgstr "1 night lodging"
+
+msgid "Alimentación completa"
+msgstr "Full meals"
+
+msgid "Entrada reserva"
+msgstr "Reserve entry"
+
+msgid "Garantía de reserva"
+msgstr "Reservation guarantee"
+
+msgid "Incluido"
+msgstr "Included"
+
+msgid "Desde"
+msgstr "From"
+
+msgid "¡Ahorra más de $50.000 COP por persona!"
+msgstr "Save over $50,000 COP per person!"
+
+msgid "Además garantizas tu estadía y evitas sobrecostos de temporada"
+msgstr "Plus you guarantee your stay and avoid seasonal surcharges"
+
+msgid "¿Listo para Reservar?"
+msgstr "Ready to Book?"
+
+msgid "Escríbenos por WhatsApp y te respondemos en minutos. Te ayudamos a armar el paquete perfecto para tu grupo."
+msgstr "Message us on WhatsApp and we'll respond in minutes. We'll help you create the perfect package for your group."
+
+msgid "Contactar por WhatsApp"
+msgstr "Contact via WhatsApp"
+
+msgid "Respuesta rápida"
+msgstr "Quick response"
+
+msgid "¿Prefieres email?"
+msgstr "Prefer email?"
+
+msgid "Gastronomía local"
+msgstr "Local gastronomy"
+
+msgid "¡Reserva con nosotros y ahorra hasta un 25%!"
+msgstr "Book with us and save up to 25%!"
+
+msgid "Obtén mejores precios y garantiza tu estadía reservando directamente"
+msgstr "Get better prices and guarantee your stay by booking directly"
+
+msgid "Cotizar Ahora"
+msgstr "Get Quote"

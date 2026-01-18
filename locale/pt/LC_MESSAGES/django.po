@@ -1087,3 +1087,85 @@ msgstr "Preencher Formulário"
 
 msgid "WhatsApp"
 msgstr "WhatsApp"
+
+# Services page - New pricing messages
+msgid "¡Estos son precios promedio de referencia!"
+msgstr "Estes são preços médios de referência!"
+
+msgid "Los precios pueden variar según temporada y disponibilidad. Reserva con nosotros para garantizar tu estadía y evitar sobrecostos."
+msgstr "Os preços podem variar de acordo com a temporada e disponibilidade. Reserve conosco para garantir sua estadia e evitar custos extras."
+
+msgid "Precios promedio individuales"
+msgstr "Preços médios individuais"
+
+msgid "Estos precios son referenciales si contratas cada servicio por separado. Con nuestros paquetes obtienes mejores precios y garantizas disponibilidad."
+msgstr "Estes preços são referenciais se você contratar cada serviço separadamente. Com nossos pacotes você obtém melhores preços e garante disponibilidade."
+
+msgid "¡MEJOR PRECIO!"
+msgstr "MELHOR PREÇO!"
+
+msgid "¡Reserva con Nosotros y Ahorra!"
+msgstr "Reserve Conosco e Economize!"
+
+msgid "Precios individuales (sin paquete)"
+msgstr "Preços individuais (sem pacote)"
+
+msgid "Total aproximado"
+msgstr "Total aproximado"
+
+msgid "Con nuestro paquete"
+msgstr "Com nosso pacote"
+
+msgid "Brujitas ida y vuelta"
+msgstr "Brujitas ida e volta"
+
+msgid "Hospedaje 1 noche"
+msgstr "Hospedagem 1 noite"
+
+msgid "Alimentación completa"
+msgstr "Alimentação completa"
+
+msgid "Entrada reserva"
+msgstr "Entrada na reserva"
+
+msgid "Garantía de reserva"
+msgstr "Garantia de reserva"
+
+msgid "Incluido"
+msgstr "Incluído"
+
+msgid "Desde"
+msgstr "A partir de"
+
+msgid "¡Ahorra más de $50.000 COP por persona!"
+msgstr "Economize mais de 50.000 COP por pessoa!"
+
+msgid "Además garantizas tu estadía y evitas sobrecostos de temporada"
+msgstr "Além disso, você garante sua estadia e evita custos extras de temporada"
+
+msgid "¿Listo para Reservar?"
+msgstr "Pronto para Reservar?"
+
+msgid "Escríbenos por WhatsApp y te respondemos en minutos. Te ayudamos a armar el paquete perfecto para tu grupo."
+msgstr "Escreva-nos no WhatsApp e respondemos em minutos. Ajudamos você a montar o pacote perfeito para seu grupo."
+
+msgid "Contactar por WhatsApp"
+msgstr "Contatar via WhatsApp"
+
+msgid "Respuesta rápida"
+msgstr "Resposta rápida"
+
+msgid "¿Prefieres email?"
+msgstr "Prefere e-mail?"
+
+msgid "Gastronomía local"
+msgstr "Gastronomia local"
+
+msgid "¡Reserva con nosotros y ahorra hasta un 25%!"
+msgstr "Reserve conosco e economize até 25%!"
+
+msgid "Obtén mejores precios y garantiza tu estadía reservando directamente"
+msgstr "Obtenha melhores preços e garanta sua estadia reservando diretamente"
+
+msgid "Cotizar Ahora"
+msgstr "Solicitar Orçamento"
