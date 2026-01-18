@@ -89,8 +89,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <!-- Birds -->
             <div class="bg-white rounded-2xl shadow-md overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
-                    <span class="text-8xl">🐦</span>
+                <div class="h-48 overflow-hidden">
+                    <img src="{% static 'images/gallery/info-avistamiento.jpg' %}" alt="{% trans 'Avistamiento de aves en San Cipriano' %}" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="font-display text-2xl font-bold text-gray-900 mb-3">{% trans "Aves" %}</h3>
@@ -109,7 +109,7 @@
             <!-- Amphibians -->
             <div class="bg-white rounded-2xl shadow-md overflow-hidden">
                 <div class="h-48 overflow-hidden">
-                    <img src="{% static 'images/gallery/rana-tropical.jpg' %}" alt="{% trans 'Rana tropical de San Cipriano' %}" class="w-full h-full object-cover">
+                    <img src="{% static 'images/gallery/rana.jpg' %}" alt="{% trans 'Rana tropical de San Cipriano' %}" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="font-display text-2xl font-bold text-gray-900 mb-3">{% trans "Anfibios" %}</h3>

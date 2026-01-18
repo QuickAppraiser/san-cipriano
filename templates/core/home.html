@@ -161,7 +161,7 @@
             <!-- Experience Cards with Real Photos -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div class="h-48 overflow-hidden">
-                    <img src="{% static 'images/gallery/rio-selva.jpg' %}" alt="{% trans 'Selva y río de San Cipriano' %}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <img src="{% static 'images/gallery/info-avistamiento.jpg' %}" alt="{% trans 'Avistamiento de aves en San Cipriano' %}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-5">
                     <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Avistamiento de Aves" %}</h3>
@@ -181,11 +181,11 @@
 
             <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <div class="h-48 overflow-hidden">
-                    <img src="{% static 'images/gallery/cascada.jpg' %}" alt="{% trans 'Cascada en San Cipriano' %}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <img src="{% static 'images/gallery/rana.jpg' %}" alt="{% trans 'Rana tropical de San Cipriano' %}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-5">
-                    <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Cascadas Naturales" %}</h3>
-                    <p class="text-gray-600 text-sm">{% trans "Descubre cascadas escondidas en la selva. Aguas cristalinas en un entorno mágico." %}</p>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Ranas y Anfibios" %}</h3>
+                    <p class="text-gray-600 text-sm">{% trans "Hogar de ranas venenosas y especies únicas. Un espectáculo de colores en la naturaleza." %}</p>
                 </div>
             </div>
         </div>
@@ -304,6 +304,63 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                     <div class="absolute bottom-3 left-3 text-white">
                         <p class="text-sm font-medium">{% trans "Hospedaje" %}</p>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brujita -->
+            <div class="col-span-1">
+                <div class="relative h-48 rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/brujita-operador.jpg' %}"
+                     data-title="{% trans 'Las Brujitas' %}"
+                     data-desc="{% trans 'Transporte tradicional sobre rieles' %}">
+                    <img src="{% static 'images/gallery/brujita-operador.jpg' %}" alt="{% trans 'Brujita y operador' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="text-sm font-medium">{% trans "Brujitas" %}</p>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estación Brujita -->
+            <div class="col-span-1">
+                <div class="relative h-48 rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/estacion-brujita.jpg' %}"
+                     data-title="{% trans 'Estación de Brujitas' %}"
+                     data-desc="{% trans 'Punto de partida de la aventura' %}">
+                    <img src="{% static 'images/gallery/estacion-brujita.jpg' %}" alt="{% trans 'Estación de brujitas' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="text-sm font-medium">{% trans "Estación" %}</p>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rana -->
+            <div class="col-span-1">
+                <div class="relative h-48 rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/rana.jpg' %}"
+                     data-title="{% trans 'Biodiversidad' %}"
+                     data-desc="{% trans 'Ranas y anfibios únicos de la región' %}">
+                    <img src="{% static 'images/gallery/rana.jpg' %}" alt="{% trans 'Rana tropical' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="text-sm font-medium">{% trans "Fauna" %}</p>
                     </div>
                     <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
                         <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
