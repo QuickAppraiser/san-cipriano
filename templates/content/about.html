@@ -163,9 +163,10 @@
 <section class="py-16 px-4 bg-rio-50">
     <div class="max-w-4xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="bg-gradient-to-br from-rio-200 to-rio-300 rounded-2xl h-64 flex items-center justify-center">
-                <!-- Placeholder for brujitas photo -->
-                <span class="text-8xl">🚃</span>
+            <div class="rounded-2xl h-64 overflow-hidden shadow-lg">
+                <img src="{% static 'images/gallery/brujita-operador.jpg' %}"
+                     alt="{% trans 'Operador de brujita en San Cipriano' %}"
+                     class="w-full h-full object-cover">
             </div>
             <div>
                 <span class="text-4xl mb-4 block">✨</span>
