@@ -91,7 +91,9 @@
             <!-- Transporte Brujitas -->
             <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
                 <div class="h-32 relative overflow-hidden">
-                    <img src="{% static 'images/gallery/brujita-operador.jpg' %}" alt="{% trans 'Brujita y operador' %}" class="w-full h-full object-cover">
+                    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <source src="{% static 'videos/brujitas.mp4' %}" type="video/mp4">
+                    </video>
                     <div class="absolute inset-0 bg-gradient-to-t from-rio-900/60 to-transparent flex items-end p-3">
                         <span class="text-4xl">🚃</span>
                     </div>
@@ -130,7 +132,7 @@
             <!-- Entrada Reserva -->
             <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
                 <div class="h-32 relative overflow-hidden">
-                    <img src="{% static 'images/gallery/entrada-pago.jpg' %}" alt="{% trans 'Entrada a la reserva' %}" class="w-full h-full object-cover">
+                    <img src="{% static 'images/gallery/entrada-bienvenidos.jpg' %}" alt="{% trans 'Entrada a la reserva' %}" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-selva-900/60 to-transparent flex items-end p-3">
                         <span class="text-4xl">🎫</span>
                     </div>
