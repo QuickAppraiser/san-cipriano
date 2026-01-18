@@ -85,17 +85,21 @@
                 </p>
             </div>
 
-            <!-- River Card -->
-            <div class="bg-rio-50 rounded-2xl p-6 border border-rio-100 hover:shadow-lg transition-shadow">
-                <div class="w-14 h-14 bg-rio-100 rounded-xl flex items-center justify-center text-3xl mb-4">
-                    🚃
+            <!-- River Card - Las Brujitas -->
+            <div class="bg-rio-50 rounded-2xl overflow-hidden border border-rio-100 hover:shadow-lg transition-shadow">
+                <div class="h-40 overflow-hidden">
+                    <img src="{% static 'images/gallery/brujitas-real.jpg' %}"
+                         alt="{% trans 'Las Brujitas - carros sobre rieles' %}"
+                         class="w-full h-full object-cover">
                 </div>
-                <h3 class="font-display text-xl font-bold text-rio-900 mb-2">
-                    {% trans "Las Brujitas" %}
-                </h3>
-                <p class="text-gray-600">
-                    {% trans "Vive la experiencia única de viajar en los tradicionales carros sobre rieles, una aventura que solo encontrarás aquí." %}
-                </p>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-rio-900 mb-2">
+                        {% trans "Las Brujitas" %}
+                    </h3>
+                    <p class="text-gray-600">
+                        {% trans "Vive la experiencia única de viajar en los tradicionales carros sobre rieles, una aventura que solo encontrarás aquí." %}
+                    </p>
+                </div>
             </div>
         </div>
 
