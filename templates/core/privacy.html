@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Política de Privacidad" %}{% endblock %}
+
+{% block meta_description %}{% trans "Política de privacidad de San Cipriano. Cómo recopilamos, usamos y protegemos tu información personal." %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="relative bg-gradient-to-br from-selva-700 to-selva-900 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-5xl mb-4">🔒</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {% trans "Política de Privacidad" %}
+        </h1>
+        <p class="text-selva-100 text-lg">
+            {% trans "Última actualización: Enero 2025" %}
+        </p>
+    </div>
+</section>
+
+<!-- Content -->
+<section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto prose prose-lg">
+
+        <!-- Introduction -->
+        <div class="bg-selva-50 border-l-4 border-selva-500 rounded-r-xl p-6 mb-8">
+            <p class="text-selva-900">
+                {% trans "En San Cipriano, respetamos tu privacidad. Esta política explica cómo recopilamos, usamos y protegemos tu información personal cuando utilizas nuestro sitio web." %}
+            </p>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-selva-900 mt-8 mb-4">
+            {% trans "1. Información que Recopilamos" %}
+        </h2>
+        <p class="text-gray-700 mb-4">
+            {% trans "Recopilamos información que nos proporcionas voluntariamente cuando:" %}
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <li>{% trans "Completas el formulario de consulta o reserva" %}</li>
+            <li>{% trans "Nos contactas por WhatsApp o correo electrónico" %}</li>
+            <li>{% trans "Navegas por nuestro sitio web" %}</li>
+        </ul>
+        <p class="text-gray-700 mb-4">
+            {% trans "La información que podemos recopilar incluye:" %}
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <li>{% trans "Nombre completo" %}</li>
+            <li>{% trans "Correo electrónico" %}</li>
+            <li>{% trans "Número de teléfono" %}</li>
+            <li>{% trans "Fechas de visita planificadas" %}</li>
+            <li>{% trans "Número de personas en tu grupo" %}</li>
+            <li>{% trans "Servicios de interés" %}</li>
+        </ul>
+
+        <h2 class="font-display text-2xl font-bold text-selva-900 mt-8 mb-4">
+            {% trans "2. Cómo Usamos tu Información" %}
+        </h2>
+        <p class="text-gray-700 mb-4">
+            {% trans "Utilizamos tu información personal para:" %}
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <li>{% trans "Responder a tus consultas sobre hospedaje y servicios" %}</li>
+            <li>{% trans "Coordinar tu visita a San Cipriano" %}</li>
+            <li>{% trans "Enviarte confirmaciones de reserva" %}</li>
+            <li>{% trans "Mejorar nuestros servicios turísticos" %}</li>
+            <li>{% trans "Cumplir con obligaciones legales" %}</li>
+        </ul>
+
+        <h2 class="font-display text-2xl font-bold text-selva-900 mt-8 mb-4">
+            {% trans "3. Compartir Información" %}
+        </h2>
+        <p class="text-gray-700 mb-6">
+            {% trans "NO vendemos, alquilamos ni compartimos tu información personal con terceros para fines de marketing. Solo compartimos información cuando:" %}
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <li>{% trans "Es necesario para coordinar tu visita con proveedores de servicios locales (hospedajes, guías)" %}</li>
+            <li>{% trans "Lo exige la ley colombiana" %}</li>
+            <li>{% trans "Tienes tu consentimiento explícito" %}</li>
+        </ul>
+
+        <h2 class="font-display text-2xl font-bold text-selva-900 mt-8 mb-4">
+            {% trans "4. Seguridad de los Datos" %}
+        </h2>
+        <p class="text-gray-700 mb-6">
+            {% trans "Implementamos medidas de seguridad para proteger tu información, incluyendo:" %}
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <li>{% trans "Conexión segura HTTPS en todo el sitio" %}</li>
+            <li>{% trans "Almacenamiento seguro de datos" %}</li>
+            <li>{% trans "Acceso restringido solo a personal autorizado" %}</li>
+        </ul>
+
+        <h2 class="font-display text-2xl font-bold text-selva-900 mt-8 mb-4">
+            {% trans "5. Tus Derechos" %}
+        </h2>
+        <p class="text-gray-700 mb-4">
+            {% trans "De acuerdo con la Ley 1581 de 2012 (Protección de Datos Personales de Colombia), tienes derecho a:" %}
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <li>{% trans "Conocer, actualizar y rectificar tus datos personales" %}</li>
+            <li>{% trans "Solicitar prueba de la autorización otorgada" %}</li>
+            <li>{% trans "Ser informado sobre el uso de tus datos" %}</li>
+            <li>{% trans "Presentar quejas ante la Superintendencia de Industria y Comercio" %}</li>
+            <li>{% trans "Revocar la autorización y/o solicitar la supresión de tus datos" %}</li>
+            <li>{% trans "Acceder de forma gratuita a tus datos personales" %}</li>
+        </ul>
+
+        <h2 class="font-display text-2xl font-bold text-selva-900 mt-8 mb-4">
+            {% trans "6. Retención de Datos" %}
+        </h2>
+        <p class="text-gray-700 mb-6">
+            {% trans "Conservamos tu información personal solo durante el tiempo necesario para cumplir con los fines para los cuales fue recopilada, o según lo requiera la ley. Generalmente, conservamos los datos de consultas por un período de 2 años." %}
+        </p>
+
+        <h2 class="font-display text-2xl font-bold text-selva-900 mt-8 mb-4">
+            {% trans "7. Contacto" %}
+        </h2>
+        <p class="text-gray-700 mb-4">
+            {% trans "Si tienes preguntas sobre esta política o deseas ejercer tus derechos, contáctanos:" %}
+        </p>
+        <div class="bg-gray-50 rounded-xl p-6 mb-6">
+            <ul class="text-gray-700 space-y-2">
+                <li><strong>{% trans "Email:" %}</strong> {{ community_email }}</li>
+                <li><strong>{% trans "WhatsApp:" %}</strong> {{ community_whatsapp }}</li>
+                <li><strong>{% trans "Ubicación:" %}</strong> {% trans "San Cipriano, Valle del Cauca, Colombia" %}</li>
+            </ul>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-selva-900 mt-8 mb-4">
+            {% trans "8. Cambios a esta Política" %}
+        </h2>
+        <p class="text-gray-700 mb-6">
+            {% trans "Podemos actualizar esta política ocasionalmente. La fecha de la última actualización aparece al inicio de este documento. Te recomendamos revisar esta página periódicamente." %}
+        </p>
+
+    </div>
+</section>
+
+<!-- Related Links -->
+<section class="py-12 px-4 bg-gray-100">
+    <div class="max-w-2xl mx-auto text-center">
+        <p class="text-gray-600 mb-4">{% trans "Ver también:" %}</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="{% url 'core:terms' %}" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                {% trans "Términos y Condiciones" %}
+            </a>
+            <a href="{% url 'core:cookies' %}" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                {% trans "Política de Cookies" %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

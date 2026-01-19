@@ -3,10 +3,16 @@
 
 {% block title %}{% trans "Planifica tu Visita" %}{% endblock %}
 
+{% block meta_description %}{% trans "Reserva tu visita a San Cipriano. Formulario de contacto directo con la comunidad. Hospedaje, alimentación, tours y transporte en brujitas." %}{% endblock %}
+
 {% block content %}
-<!-- Header -->
-<section class="bg-gradient-to-br from-rio-600 to-selva-700 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
+<!-- Header with Background Image -->
+<section class="relative bg-gradient-to-br from-rio-600 to-selva-700 text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 opacity-35">
+        <img src="{% static 'images/gallery/cascada.jpg' %}" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-selva-900/60 to-selva-900/80"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
         <span class="inline-block text-6xl mb-4">📋</span>
         <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
             {{ page_title }}
@@ -17,16 +23,27 @@
     </div>
 </section>
 
-<!-- Info Banner -->
-<section class="bg-amber-50 border-b border-amber-200 py-4 px-4">
-    <div class="max-w-4xl mx-auto">
-        <div class="flex items-center justify-center gap-3 text-amber-800">
-            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <p class="text-sm font-medium">
-                {% trans "Los detalles y costos exactos se envían de forma personalizada después del registro." %}
-            </p>
+<!-- Book in Advance Banner -->
+<section class="bg-gradient-to-r from-selva-600 to-selva-700 border-b border-selva-800 py-8 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+        <span class="text-4xl block mb-3">💰</span>
+        <h3 class="text-xl md:text-2xl font-bold text-white mb-3">{% trans "¡Reserva con anticipación y ahorra!" %}</h3>
+        <p class="text-selva-100 text-base md:text-lg mb-4">
+            {% trans "Al reservar con nosotros garantizas tu lugar, evitas sobrecostos de temporada alta y obtienes los mejores precios directamente con la comunidad." %}
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-selva-100 text-sm">
+            <div class="flex items-center gap-2">
+                <span class="text-green-300">✓</span>
+                <span>{% trans "Mejores precios garantizados" %}</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-green-300">✓</span>
+                <span>{% trans "Hospedaje asegurado" %}</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-green-300">✓</span>
+                <span>{% trans "Sin sorpresas al llegar" %}</span>
+            </div>
         </div>
     </div>
 </section>
@@ -293,7 +310,7 @@
                     {% trans "Enviar Solicitud" %}
                 </button>
                 <p class="mt-4 text-gray-500 text-sm">
-                    {% trans "Una vez recibamos tus datos, la comunidad te enviará la información completa y personalizada." %}
+                    {% trans "Una vez recibamos tus datos, la comunidad te contactará para confirmar disponibilidad y coordinar tu visita." %}
                 </p>
             </div>
 

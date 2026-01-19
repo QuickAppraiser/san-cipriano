@@ -1,0 +1,71 @@
+{% extends "base_simple.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Preguntas Frecuentes" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-tierra-600 to-tierra-800 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">❓</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {% trans "Preguntas Frecuentes" %}
+        </h1>
+        <p class="text-tierra-100 text-lg max-w-2xl mx-auto">
+            {% trans "Respuestas a las preguntas más comunes sobre San Cipriano." %}
+        </p>
+    </div>
+</section>
+
+<!-- FAQ List -->
+<section class="py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+        <div class="space-y-4">
+            {% for faq in faqs %}
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                    <span class="font-semibold text-gray-900">{{ faq.question }}</span>
+                    <svg class="faq-icon w-5 h-5 text-gray-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden px-6 pb-4">
+                    <p class="text-gray-600">{{ faq.answer }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-16 px-4 bg-tierra-50">
+    <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-display text-2xl font-bold text-gray-900 mb-4">
+            {% trans "¿Tienes más preguntas?" %}
+        </h2>
+        <p class="text-gray-600 mb-6">
+            {% trans "Escríbenos por WhatsApp y te responderemos lo antes posible." %}
+        </p>
+        <a href="https://wa.me/573113111669"
+           target="_blank"
+           class="inline-flex items-center gap-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white text-lg font-semibold rounded-xl shadow-lg transition-all">
+            {% trans "Preguntar por WhatsApp" %}
+        </a>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const icon = this.querySelector('.faq-icon');
+
+            answer.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        });
+    });
+});
+</script>
+{% endblock %}

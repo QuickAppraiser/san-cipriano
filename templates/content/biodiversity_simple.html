@@ -1,0 +1,81 @@
+{% extends "base_simple.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Biodiversidad" %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-gradient-to-br from-selva-600 to-rio-700 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">🦜</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {% trans "Biodiversidad" %}
+        </h1>
+        <p class="text-selva-100 text-lg max-w-2xl mx-auto">
+            {% trans "Descubre la increíble diversidad de vida que habita en nuestra reserva natural." %}
+        </p>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section class="py-12 px-4 bg-selva-50">
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="text-lg text-selva-800">
+            {% trans "San Cipriano es hogar de cientos de especies de aves, anfibios, mamíferos y plantas. Cada visita es una oportunidad para conectar con la naturaleza en su estado más puro." %}
+        </p>
+    </div>
+</section>
+
+<!-- Biodiversity Content -->
+<section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+        {% for category_name, entries in biodiversity_by_category.items %}
+        <div class="mb-12">
+            <h2 class="font-display text-2xl font-bold text-selva-900 mb-6 flex items-center gap-3">
+                {% if category_name == "Aves" %}🐦{% endif %}
+                {% if category_name == "Anfibios" %}🐸{% endif %}
+                {% if category_name == "Mamíferos" %}🦝{% endif %}
+                {% if category_name == "Flora" %}🌺{% endif %}
+                {{ category_name }}
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for entry in entries %}
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="w-full h-40 bg-gradient-to-br from-selva-100 to-rio-100 flex items-center justify-center">
+                        <span class="text-5xl opacity-50">
+                            {% if category_name == "Aves" %}🐦{% endif %}
+                            {% if category_name == "Anfibios" %}🐸{% endif %}
+                            {% if category_name == "Mamíferos" %}🦝{% endif %}
+                            {% if category_name == "Flora" %}🌺{% endif %}
+                        </span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-gray-900">{{ entry.name }}</h3>
+                        <p class="text-sm text-gray-500 italic">{{ entry.scientific_name }}</p>
+                        <p class="text-gray-600 text-sm mt-2">{{ entry.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 px-4 bg-selva-50">
+    <div class="max-w-2xl mx-auto text-center">
+        <h2 class="font-display text-2xl font-bold text-gray-900 mb-4">
+            {% trans "¿Quieres conocer más?" %}
+        </h2>
+        <p class="text-gray-600 mb-6">
+            {% trans "Contáctanos por WhatsApp para planificar tu visita." %}
+        </p>
+        <a href="https://wa.me/573113111669"
+           target="_blank"
+           class="inline-flex items-center gap-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white text-lg font-semibold rounded-xl shadow-lg transition-all">
+            {% trans "Contactar por WhatsApp" %}
+        </a>
+    </div>
+</section>
+{% endblock %}

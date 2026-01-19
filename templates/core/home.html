@@ -8,10 +8,9 @@
 {% block content %}
 <!-- Hero Section -->
 <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-    <!-- Background Image Placeholder -->
+    <!-- Background Image - Real San Cipriano Photo -->
     <div class="absolute inset-0 bg-gradient-to-br from-selva-900 via-selva-800 to-rio-900">
-        <!-- Placeholder for real photo of San Cipriano -->
-        <div class="absolute inset-0 opacity-30" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="absolute inset-0 opacity-60" style="background-image: url('{% static 'images/gallery/rio-selva.jpg' %}'); background-size: cover; background-position: center;"></div>
         <div class="absolute inset-0 hero-gradient"></div>
     </div>
 
@@ -29,6 +28,13 @@
         <p class="text-lg text-selva-200 mb-8">
             {% trans "Turismo responsable • Conservación ambiental • Economía comunitaria" %}
         </p>
+
+        <!-- Price anchor -->
+        <div class="mb-6">
+            <span class="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium border border-white/30">
+                {% trans "Desde" %} <span class="text-lg font-bold">$140.000 COP</span> {% trans "por persona" %}
+            </span>
+        </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="{% url 'visitors:inquiry_form' %}"
@@ -61,42 +67,93 @@
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Nature Card -->
-            <div class="bg-selva-50 rounded-2xl p-6 border border-selva-100 hover:shadow-lg transition-shadow">
-                <div class="w-14 h-14 bg-selva-100 rounded-xl flex items-center justify-center text-3xl mb-4">
-                    🌳
+            <div class="bg-selva-50 rounded-2xl overflow-hidden border border-selva-100 hover:shadow-lg transition-shadow">
+                <div class="h-40 overflow-hidden">
+                    <img src="{% static 'images/gallery/cascada.jpg' %}"
+                         alt="{% trans 'Reserva Natural - selva y cascadas' %}"
+                         class="w-full h-full object-cover"
+                         loading="lazy"
+                         width="400"
+                         height="160">
                 </div>
-                <h3 class="font-display text-xl font-bold text-selva-900 mb-2">
-                    {% trans "Reserva Natural" %}
-                </h3>
-                <p class="text-gray-600">
-                    {% trans "Un santuario de biodiversidad en el Pacífico colombiano, hogar de cientos de especies de aves, anfibios y flora única." %}
-                </p>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-selva-900 mb-2">
+                        {% trans "Reserva Natural" %}
+                    </h3>
+                    <p class="text-gray-600">
+                        {% trans "Un santuario de biodiversidad en el Pacífico colombiano, hogar de cientos de especies de aves, anfibios y flora única." %}
+                    </p>
+                </div>
             </div>
 
             <!-- Community Card -->
-            <div class="bg-tierra-50 rounded-2xl p-6 border border-tierra-100 hover:shadow-lg transition-shadow">
-                <div class="w-14 h-14 bg-tierra-100 rounded-xl flex items-center justify-center text-3xl mb-4">
-                    👨‍👩‍👧‍👦
+            <div class="bg-tierra-50 rounded-2xl overflow-hidden border border-tierra-100 hover:shadow-lg transition-shadow">
+                <div class="h-40 overflow-hidden">
+                    <img src="{% static 'images/gallery/estacion-brujita.jpg' %}"
+                         alt="{% trans 'Turismo Comunitario - comunidad local' %}"
+                         class="w-full h-full object-cover object-bottom"
+                         loading="lazy"
+                         width="400"
+                         height="160">
                 </div>
-                <h3 class="font-display text-xl font-bold text-tierra-900 mb-2">
-                    {% trans "Turismo Comunitario" %}
-                </h3>
-                <p class="text-gray-600">
-                    {% trans "Cada visita apoya directamente a las familias locales. El turismo es gestionado por y para la comunidad." %}
-                </p>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-tierra-900 mb-2">
+                        {% trans "Turismo Comunitario" %}
+                    </h3>
+                    <p class="text-gray-600">
+                        {% trans "Cada visita apoya directamente a las familias locales. El turismo es gestionado por y para la comunidad." %}
+                    </p>
+                </div>
             </div>
 
-            <!-- River Card -->
-            <div class="bg-rio-50 rounded-2xl p-6 border border-rio-100 hover:shadow-lg transition-shadow">
-                <div class="w-14 h-14 bg-rio-100 rounded-xl flex items-center justify-center text-3xl mb-4">
-                    🚃
+            <!-- River Card - Las Brujitas -->
+            <div class="bg-rio-50 rounded-2xl overflow-hidden border border-rio-100 hover:shadow-lg transition-shadow">
+                <div class="h-40 overflow-hidden">
+                    <img src="{% static 'images/gallery/estacion-nueva.jpg' %}"
+                         alt="{% trans 'Las Brujitas - carros sobre rieles' %}"
+                         class="w-full h-full object-cover"
+                         loading="lazy"
+                         width="400"
+                         height="160">
                 </div>
-                <h3 class="font-display text-xl font-bold text-rio-900 mb-2">
-                    {% trans "Las Brujitas" %}
-                </h3>
-                <p class="text-gray-600">
-                    {% trans "Vive la experiencia única de viajar en los tradicionales carros sobre rieles, una aventura que solo encontrarás aquí." %}
-                </p>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-rio-900 mb-2">
+                        {% trans "Las Brujitas" %}
+                    </h3>
+                    <p class="text-gray-600">
+                        {% trans "Vive la experiencia única de viajar en los tradicionales carros sobre rieles, una aventura que solo encontrarás aquí." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Savings Banner -->
+        <div class="mt-12 bg-gradient-to-r from-selva-600 via-selva-500 to-rio-600 rounded-2xl p-6 md:p-8 shadow-xl relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full translate-y-1/2 -translate-x-1/2"></div>
+            </div>
+
+            <div class="relative flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center">
+                        <span class="text-4xl">💰</span>
+                    </div>
+                    <div class="text-white">
+                        <p class="text-2xl md:text-3xl font-bold">{% trans "¡Reserva con nosotros y ahorra hasta un 25%!" %}</p>
+                        <p class="text-selva-100 text-sm md:text-base mt-1">{% trans "Obtén mejores precios y garantiza tu estadía reservando directamente" %}</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/573113111669?text=Hola!%20Quiero%20información%20sobre%20paquetes%20para%20San%20Cipriano"
+                   target="_blank"
+                   rel="noopener"
+                   class="flex-shrink-0 inline-flex items-center gap-3 px-6 py-4 bg-white hover:bg-gray-50 text-selva-700 font-bold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    {% trans "Cotizar Ahora" %}
+                </a>
             </div>
         </div>
     </div>
@@ -159,10 +216,10 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Experience Cards -->
+            <!-- Experience Cards with Real Photos -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div class="h-48 bg-gradient-to-br from-selva-400 to-selva-600 flex items-center justify-center">
-                    <span class="text-6xl">🐦</span>
+                <div class="h-48 overflow-hidden">
+                    <img src="{% static 'images/gallery/info-avistamiento.jpg' %}" alt="{% trans 'Avistamiento de aves en San Cipriano' %}" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-5">
                     <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Avistamiento de Aves" %}</h3>
@@ -171,8 +228,8 @@
             </div>
 
             <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div class="h-48 bg-gradient-to-br from-rio-400 to-rio-600 flex items-center justify-center">
-                    <span class="text-6xl">🏊</span>
+                <div class="h-48 overflow-hidden">
+                    <img src="{% static 'images/gallery/pozos-naturales.jpg' %}" alt="{% trans 'Pozos naturales de San Cipriano' %}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-5">
                     <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Ríos Cristalinos" %}</h3>
@@ -181,8 +238,8 @@
             </div>
 
             <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                <div class="h-48 bg-gradient-to-br from-tierra-400 to-tierra-600 flex items-center justify-center">
-                    <span class="text-6xl">🐸</span>
+                <div class="h-48 overflow-hidden">
+                    <img src="{% static 'images/gallery/rana.jpg' %}" alt="{% trans 'Rana tropical de San Cipriano' %}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                 </div>
                 <div class="p-5">
                     <h3 class="font-semibold text-lg text-gray-900 mb-2">{% trans "Ranas y Anfibios" %}</h3>
@@ -203,6 +260,166 @@
     </div>
 </section>
 
+<!-- Photo Gallery Section with Lightbox -->
+<section class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="inline-block text-5xl mb-4">📸</span>
+            <h2 class="font-display text-3xl font-bold text-selva-900 mb-2">
+                {% trans "Galería de San Cipriano" %}
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                {% trans "Imágenes reales de nuestra reserva natural. Ríos cristalinos, cascadas y la belleza del Pacífico colombiano." %}
+            </p>
+            <p class="text-selva-600 text-sm mt-2">{% trans "Haz clic en las fotos para ampliar" %}</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Large image spanning 2 columns -->
+            <div class="col-span-2 row-span-2">
+                <div class="relative h-full min-h-[300px] rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/cascada.jpg' %}"
+                     data-title="{% trans 'Cascadas' %}"
+                     data-desc="{% trans 'Aguas cristalinas en un entorno mágico' %}">
+                    <img src="{% static 'images/gallery/cascada.jpg' %}" alt="{% trans 'Cascada en San Cipriano' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h3 class="font-semibold text-lg">{% trans "Cascadas" %}</h3>
+                        <p class="text-sm text-white/80">{% trans "Aguas cristalinas" %}</p>
+                    </div>
+                    <div class="absolute top-3 right-3 bg-black/30 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- River crystal clear -->
+            <div class="col-span-1">
+                <div class="relative h-48 rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/rio-cristalino.jpg' %}"
+                     data-title="{% trans 'Ríos Cristalinos' %}"
+                     data-desc="{% trans 'Aguas transparentes del Pacífico colombiano' %}">
+                    <img src="{% static 'images/gallery/rio-cristalino.jpg' %}" alt="{% trans 'Río cristalino' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="text-sm font-medium">{% trans "Ríos" %}</p>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jungle river -->
+            <div class="col-span-1">
+                <div class="relative h-48 rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/rio-selva.jpg' %}"
+                     data-title="{% trans 'Selva Tropical' %}"
+                     data-desc="{% trans 'Río serpenteando a través de la selva' %}">
+                    <img src="{% static 'images/gallery/rio-selva.jpg' %}" alt="{% trans 'Río en la selva' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="text-sm font-medium">{% trans "Selva" %}</p>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel/Restaurant -->
+            <div class="col-span-1">
+                <div class="relative h-48 rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/hotel-restaurante.jpg' %}"
+                     data-title="{% trans 'Hospedaje Comunitario' %}"
+                     data-desc="{% trans 'Alojamiento gestionado por la comunidad local' %}">
+                    <img src="{% static 'images/gallery/hotel-restaurante.jpg' %}" alt="{% trans 'Hotel y restaurante comunitario' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="text-sm font-medium">{% trans "Hospedaje" %}</p>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brujita -->
+            <div class="col-span-1">
+                <div class="relative h-48 rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/brujita-operador.jpg' %}"
+                     data-title="{% trans 'Las Brujitas' %}"
+                     data-desc="{% trans 'Transporte tradicional sobre rieles' %}">
+                    <img src="{% static 'images/gallery/brujita-operador.jpg' %}" alt="{% trans 'Brujita y operador' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="text-sm font-medium">{% trans "Brujitas" %}</p>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rana -->
+            <div class="col-span-1">
+                <div class="relative h-48 rounded-2xl overflow-hidden group cursor-pointer gallery-item"
+                     data-src="{% static 'images/gallery/rana.jpg' %}"
+                     data-title="{% trans 'Biodiversidad' %}"
+                     data-desc="{% trans 'Ranas y anfibios únicos de la región' %}">
+                    <img src="{% static 'images/gallery/rana.jpg' %}" alt="{% trans 'Rana tropical' %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-3 left-3 text-white">
+                        <p class="text-sm font-medium">{% trans "Fauna" %}</p>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white p-2 z-10" aria-label="{% trans 'Cerrar galería' %}">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10" aria-label="{% trans 'Imagen anterior' %}">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+    </button>
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 z-10" aria-label="{% trans 'Imagen siguiente' %}">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
+    <div class="flex flex-col items-center justify-center h-full px-16 py-12">
+        <img id="lightbox-img" src="" alt="" class="max-h-[75vh] max-w-full object-contain rounded-lg shadow-2xl">
+        <div class="text-center mt-4">
+            <h3 id="lightbox-title" class="text-white text-xl font-semibold"></h3>
+            <p id="lightbox-desc" class="text-white/70 text-sm mt-1"></p>
+        </div>
+    </div>
+</div>
+
 <!-- CTA Section -->
 <section class="py-20 px-4 bg-gradient-to-br from-selva-800 to-rio-900 text-white">
     <div class="max-w-3xl mx-auto text-center">
@@ -221,8 +438,76 @@
             {% trans "Planifica tu Visita" %}
         </a>
         <p class="mt-4 text-selva-300 text-sm">
-            {% trans "Los detalles y costos se envían de forma personalizada después del registro." %}
+            {% trans "La comunidad te contactará para coordinar los detalles de tu visita." %}
         </p>
     </div>
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Lightbox functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    let currentIndex = 0;
+
+    // Open lightbox
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            openLightbox(item);
+        });
+    });
+
+    function openLightbox(item) {
+        lightboxImg.src = item.dataset.src;
+        lightboxImg.alt = item.dataset.title;
+        lightboxTitle.textContent = item.dataset.title;
+        lightboxDesc.textContent = item.dataset.desc;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        openLightbox(galleryItems[currentIndex]);
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        openLightbox(galleryItems[currentIndex]);
+    }
+
+    // Close button
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+
+    // Navigation buttons
+    document.getElementById('lightbox-next').addEventListener('click', showNext);
+    document.getElementById('lightbox-prev').addEventListener('click', showPrev);
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+    });
+});
+</script>
 {% endblock %}

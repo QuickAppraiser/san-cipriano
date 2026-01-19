@@ -44,7 +44,7 @@ class BiodiversityEntry(TimeStampedModel):
     )
     image = models.ImageField(
         _("imagen"),
-        upload_to="biodiversity/",
+        upload_to="biodiversity_animals_plants/",
         null=True,
         blank=True
     )
@@ -87,7 +87,7 @@ class Experience(TimeStampedModel):
     )
     image = models.ImageField(
         _("imagen"),
-        upload_to="experiences/",
+        upload_to="experiences_tours_activities/",
         null=True,
         blank=True
     )
@@ -111,7 +111,7 @@ class GalleryImage(TimeStampedModel):
 
     title = models.CharField(_("título"), max_length=100)
     description = models.TextField(_("descripción"), blank=True)
-    image = models.ImageField(_("imagen"), upload_to="gallery/")
+    image = models.ImageField(_("imagen"), upload_to="gallery_homepage/")
     is_hero = models.BooleanField(
         _("imagen hero"),
         default=False,

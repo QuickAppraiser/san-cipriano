@@ -1,0 +1,167 @@
+{% extends "base_simple.html" %}
+{% load static i18n %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <!-- Background with gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-selva-900 via-selva-800 to-rio-900">
+        <div class="absolute inset-0 nature-pattern opacity-30"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <span class="inline-block text-6xl md:text-8xl mb-6 animate-bounce">🌿</span>
+        <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-shadow">
+            San Cipriano
+        </h1>
+        <p class="text-xl md:text-2xl text-selva-100 mb-8 max-w-2xl mx-auto">
+            Reserva Natural Comunitaria en el corazón del Pacífico Colombiano
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wa.me/573113111669" target="_blank"
+               class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white text-lg font-semibold rounded-xl shadow-lg transition-all hover:scale-105">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Contactar por WhatsApp
+            </a>
+            <a href="/servicios/"
+               class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-lg font-semibold rounded-xl border-2 border-white/30 transition-all">
+                Ver Servicios
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-8 h-8 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="text-5xl mb-4 block">🏡</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-selva-900 mb-6">
+            Bienvenidos a San Cipriano
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+            Somos una comunidad afrodescendiente que protege y comparte la riqueza natural de nuestra reserva.
+            Aquí encontrarás ríos cristalinos, selva tropical, biodiversidad única y la calidez de nuestra gente.
+        </p>
+    </div>
+</section>
+
+<!-- Experiences Section -->
+<section class="py-16 px-4 bg-selva-50">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-5xl mb-4 block">✨</span>
+            <h2 class="font-display text-3xl font-bold text-selva-900">
+                Experiencias Naturales
+            </h2>
+            <p class="text-gray-600 mt-2">Vive momentos únicos en contacto con la naturaleza</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for exp in experiences %}
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-6 text-center">
+                <span class="text-5xl mb-4 block">{{ exp.icon }}</span>
+                <h3 class="font-display text-xl font-semibold text-gray-900 mb-2">{{ exp.name }}</h3>
+                <p class="text-gray-600 text-sm">{{ exp.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Brujitas Section -->
+<section class="py-16 px-4 bg-tierra-100">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden md:flex">
+            <div class="md:w-1/2 bg-gradient-to-br from-tierra-500 to-tierra-700 p-8 text-white flex items-center justify-center">
+                <span class="text-9xl">🚃</span>
+            </div>
+            <div class="md:w-1/2 p-8">
+                <h2 class="font-display text-2xl font-bold text-gray-900 mb-4">
+                    Las Famosas Brujitas
+                </h2>
+                <p class="text-gray-600 mb-4">
+                    El único medio de transporte para llegar a San Cipriano son las "brujitas":
+                    pequeños carros sobre rieles impulsados por motores de moto.
+                </p>
+                <p class="text-gray-600">
+                    Una experiencia única que atraviesa la selva y te conecta con la aventura
+                    desde el primer momento.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview -->
+<section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-5xl mb-4 block">🎯</span>
+            <h2 class="font-display text-3xl font-bold text-gray-900">
+                Nuestros Servicios
+            </h2>
+            <p class="text-gray-600 mt-2">Todo lo que necesitas para tu visita</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-selva-50 rounded-xl p-4 text-center border border-selva-200">
+                <span class="text-3xl">🏠</span>
+                <p class="font-medium text-selva-900 mt-2">Hospedaje</p>
+            </div>
+            <div class="bg-rio-50 rounded-xl p-4 text-center border border-rio-200">
+                <span class="text-3xl">🍽️</span>
+                <p class="font-medium text-rio-900 mt-2">Alimentación</p>
+            </div>
+            <div class="bg-tierra-50 rounded-xl p-4 text-center border border-tierra-200">
+                <span class="text-3xl">🧭</span>
+                <p class="font-medium text-tierra-900 mt-2">Tours Guiados</p>
+            </div>
+            <div class="bg-amber-50 rounded-xl p-4 text-center border border-amber-200">
+                <span class="text-3xl">🅿️</span>
+                <p class="font-medium text-amber-900 mt-2">Parqueadero</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="/servicios/" class="inline-flex items-center gap-2 text-selva-600 hover:text-selva-700 font-medium">
+                Ver todos los servicios
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 px-4 bg-gradient-to-br from-selva-600 to-rio-700 text-white">
+    <div class="max-w-3xl mx-auto text-center">
+        <span class="text-5xl mb-4 block">📞</span>
+        <h2 class="font-display text-3xl font-bold mb-4">
+            ¿Listo para visitarnos?
+        </h2>
+        <p class="text-selva-100 text-lg mb-8">
+            Contáctanos por WhatsApp y te ayudaremos a planificar tu visita perfecta.
+        </p>
+        <a href="https://wa.me/573113111669" target="_blank"
+           class="inline-flex items-center gap-3 px-10 py-5 bg-white text-selva-700 text-xl font-bold rounded-2xl shadow-xl hover:scale-105 transition-transform">
+            <svg class="w-8 h-8 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Escribir por WhatsApp
+        </a>
+    </div>
+</section>
+{% endblock %}

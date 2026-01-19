@@ -3,10 +3,16 @@
 
 {% block title %}{% trans "Sobre San Cipriano" %}{% endblock %}
 
+{% block meta_description %}{% trans "Conoce la historia de San Cipriano, comunidad afrodescendiente del Pacífico colombiano. Turismo comunitario, conservación ambiental y cultura palenquera." %}{% endblock %}
+
 {% block content %}
-<!-- Header -->
-<section class="bg-gradient-to-br from-selva-700 to-selva-900 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
+<!-- Header with Background Image -->
+<section class="relative bg-gradient-to-br from-selva-700 to-selva-900 text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 opacity-40">
+        <img src="{% static 'images/gallery/cascada.jpg' %}" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-selva-900/60 to-selva-900/80"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
         <span class="inline-block text-6xl mb-4">🌿</span>
         <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
             {% trans "Sobre San Cipriano" %}
@@ -32,17 +38,42 @@
                 <p class="text-gray-600 mb-4">
                     {% trans "Rodeado de selva húmeda tropical, ríos cristalinos y una biodiversidad impresionante, San Cipriano es un santuario natural protegido por su comunidad." %}
                 </p>
-                <div class="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg">
-                    <p class="text-amber-800 text-sm">
-                        <strong>{% trans "Nota:" %}</strong> {% trans "Las indicaciones exactas de llegada se proporcionan después del registro para proteger la reserva." %}
-                    </p>
+
+                <!-- GPS Coordinates -->
+                <div class="bg-selva-50 border border-selva-200 rounded-xl p-4 mb-4">
+                    <p class="text-selva-800 text-sm font-medium mb-2">{% trans "Coordenadas GPS:" %}</p>
+                    <p class="text-selva-700 font-mono text-lg">3.8167° N, 76.8833° W</p>
+                </div>
+
+                <!-- How to get there -->
+                <div class="bg-rio-50 border border-rio-200 rounded-xl p-4">
+                    <p class="text-rio-800 text-sm font-medium mb-2">{% trans "Cómo llegar:" %}</p>
+                    <ul class="text-rio-700 text-sm space-y-1">
+                        <li>{% trans "Desde Cali: Tomar la vía al mar hacia Buenaventura (~3 horas)" %}</li>
+                        <li>{% trans "Pasar Buenaventura y continuar hacia Córdoba (~20 min)" %}</li>
+                        <li>{% trans "Detenerse en la estación de las Brujitas" %}</li>
+                        <li>{% trans "Tomar la brujita hacia San Cipriano (~30 min)" %}</li>
+                    </ul>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-selva-100 to-rio-100 rounded-2xl h-64 flex items-center justify-center">
-                <!-- Placeholder for map or image -->
-                <div class="text-center text-selva-600">
-                    <span class="text-6xl block mb-2">🗺️</span>
-                    <p class="text-sm">{% trans "Valle del Cauca, Colombia" %}</p>
+            <div class="relative rounded-2xl overflow-hidden h-80">
+                <img src="{% static 'images/gallery/rio-cristalino.jpg' %}" alt="{% trans 'Río cristalino de San Cipriano' %}" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <p class="font-semibold text-lg mb-1">{% trans "Valle del Cauca, Colombia" %}</p>
+                    <div class="text-sm text-white/80 space-y-1 mb-3">
+                        <p>{% trans "A 100 km de Cali" %}</p>
+                        <p>{% trans "A 20 km de Buenaventura" %}</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=3.8167,-76.8833"
+                       target="_blank"
+                       class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-lg hover:bg-white/30 transition-colors border border-white/30">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        {% trans "Ver en Google Maps" %}
+                    </a>
                 </div>
             </div>
         </div>
@@ -61,14 +92,88 @@
 
         <div class="prose prose-lg max-w-none text-gray-700">
             <p>
-                {% trans "San Cipriano es una comunidad afrodescendiente que ha habitado estas tierras por generaciones. Durante décadas, nuestra gente vivió de la pesca, la agricultura y los recursos naturales que la selva nos proporciona." %}
+                {% trans "San Cipriano es una comunidad afrodescendiente con raíces profundas en la historia de Colombia. Nuestros ancestros llegaron a estas tierras como parte de los palenques, comunidades de africanos esclavizados que escaparon y formaron asentamientos libres en las selvas del Pacífico colombiano." %}
             </p>
             <p>
-                {% trans "Con el tiempo, reconocimos el valor único de nuestro hogar: ríos de aguas cristalinas, bosques vírgenes y una biodiversidad que pocos lugares en el mundo pueden igualar. Decidimos entonces abrir nuestras puertas al turismo, pero con un enfoque diferente." %}
+                {% trans "Como herederos de la tradición palenquera, nuestra comunidad ha mantenido viva la cultura, las tradiciones y el espíritu de libertad de nuestros antepasados. Durante generaciones, hemos vivido en armonía con la selva, practicando la pesca, la agricultura y aprovechando de manera sostenible los recursos que la naturaleza nos brinda." %}
             </p>
             <p>
-                {% trans "El turismo en San Cipriano es comunitario. Cada servicio, cada hospedaje, cada tour es gestionado por familias locales. El visitante no viene a consumir un producto, viene a vivir una experiencia auténtica y a contribuir directamente al bienestar de nuestra comunidad." %}
+                {% trans "Con el tiempo, reconocimos el valor único de nuestro hogar: ríos de aguas cristalinas que son de los más puros de Colombia, bosques vírgenes y una biodiversidad que pocos lugares en el mundo pueden igualar. Decidimos entonces abrir nuestras puertas al turismo, pero manteniendo nuestra esencia comunitaria." %}
             </p>
+            <p>
+                {% trans "El turismo en San Cipriano es 100% comunitario. Cada servicio, cada hospedaje, cada tour es gestionado por familias locales. El visitante no viene a consumir un producto turístico convencional, viene a vivir una experiencia auténtica y a contribuir directamente al bienestar de nuestra comunidad y la preservación de nuestra herencia cultural." %}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Visitor Experience Section -->
+<section class="py-16 px-4 bg-gradient-to-br from-rio-700 to-selva-800">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+            <span class="inline-block text-5xl mb-4">✨</span>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+                {% trans "La Experiencia San Cipriano" %}
+            </h2>
+            <p class="text-rio-100 max-w-2xl mx-auto text-lg">
+                {% trans "Desde el viaje en brujita hasta los ríos cristalinos, cada momento es una aventura inolvidable." %}
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+            <!-- Video testimonial -->
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+                <video controls playsinline poster="{% static 'images/gallery/rio-cristalino.jpg' %}" class="w-full aspect-video">
+                    <source src="{% static 'videos/about-us.mp4' %}" type="video/mp4">
+                    {% trans "Tu navegador no soporta el elemento de video." %}
+                </video>
+            </div>
+
+            <!-- Experience highlights -->
+            <div class="text-white">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🚃</span>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-lg">{% trans "El viaje en Brujita" %}</p>
+                        <p class="text-rio-200 text-sm">{% trans "15-20 minutos de aventura" %}</p>
+                    </div>
+                </div>
+                <p class="text-rio-100 mb-4">
+                    {% trans "Tu aventura comienza en las famosas 'brujitas': pequeños carros sobre rieles impulsados por motocicletas. Atraviesas la selva, cruzas puentes sobre ríos y llegas a un mundo alejado del ruido de la ciudad." %}
+                </p>
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🌿 {% trans "Selva tropical" %}</span>
+                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🌉 {% trans "Puentes sobre ríos" %}</span>
+                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">💧 {% trans "Aguas cristalinas" %}</span>
+                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🦜 {% trans "Biodiversidad" %}</span>
+                </div>
+
+                <!-- Diana's quote -->
+                <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/20">
+                    <blockquote class="text-rio-100 italic text-sm">
+                        "{% trans "Una experiencia inolvidable. Los ríos cristalinos, la selva, las cascadas... San Cipriano es un paraíso escondido." %}"
+                    </blockquote>
+                    <p class="text-rio-200 text-xs mt-2">— Diana, {% trans "Visitante" %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square rounded-xl overflow-hidden bg-white/10">
+                <img src="{% static 'images/gallery/fauna.jpeg' %}" alt="{% trans 'Fauna' %}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden bg-white/10">
+                <img src="{% static 'images/gallery/flotadores.jpg' %}" alt="{% trans 'Flotadores' %}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden bg-white/10">
+                <img src="{% static 'images/gallery/visitantes.jpeg' %}" alt="{% trans 'Visitantes' %}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden bg-white/10">
+                <img src="{% static 'images/gallery/cascada.jpg' %}" alt="{% trans 'Cascada' %}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+            </div>
         </div>
     </div>
 </section>
@@ -125,26 +230,28 @@
     </div>
 </section>
 
-<!-- Brujitas Section -->
-<section class="py-16 px-4 bg-rio-50">
+<!-- Savings Banner -->
+<section class="py-12 px-4 bg-gradient-to-r from-amber-500 to-orange-500">
     <div class="max-w-4xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="bg-gradient-to-br from-rio-200 to-rio-300 rounded-2xl h-64 flex items-center justify-center">
-                <!-- Placeholder for brujitas photo -->
-                <span class="text-8xl">🚃</span>
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4 text-white">
+                <div class="w-16 h-16 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <span class="text-4xl">💰</span>
+                </div>
+                <div>
+                    <p class="text-2xl md:text-3xl font-bold">{% trans "¡Reserva con nosotros y ahorra hasta un 25%!" %}</p>
+                    <p class="text-amber-100 text-sm md:text-base mt-1">{% trans "Obtén mejores precios y garantiza tu estadía reservando directamente" %}</p>
+                </div>
             </div>
-            <div>
-                <span class="text-4xl mb-4 block">✨</span>
-                <h2 class="font-display text-3xl font-bold text-rio-900 mb-4">
-                    {% trans "Las Brujitas" %}
-                </h2>
-                <p class="text-gray-600 mb-4">
-                    {% trans "Un símbolo de San Cipriano son las 'brujitas': pequeños carros sobre rieles impulsados por motocicletas. Este medio de transporte único nació de la creatividad de nuestra comunidad." %}
-                </p>
-                <p class="text-gray-600">
-                    {% trans "El viaje en brujita es una experiencia inolvidable: atraviesas la selva, cruzas puentes sobre ríos y llegas a un mundo alejado del ruido de la ciudad." %}
-                </p>
-            </div>
+            <a href="https://wa.me/573113111669?text=Hola!%20Quiero%20información%20sobre%20paquetes%20para%20San%20Cipriano"
+               target="_blank"
+               rel="noopener"
+               class="flex-shrink-0 inline-flex items-center gap-3 px-6 py-4 bg-white hover:bg-gray-50 text-amber-700 font-bold rounded-xl shadow-lg transition-all transform hover:scale-105">
+                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                {% trans "Cotizar Ahora" %}
+            </a>
         </div>
     </div>
 </section>

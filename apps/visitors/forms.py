@@ -2,6 +2,8 @@
 Visitors forms - Main inquiry form
 """
 
+import re
+
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
@@ -120,6 +122,18 @@ class VisitorInquiryForm(forms.ModelForm):
         """Convert services to list for JSON storage."""
         services = self.cleaned_data.get("services", [])
         return list(services)
+
+    def clean_phone(self):
+        """Validate and clean phone number."""
+        phone = self.cleaned_data.get("phone", "")
+        # Remove spaces, dashes, and parentheses
+        cleaned_phone = re.sub(r'[\s\-\(\)]', '', phone)
+        # Validate format: optional + followed by 10-15 digits
+        if not re.match(r'^\+?[0-9]{10,15}$', cleaned_phone):
+            raise forms.ValidationError(
+                _("Número de teléfono inválido. Usa formato: +57 300 123 4567")
+            )
+        return phone  # Return original format for readability
 
     def clean(self):
         """Validate dates."""

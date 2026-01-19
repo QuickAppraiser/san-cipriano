@@ -23,8 +23,8 @@ class Command(BaseCommand):
                 "tagline": "Reserva Natural Comunitaria",
                 "welcome_message": "Bienvenidos a San Cipriano, una reserva natural cuidada por su comunidad.",
                 "community_whatsapp": "+573113111669",
-                "community_email": "contacto@sancipriano.co",
-                "visitor_counter_base": 180,
+                "community_email": "lordmauricio22@gmail.com",
+                "visitor_counter_base": 45,
             }
         )
         if created:
@@ -36,12 +36,12 @@ class Command(BaseCommand):
         counter, created = VisitorCounter.objects.get_or_create(
             pk=1,
             defaults={
-                "base_count": 180,
+                "base_count": 45,
                 "inquiry_count": 0,
             }
         )
         if created:
-            self.stdout.write(self.style.SUCCESS("✓ Visitor counter created (starts at 180)"))
+            self.stdout.write(self.style.SUCCESS("✓ Visitor counter created (starts at 45)"))
         else:
             self.stdout.write(f"  Visitor counter exists: {counter.total_count}")
 
@@ -239,7 +239,7 @@ class Command(BaseCommand):
             },
             {
                 "question": "¿Qué debo llevar?",
-                "answer": "Recomendamos: ropa cómoda y ligera, zapatos para agua (sandalias con agarre), traje de baño, protector solar BIODEGRADABLE, repelente de insectos, toalla, cámara con funda impermeable, y muy importante: una bolsa para llevarte tu basura. Te enviaremos una lista completa al confirmar tu reserva.",
+                "answer": "Recomendamos: ropa cómoda de colores claros, manga larga para protección natural contra insectos, zapatos para agua (sandalias con agarre), traje de baño, gorra o sombrero (NO protector solar ni repelente químico - contaminan el río), careta de snorkel, toalla, cámara con funda impermeable, y muy importante: una bolsa para llevarte tu basura.",
                 "order": 5,
             },
             {

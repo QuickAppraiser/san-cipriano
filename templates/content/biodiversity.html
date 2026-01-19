@@ -3,10 +3,16 @@
 
 {% block title %}{% trans "Biodiversidad y Experiencias" %}{% endblock %}
 
+{% block meta_description %}{% trans "Descubre la biodiversidad de San Cipriano: aves, ranas venenosas, flora tropical. Experiencias de avistamiento, senderismo y tours nocturnos en el Pacífico colombiano." %}{% endblock %}
+
 {% block content %}
-<!-- Header -->
-<section class="bg-gradient-to-br from-selva-600 to-rio-700 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
+<!-- Header with Background Image -->
+<section class="relative bg-gradient-to-br from-selva-600 to-rio-700 text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+        <img src="{% static 'images/gallery/rio-selva.jpg' %}" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-selva-900/50 to-rio-900/70"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
         <span class="inline-block text-6xl mb-4">🦜</span>
         <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
             {{ page_title }}
@@ -83,8 +89,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <!-- Birds -->
             <div class="bg-white rounded-2xl shadow-md overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
-                    <span class="text-8xl">🐦</span>
+                <div class="h-48 overflow-hidden">
+                    <img src="{% static 'images/gallery/info-avistamiento.jpg' %}" alt="{% trans 'Avistamiento de aves en San Cipriano' %}" class="w-full h-full object-cover object-top">
                 </div>
                 <div class="p-6">
                     <h3 class="font-display text-2xl font-bold text-gray-900 mb-3">{% trans "Aves" %}</h3>
@@ -102,8 +108,8 @@
 
             <!-- Amphibians -->
             <div class="bg-white rounded-2xl shadow-md overflow-hidden">
-                <div class="h-48 bg-gradient-to-br from-lime-400 to-green-500 flex items-center justify-center">
-                    <span class="text-8xl">🐸</span>
+                <div class="h-48 overflow-hidden">
+                    <img src="{% static 'images/gallery/rana.jpg' %}" alt="{% trans 'Rana tropical de San Cipriano' %}" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="font-display text-2xl font-bold text-gray-900 mb-3">{% trans "Anfibios" %}</h3>
@@ -197,8 +203,8 @@
                 </div>
 
                 <div class="bg-white rounded-xl p-6 shadow-sm border border-rio-100 flex gap-4">
-                    <div class="w-16 h-16 bg-rio-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
-                        🏊
+                    <div class="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden">
+                        <img src="{% static 'images/gallery/piedras-rio.jpg' %}" alt="{% trans 'Baño en el río' %}" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <h3 class="font-semibold text-gray-900 mb-1">{% trans "Baño en el Río" %}</h3>
@@ -207,8 +213,8 @@
                 </div>
 
                 <div class="bg-white rounded-xl p-6 shadow-sm border border-rio-100 flex gap-4">
-                    <div class="w-16 h-16 bg-rio-100 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
-                        🌙
+                    <div class="w-16 h-16 rounded-xl flex-shrink-0 overflow-hidden">
+                        <img src="{% static 'images/gallery/rana-tropical.jpg' %}" alt="{% trans 'Rana tropical' %}" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <h3 class="font-semibold text-gray-900 mb-1">{% trans "Tour Nocturno" %}</h3>

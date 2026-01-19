@@ -3,10 +3,16 @@
 
 {% block title %}{% trans "Protección de la Reserva" %}{% endblock %}
 
+{% block meta_description %}{% trans "Normas de protección ambiental de San Cipriano. Cómo cuidar la reserva natural: no basura, no plásticos, respeto a la fauna y flora del Pacífico colombiano." %}{% endblock %}
+
 {% block content %}
-<!-- Header -->
-<section class="bg-gradient-to-br from-amber-600 to-amber-800 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
+<!-- Header with Background Image -->
+<section class="relative bg-gradient-to-br from-amber-600 to-amber-800 text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 opacity-40">
+        <img src="{% static 'images/gallery/rio-selva.jpg' %}" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-amber-900/60 to-amber-900/80"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
         <span class="inline-block text-6xl mb-4">🛡️</span>
         <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
             {% trans "Protección de la Reserva" %}
@@ -26,6 +32,19 @@
             <p class="text-amber-900 text-lg">
                 {% trans "La reserva de San Cipriano es protegida por su comunidad. Tu visita responsable es esencial para mantener este paraíso natural. Por favor, lee y respeta todas las normas." %}
             </p>
+        </div>
+
+        <!-- Featured Image - Crystal Clear Waters -->
+        <div class="mb-12 rounded-2xl overflow-hidden shadow-xl">
+            <img src="{% static 'images/gallery/pozos-naturales.jpg' %}"
+                 alt="{% trans 'Pozos naturales de aguas cristalinas en San Cipriano' %}"
+                 class="w-full h-64 md:h-80 object-cover">
+            <div class="bg-selva-800 text-white px-6 py-4">
+                <p class="text-selva-100 text-center">
+                    <span class="text-xl mr-2">💧</span>
+                    {% trans "Estas aguas cristalinas son el tesoro de nuestra comunidad. Ayúdanos a mantenerlas puras." %}
+                </p>
+            </div>
         </div>
 
         <!-- Environmental Care Section -->
@@ -100,19 +119,15 @@
             </div>
 
             <div class="bg-red-50 rounded-2xl p-6 border border-red-200">
-                <p class="text-red-800 mb-4 font-medium">{% trans "No se permite el ingreso a la reserva con:" %}</p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <p class="text-red-800 mb-4 font-medium">{% trans "No se permite:" %}</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="bg-white rounded-xl p-4 text-center border border-red-200">
-                        <span class="text-3xl">🚬</span>
-                        <p class="text-red-700 font-medium mt-2">{% trans "Drogas" %}</p>
+                        <span class="text-3xl">🔫</span>
+                        <p class="text-red-700 font-medium mt-2">{% trans "Armas de fuego" %}</p>
                     </div>
                     <div class="bg-white rounded-xl p-4 text-center border border-red-200">
-                        <span class="text-3xl">🍺</span>
-                        <p class="text-red-700 font-medium mt-2">{% trans "Alcohol" %}</p>
-                    </div>
-                    <div class="bg-white rounded-xl p-4 text-center border border-red-200">
-                        <span class="text-3xl">🔪</span>
-                        <p class="text-red-700 font-medium mt-2">{% trans "Objetos cortopunzantes" %}</p>
+                        <span class="text-3xl">🚫🌊</span>
+                        <p class="text-red-700 font-medium mt-2">{% trans "Ingresar al río bajo efectos de alcohol o drogas" %}</p>
                     </div>
                 </div>
             </div>
@@ -149,7 +164,7 @@
                         <svg class="w-6 h-6 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        <span class="text-selva-800">{% trans "Usa productos biodegradables (protector solar, repelente)" %}</span>
+                        <span class="text-selva-800">{% trans "No uses protector solar - los químicos contaminan el río. Usa gorra, camisa manga larga o sombrilla" %}</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <svg class="w-6 h-6 text-selva-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

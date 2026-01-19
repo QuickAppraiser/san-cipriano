@@ -1,116 +1,421 @@
 {% extends "base.html" %}
 {% load static i18n %}
 
-{% block title %}{% trans "Servicios" %}{% endblock %}
+{% block title %}{% trans "Servicios y Precios" %}{% endblock %}
+
+{% block meta_description %}{% trans "Precios de hospedaje, alimentación, brujitas y tours en San Cipriano. Desde $229,000 COP un fin de semana. Reserva y ahorra hasta 25%." %}{% endblock %}
 
 {% block content %}
-<!-- Header -->
-<section class="bg-gradient-to-br from-tierra-600 to-tierra-800 text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
+<!-- Header with Background Image -->
+<section class="relative bg-gradient-to-br from-tierra-600 to-tierra-800 text-white py-20 px-4 overflow-hidden">
+    <div class="absolute inset-0 opacity-40">
+        <img src="{% static 'images/gallery/hotel-restaurante.jpg' %}" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-tierra-900/60 to-tierra-900/80"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
         <span class="inline-block text-6xl mb-4">🎯</span>
         <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
-            {{ page_title }}
+            {% trans "Servicios y Precios" %}
         </h1>
         <p class="text-tierra-100 text-lg max-w-2xl mx-auto">
-            {% trans "Servicios gestionados directamente por la comunidad de San Cipriano." %}
+            {% trans "Servicios gestionados directamente por la comunidad de San Cipriano. Precios promedio por persona." %}
         </p>
     </div>
 </section>
 
-<!-- Info Banner -->
-<section class="bg-amber-50 border-b border-amber-200 py-4 px-4">
-    <div class="max-w-4xl mx-auto">
-        <div class="flex items-center justify-center gap-3 text-amber-800">
-            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <p class="text-sm font-medium">
-                {% trans "Los detalles y costos exactos se envían de forma personalizada después del registro." %}
-            </p>
+<!-- Important Notice Banner -->
+<section class="py-6 px-4 bg-gradient-to-r from-amber-500 to-orange-500">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+            <span class="text-4xl">⚠️</span>
+            <div class="text-white">
+                <p class="font-bold text-lg md:text-xl">{% trans "¡Estos son precios promedio de referencia!" %}</p>
+                <p class="text-amber-100 text-sm md:text-base">{% trans "Los precios pueden variar según temporada y disponibilidad. Reserva con nosotros para garantizar tu estadía y evitar sobrecostos." %}</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Services Grid -->
+<!-- Services Grid with Prices -->
 <section class="py-16 px-4">
     <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {% for service in services %}
-            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
-                <div class="h-32 bg-gradient-to-br from-selva-400 to-rio-500 flex items-center justify-center">
-                    <span class="text-6xl">{{ service.icon }}</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-display text-xl font-bold text-gray-900 mb-2">{{ service.name }}</h3>
-                    <p class="text-gray-600">{{ service.description }}</p>
+        <!-- Average Prices Notice -->
+        <div class="mb-8 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
+            <div class="flex items-start gap-3">
+                <span class="text-2xl">💡</span>
+                <div>
+                    <p class="font-semibold text-blue-900">{% trans "Precios promedio individuales" %}</p>
+                    <p class="text-blue-700 text-sm">{% trans "Estos precios son referenciales si contratas cada servicio por separado. Con nuestros paquetes obtienes mejores precios y garantizas disponibilidad." %}</p>
                 </div>
             </div>
-            {% endfor %}
         </div>
 
-        <!-- Pricing Notice -->
-        <div class="mt-12 bg-selva-50 rounded-2xl p-8 border border-selva-200">
-            <div class="flex flex-col md:flex-row items-center gap-6">
-                <div class="w-20 h-20 bg-selva-100 rounded-full flex items-center justify-center text-4xl flex-shrink-0">
-                    💰
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Hospedaje -->
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div class="h-32 relative overflow-hidden">
+                    <img src="{% static 'images/gallery/hotel-restaurante.jpg' %}" alt="{% trans 'Hospedaje comunitario' %}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-selva-900/60 to-transparent flex items-end p-3">
+                        <span class="text-4xl">🏠</span>
+                    </div>
                 </div>
-                <div class="text-center md:text-left">
-                    <h3 class="font-display text-xl font-bold text-selva-900 mb-2">
-                        {% trans "¿Cuánto cuesta?" %}
-                    </h3>
-                    <p class="text-selva-700 mb-4">
-                        {% trans "Los precios se manejan de forma personalizada según tus necesidades, número de personas y fechas. Completa el formulario y te enviaremos toda la información detallada." %}
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-bold text-gray-900">{% trans "Hospedaje" %}</h3>
+                        <span class="bg-selva-100 text-selva-700 px-3 py-1 rounded-full text-sm font-semibold">$80.000 - $120.000</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{% trans "Hoteles y alojamientos comunitarios en armonía con la naturaleza. Incluye habitación privada o compartida con ventilador." %}</p>
+                    <p class="text-xs text-gray-500 mt-2">{% trans "Por persona/noche" %}</p>
+                </div>
+            </div>
+
+            <!-- Alimentacion -->
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div class="h-32 relative overflow-hidden">
+                    <img src="{% static 'images/gallery/alimentacion.png' %}" alt="{% trans 'Gastronomía local' %}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-tierra-900/60 to-transparent flex items-end p-3">
+                        <span class="text-4xl">🍽️</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-bold text-gray-900">{% trans "Alimentación" %}</h3>
+                        <span class="bg-tierra-100 text-tierra-700 px-3 py-1 rounded-full text-sm font-semibold">$25.000 - $45.000</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{% trans "Gastronomía local preparada por la comunidad. Desayuno, almuerzo y cena con productos frescos del Pacífico." %}</p>
+                    <p class="text-xs text-gray-500 mt-2">{% trans "Por comida" %}</p>
+                </div>
+            </div>
+
+            <!-- Transporte Brujitas -->
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div class="h-32 relative overflow-hidden">
+                    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <source src="{% static 'videos/brujitas.mp4' %}" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-rio-900/60 to-transparent flex items-end p-3">
+                        <span class="text-4xl">🚃</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-bold text-gray-900">{% trans "Brujitas" %}</h3>
+                        <span class="bg-rio-100 text-rio-700 px-3 py-1 rounded-full text-sm font-semibold">$24.000</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{% trans "La experiencia única de viajar en los famosos carros sobre rieles. Recorrido de 3km atravesando la selva." %}</p>
+                    <p class="text-xs text-rio-600 mt-2">
+                        🛡️ {% trans "Incluye seguro de" %} <a href="https://colasistencia.net" target="_blank" rel="noopener" class="underline hover:text-rio-800">Colasistencia</a> {% trans "($4.000)" %}
                     </p>
-                    <a href="{% url 'visitors:inquiry_form' %}"
-                       class="inline-flex items-center gap-2 px-6 py-3 bg-selva-600 hover:bg-selva-700 text-white font-medium rounded-xl transition-colors">
-                        {% trans "Solicitar Información" %}
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                        </svg>
-                    </a>
+                    <p class="text-xs text-gray-500 mt-1">{% trans "Ida y vuelta por persona" %}</p>
+                </div>
+            </div>
+
+            <!-- Parqueadero -->
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div class="h-32 relative overflow-hidden">
+                    <img src="{% static 'images/gallery/parqueadero.jpg' %}" alt="{% trans 'Parqueadero oficial' %}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent flex items-end p-3">
+                        <span class="text-4xl">🅿️</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-bold text-gray-900">{% trans "Parqueadero" %}</h3>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold">$15.000 - $20.000</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{% trans "Estacionamiento seguro y vigilado para tu vehículo en la entrada de la reserva, cerca de la estación de brujitas. Día y noche se cobran por separado." %}</p>
+                    <p class="text-xs text-gray-500 mt-2">{% trans "Por día o noche" %}</p>
+                </div>
+            </div>
+
+            <!-- Entrada Reserva -->
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div class="h-32 relative overflow-hidden">
+                    <img src="{% static 'images/gallery/entrada-bienvenidos.jpg' %}" alt="{% trans 'Entrada a la reserva' %}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-selva-900/60 to-transparent flex items-end p-3">
+                        <span class="text-4xl">🎫</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-bold text-gray-900">{% trans "Entrada Reserva" %}</h3>
+                        <span class="bg-selva-100 text-selva-700 px-3 py-1 rounded-full text-sm font-semibold">$10.000</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{% trans "Acceso a los senderos, ríos cristalinos y espacios naturales de la reserva. Incluye uso de charcos y zonas de descanso." %}</p>
+                    <p class="text-xs text-gray-500 mt-2">{% trans "Por persona" %}</p>
+                </div>
+            </div>
+
+            <!-- Paquete Turístico -->
+            <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-100">
+                <div class="h-32 relative overflow-hidden">
+                    <img src="{% static 'images/gallery/info-avistamiento.jpg' %}" alt="{% trans 'Paquete turístico' %}" class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-t from-amber-900/60 to-transparent flex items-end p-3">
+                        <span class="text-4xl">🧭</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-display text-xl font-bold text-gray-900">{% trans "Paquete Turístico" %}</h3>
+                        <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold">$80.000 - $100.000</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{% trans "Incluye chalecos salvavidas, flotadores, visita a las cascadas y los pozos naturales." %}</p>
+                    <p class="text-xs text-gray-500 mt-2">{% trans "Por persona" %}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Packages Section -->
+        <div class="mt-12 bg-gradient-to-br from-selva-600 to-rio-700 rounded-2xl p-8 border-4 border-selva-400 shadow-2xl relative overflow-hidden">
+            <!-- Decorative ribbon -->
+            <div class="absolute -right-12 top-6 bg-amber-500 text-white font-bold py-2 px-12 rotate-45 text-sm shadow-lg">
+                {% trans "¡MEJOR PRECIO!" %}
+            </div>
+
+            <div class="text-center mb-8">
+                <span class="inline-block text-5xl mb-3">🎁</span>
+                <h3 class="font-display text-2xl md:text-3xl font-bold text-white mb-2">
+                    {% trans "¡Reserva con Nosotros y Ahorra!" %}
+                </h3>
+                <p class="text-selva-100 text-lg">{% trans "Elige el paquete perfecto para tu aventura" %}</p>
+            </div>
+
+            <!-- Two Packages -->
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <!-- Package 1: Basic -->
+                <div class="bg-white rounded-xl p-6 border-2 border-white/50 shadow-lg relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-selva-600 text-white text-xs font-bold px-4 py-1 rounded-full">
+                        {% trans "PAQUETE 1" %}
+                    </div>
+                    <div class="text-center mb-4 pt-2">
+                        <span class="text-3xl">🏠</span>
+                        <h4 class="font-display text-xl font-bold text-gray-900 mt-2">{% trans "Estadía Básica" %}</h4>
+                    </div>
+                    <div class="space-y-3 text-gray-600 text-sm mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-selva-600">✓</span>
+                            <span>🏠 {% trans "Hospedaje 1 noche" %}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-selva-600">✓</span>
+                            <span>🍽️ {% trans "3 comidas (desayuno, almuerzo, cena)" %}</span>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-200 pt-4 text-center">
+                        <p class="text-gray-500 text-xs mb-1">{% trans "Por persona" %}</p>
+                        <p class="text-3xl font-bold text-selva-700">$140.000</p>
+                        <p class="text-gray-400 text-xs mt-1">COP</p>
+                    </div>
+                </div>
+
+                <!-- Package 2: Complete -->
+                <div class="bg-white rounded-xl p-6 border-4 border-amber-400 shadow-xl relative transform md:scale-105">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs font-bold px-4 py-1 rounded-full">
+                        {% trans "PAQUETE 2" %} ⭐
+                    </div>
+                    <div class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
+                        {% trans "¡RECOMENDADO!" %}
+                    </div>
+                    <div class="text-center mb-4 pt-2">
+                        <span class="text-3xl">🌟</span>
+                        <h4 class="font-display text-xl font-bold text-gray-900 mt-2">{% trans "Experiencia Completa" %}</h4>
+                    </div>
+                    <div class="space-y-3 text-gray-600 text-sm mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-selva-600">✓</span>
+                            <span>🏠 {% trans "Hospedaje 1 noche" %}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-selva-600">✓</span>
+                            <span>🍽️ {% trans "3 comidas (desayuno, almuerzo, cena)" %}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-amber-500">✓</span>
+                            <span class="font-medium text-amber-700">🎯 {% trans "Tour completo incluye:" %}</span>
+                        </div>
+                        <div class="ml-6 space-y-1 text-xs text-gray-500">
+                            <p>🛟 {% trans "Flotadores" %}</p>
+                            <p>🦺 {% trans "Chalecos salvavidas" %}</p>
+                            <p>💧 {% trans "Tours a cascadas y pozos" %}</p>
+                            <p>🌿 {% trans "Recorridos guiados" %}</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-amber-200 pt-4 text-center bg-amber-50 -mx-6 -mb-6 px-6 pb-6 rounded-b-lg">
+                        <p class="text-amber-700 text-xs mb-1">{% trans "Por persona - Todo incluido" %}</p>
+                        <p class="text-3xl font-bold text-amber-600">$220.000</p>
+                        <p class="text-amber-500 text-xs mt-1">COP</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional info -->
+            <div class="text-center bg-white/10 backdrop-blur rounded-xl py-4 px-6 mb-4">
+                <p class="text-white/90 text-sm">
+                    💡 {% trans "Los demás servicios (brujitas, parqueadero, entrada) se pagan por separado según los precios indicados arriba." %}
+                </p>
+            </div>
+
+            <p class="text-center text-white/70 text-xs">{% trans "Nota: El parqueadero es por vehículo, no por persona. Los precios pueden variar según temporada." %}</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-8 text-center">
+            <a href="{% url 'visitors:inquiry_form' %}"
+               class="inline-flex items-center gap-2 px-8 py-4 bg-selva-600 hover:bg-selva-700 text-white text-lg font-semibold rounded-xl transition-colors">
+                {% trans "Reservar Ahora" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section class="py-16 px-4 bg-rio-50">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+            <span class="inline-block text-5xl mb-4">📍</span>
+            <h2 class="font-display text-3xl font-bold text-gray-900 mb-2">{% trans "Cómo Llegar" %}</h2>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-md">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-4">{% trans "Desde Cali" %}</h3>
+                    <ol class="space-y-3 text-gray-600">
+                        <li class="flex gap-3">
+                            <span class="bg-rio-100 text-rio-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+                            <span>{% trans "Tomar la vía Cali - Buenaventura (aproximadamente 3 horas)" %}</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="bg-rio-100 text-rio-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+                            <span>{% trans "Antes de llegar a Buenaventura, desviarse hacia Córdoba (km 74)" %}</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="bg-rio-100 text-rio-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+                            <span>{% trans "Llegar al parqueadero de la estación de brujitas" %}</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="bg-rio-100 text-rio-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+                            <span>{% trans "Tomar la brujita hacia San Cipriano (15-20 minutos)" %}</span>
+                        </li>
+                    </ol>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-900 mb-4">{% trans "Información Importante" %}</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex gap-2">
+                            <span class="text-selva-500">✓</span>
+                            <span>{% trans "Las brujitas operan desde las 6am hasta las 6pm" %}</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-selva-500">✓</span>
+                            <span>{% trans "Se recomienda llegar antes de las 4pm para instalarse" %}</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-selva-500">✓</span>
+                            <span>{% trans "Coordenadas GPS: 3.8167° N, 76.8833° W" %}</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-selva-500">✓</span>
+                            <span>{% trans "El parqueadero tiene vigilancia 24 horas" %}</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Reservation Info -->
-<section class="py-12 px-4 bg-gray-100">
-    <div class="max-w-3xl mx-auto">
-        <h2 class="font-display text-2xl font-bold text-gray-900 mb-6 text-center">
-            {% trans "Proceso de Reserva" %}
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-xl p-6 text-center">
-                <div class="w-12 h-12 bg-rio-100 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                    1️⃣
-                </div>
-                <h3 class="font-semibold text-gray-900 mb-2">{% trans "Completa el formulario" %}</h3>
-                <p class="text-gray-600 text-sm">{% trans "Cuéntanos sobre tu visita y servicios de interés." %}</p>
-            </div>
-            <div class="bg-white rounded-xl p-6 text-center">
-                <div class="w-12 h-12 bg-rio-100 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                    2️⃣
-                </div>
-                <h3 class="font-semibold text-gray-900 mb-2">{% trans "Te contactamos" %}</h3>
-                <p class="text-gray-600 text-sm">{% trans "Recibirás información personalizada con precios y disponibilidad." %}</p>
-            </div>
-            <div class="bg-white rounded-xl p-6 text-center">
-                <div class="w-12 h-12 bg-rio-100 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                    3️⃣
-                </div>
-                <h3 class="font-semibold text-gray-900 mb-2">{% trans "Confirma tu reserva" %}</h3>
-                <p class="text-gray-600 text-sm">{% trans "La reserva se confirma mediante contacto directo con la comunidad." %}</p>
-            </div>
+<!-- What to Bring -->
+<section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-8">
+            <span class="inline-block text-5xl mb-4">🎒</span>
+            <h2 class="font-display text-3xl font-bold text-gray-900 mb-2">{% trans "Qué Llevar" %}</h2>
         </div>
 
-        <div class="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
-            <p class="text-amber-800 text-sm">
-                <svg class="w-5 h-5 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-selva-50 rounded-xl p-6">
+                <h3 class="font-semibold text-selva-900 mb-3">{% trans "Esencial" %}</h3>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                    <li>✓ {% trans "Ropa cómoda y fresca" %}</li>
+                    <li>✓ {% trans "Traje de baño" %}</li>
+                    <li>✓ {% trans "Zapatos para agua" %}</li>
+                    <li>✓ {% trans "Gorra o sombrero" %}</li>
+                    <li>✓ {% trans "Careta de snorkel" %}</li>
+                    <li>✓ {% trans "Ropa manga larga (protección contra insectos y sol)" %}</li>
+                    <li>✓ {% trans "Toalla" %}</li>
+                </ul>
+            </div>
+            <div class="bg-rio-50 rounded-xl p-6">
+                <h3 class="font-semibold text-rio-900 mb-3">{% trans "Recomendado" %}</h3>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                    <li>✓ {% trans "Linterna" %}</li>
+                    <li>✓ {% trans "Cámara fotográfica" %}</li>
+                    <li>✓ {% trans "Binoculares" %}</li>
+                    <li>✓ {% trans "Botiquín básico" %}</li>
+                    <li>✓ {% trans "Efectivo o Nequi (no hay cajeros)" %}</li>
+                    <li>✓ {% trans "Bolsas para basura" %}</li>
+                    <li>✓ {% trans "Cargador portátil" %}</li>
+                </ul>
+            </div>
+            <div class="bg-amber-50 rounded-xl p-6">
+                <h3 class="font-semibold text-amber-900 mb-3">{% trans "No Llevar / Prohibido" %}</h3>
+                <ul class="space-y-2 text-gray-600 text-sm">
+                    <li>✗ {% trans "Armas de fuego" %}</li>
+                    <li>✗ {% trans "Parlantes grandes" %}</li>
+                    <li>✗ {% trans "Plástico de un solo uso" %}</li>
+                    <li>✗ {% trans "Mascotas" %}</li>
+                    <li>✗ {% trans "Ingresar al río bajo efectos de alcohol o drogas" %}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WhatsApp Contact - Prominent CTA -->
+<section class="py-16 px-4 bg-gradient-to-br from-green-600 to-green-700">
+    <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-6xl mb-4">💬</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+            {% trans "¿Listo para Reservar?" %}
+        </h2>
+        <p class="text-green-100 text-lg mb-8 max-w-xl mx-auto">
+            {% trans "Escríbenos por WhatsApp y te respondemos en minutos. Te ayudamos a armar el paquete perfecto para tu grupo." %}
+        </p>
+
+        <!-- Large WhatsApp Button -->
+        <a href="https://wa.me/573113111669?text=Hola!%20Quiero%20información%20sobre%20paquetes%20para%20San%20Cipriano"
+           target="_blank"
+           rel="noopener"
+           class="inline-flex items-center gap-4 px-10 py-5 bg-white hover:bg-gray-50 text-green-700 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105">
+            <svg class="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <div class="text-left">
+                <span class="block">{% trans "Contactar por WhatsApp" %}</span>
+                <span class="block text-sm font-normal text-green-600">{% trans "Respuesta rápida" %}</span>
+            </div>
+        </a>
+
+        <p class="text-green-200 text-sm mt-6">
+            +57 311 311 1669
+        </p>
+
+        <!-- Alternative contact -->
+        <div class="mt-8 pt-6 border-t border-green-500/30">
+            <p class="text-green-200 text-sm mb-3">{% trans "¿Prefieres email?" %}</p>
+            <a href="mailto:lordmauricio22@gmail.com"
+               class="inline-flex items-center gap-2 text-white hover:text-green-100 underline underline-offset-4">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
-                {% trans "La confirmación de reserva puede requerir un anticipo. Los detalles se informan después del contacto inicial." %}
-            </p>
+                lordmauricio22@gmail.com
+            </a>
         </div>
     </div>
 </section>

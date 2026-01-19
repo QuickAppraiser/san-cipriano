@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, TemplateView
 
+from apps.core.utils import get_client_ip
 from .forms import VisitorInquiryForm
 from .models import VisitorInquiry, VisitorCounter
 
@@ -35,7 +36,7 @@ class InquiryFormView(CreateView):
     def form_valid(self, form):
         # Save visitor metadata
         form.instance.source_language = self.request.LANGUAGE_CODE
-        form.instance.ip_address = self.get_client_ip()
+        form.instance.ip_address = get_client_ip(self.request)
         form.instance.user_agent = self.request.META.get("HTTP_USER_AGENT", "")
 
         response = super().form_valid(form)
@@ -51,13 +52,6 @@ class InquiryFormView(CreateView):
         )
 
         return response
-
-    def get_client_ip(self):
-        """Extract client IP from request."""
-        x_forwarded_for = self.request.META.get("HTTP_X_FORWARDED_FOR")
-        if x_forwarded_for:
-            return x_forwarded_for.split(",")[0].strip()
-        return self.request.META.get("REMOTE_ADDR")
 
 
 class ThankYouView(TemplateView):

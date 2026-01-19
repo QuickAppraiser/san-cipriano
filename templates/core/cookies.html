@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Política de Cookies" %}{% endblock %}
+
+{% block meta_description %}{% trans "Política de cookies de San Cipriano. Conoce qué cookies utilizamos y cómo puedes gestionarlas." %}{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="relative bg-gradient-to-br from-tierra-600 to-tierra-800 text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+        <span class="inline-block text-5xl mb-4">🍪</span>
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">
+            {% trans "Política de Cookies" %}
+        </h1>
+        <p class="text-tierra-100 text-lg">
+            {% trans "Última actualización: Enero 2025" %}
+        </p>
+    </div>
+</section>
+
+<!-- Content -->
+<section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto prose prose-lg">
+
+        <!-- Introduction -->
+        <div class="bg-tierra-50 border-l-4 border-tierra-500 rounded-r-xl p-6 mb-8">
+            <p class="text-tierra-900">
+                {% trans "Este sitio web utiliza cookies para mejorar tu experiencia de navegación. Aquí explicamos qué son las cookies, cuáles usamos y cómo puedes gestionarlas." %}
+            </p>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-tierra-900 mt-8 mb-4">
+            {% trans "1. ¿Qué son las Cookies?" %}
+        </h2>
+        <p class="text-gray-700 mb-6">
+            {% trans "Las cookies son pequeños archivos de texto que los sitios web almacenan en tu dispositivo (computadora, tablet o teléfono) cuando los visitas. Sirven para recordar tus preferencias y mejorar tu experiencia de navegación." %}
+        </p>
+
+        <h2 class="font-display text-2xl font-bold text-tierra-900 mt-8 mb-4">
+            {% trans "2. Cookies que Utilizamos" %}
+        </h2>
+
+        <h3 class="font-display text-xl font-semibold text-gray-800 mt-6 mb-3">
+            {% trans "Cookies Esenciales" %}
+        </h3>
+        <p class="text-gray-700 mb-4">
+            {% trans "Son necesarias para el funcionamiento básico del sitio. Sin ellas, el sitio no funcionaría correctamente." %}
+        </p>
+        <div class="bg-gray-50 rounded-xl p-4 mb-6">
+            <table class="w-full text-sm">
+                <thead class="border-b">
+                    <tr>
+                        <th class="text-left py-2 font-semibold">{% trans "Cookie" %}</th>
+                        <th class="text-left py-2 font-semibold">{% trans "Propósito" %}</th>
+                        <th class="text-left py-2 font-semibold">{% trans "Duración" %}</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-600">
+                    <tr class="border-b">
+                        <td class="py-2 font-mono text-xs">csrftoken</td>
+                        <td class="py-2">{% trans "Seguridad de formularios" %}</td>
+                        <td class="py-2">{% trans "1 año" %}</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="py-2 font-mono text-xs">sessionid</td>
+                        <td class="py-2">{% trans "Sesión de usuario" %}</td>
+                        <td class="py-2">{% trans "2 semanas" %}</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 font-mono text-xs">django_language</td>
+                        <td class="py-2">{% trans "Preferencia de idioma" %}</td>
+                        <td class="py-2">{% trans "1 año" %}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 class="font-display text-xl font-semibold text-gray-800 mt-6 mb-3">
+            {% trans "Cookies de Terceros" %}
+        </h3>
+        <p class="text-gray-700 mb-4">
+            {% trans "Actualmente, NO utilizamos cookies de terceros para rastreo ni publicidad. Tu privacidad es importante para nosotros." %}
+        </p>
+        <div class="bg-green-50 border border-green-200 rounded-xl p-4 mb-6">
+            <p class="text-green-800 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {% trans "No usamos Google Analytics ni otras herramientas de rastreo" %}
+            </p>
+            <p class="text-green-800 flex items-center gap-2 mt-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {% trans "No vendemos ni compartimos datos con anunciantes" %}
+            </p>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-tierra-900 mt-8 mb-4">
+            {% trans "3. Cómo Gestionar las Cookies" %}
+        </h2>
+        <p class="text-gray-700 mb-4">
+            {% trans "Puedes controlar y/o eliminar las cookies como desees. Todos los navegadores modernos permiten:" %}
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+            <li>{% trans "Ver qué cookies están almacenadas en tu dispositivo" %}</li>
+            <li>{% trans "Eliminar todas o algunas cookies" %}</li>
+            <li>{% trans "Bloquear cookies de ciertos sitios" %}</li>
+            <li>{% trans "Bloquear todas las cookies" %}</li>
+            <li>{% trans "Recibir una alerta cuando se instale una cookie" %}</li>
+        </ul>
+
+        <h3 class="font-display text-xl font-semibold text-gray-800 mt-6 mb-3">
+            {% trans "Instrucciones por Navegador" %}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener" class="block bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
+                <p class="font-semibold text-gray-800">Google Chrome</p>
+                <p class="text-sm text-gray-600">{% trans "Configuración de cookies" %} →</p>
+            </a>
+            <a href="https://support.mozilla.org/es/kb/Borrar%20cookies" target="_blank" rel="noopener" class="block bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
+                <p class="font-semibold text-gray-800">Mozilla Firefox</p>
+                <p class="text-sm text-gray-600">{% trans "Configuración de cookies" %} →</p>
+            </a>
+            <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener" class="block bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
+                <p class="font-semibold text-gray-800">Safari</p>
+                <p class="text-sm text-gray-600">{% trans "Configuración de cookies" %} →</p>
+            </a>
+            <a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge" target="_blank" rel="noopener" class="block bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
+                <p class="font-semibold text-gray-800">Microsoft Edge</p>
+                <p class="text-sm text-gray-600">{% trans "Configuración de cookies" %} →</p>
+            </a>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+            <p class="text-amber-800">
+                <strong>{% trans "Nota:" %}</strong> {% trans "Si desactivas las cookies esenciales, algunas funciones del sitio (como el formulario de contacto y el selector de idioma) podrían no funcionar correctamente." %}
+            </p>
+        </div>
+
+        <h2 class="font-display text-2xl font-bold text-tierra-900 mt-8 mb-4">
+            {% trans "4. Cambios a esta Política" %}
+        </h2>
+        <p class="text-gray-700 mb-6">
+            {% trans "Podemos actualizar esta política ocasionalmente. Cualquier cambio será publicado en esta página con una nueva fecha de actualización." %}
+        </p>
+
+        <h2 class="font-display text-2xl font-bold text-tierra-900 mt-8 mb-4">
+            {% trans "5. Contacto" %}
+        </h2>
+        <p class="text-gray-700 mb-4">
+            {% trans "Si tienes preguntas sobre nuestra política de cookies, contáctanos:" %}
+        </p>
+        <div class="bg-gray-50 rounded-xl p-6 mb-6">
+            <ul class="text-gray-700 space-y-2">
+                <li><strong>{% trans "Email:" %}</strong> {{ community_email }}</li>
+                <li><strong>{% trans "WhatsApp:" %}</strong> {{ community_whatsapp }}</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- Related Links -->
+<section class="py-12 px-4 bg-gray-100">
+    <div class="max-w-2xl mx-auto text-center">
+        <p class="text-gray-600 mb-4">{% trans "Ver también:" %}</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="{% url 'core:privacy' %}" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                {% trans "Política de Privacidad" %}
+            </a>
+            <a href="{% url 'core:terms' %}" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                {% trans "Términos y Condiciones" %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

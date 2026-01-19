@@ -4,500 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}San Cipriano - Reserva natural comunitaria en Colombia. Turismo responsable y conservación ambiental.{% endblock %}">
+    <meta name="keywords" content="San Cipriano, turismo Colombia, ecoturismo, reserva natural, Valle del Cauca, Buenaventura, brujitas, turismo comunitario, biodiversidad">
+    <meta name="author" content="Comunidad de San Cipriano">
+    <meta name="robots" content="index, follow">
 
-    <!-- SEO Meta Tags - Multilingual Keywords for International Tourism -->
-    <meta name="description" content="{% block meta_description %}San Cipriano - Hidden paradise near Buenaventura, Colombia. Crystal clear natural pools, waterfalls, jungle train ride (brujita), rainforest hiking trails. Afro-Colombian community tourism in the Pacific coast. Best eco-adventure destination in Valle del Cauca.{% endblock %}">
-
-    <!-- MASSIVE MULTILINGUAL KEYWORDS FOR MAXIMUM SEO REACH -->
-    <meta name="keywords" content="{% block meta_keywords %}
-        {# SPANISH - Colombia, Latinoamerica #}
-        San Cipriano, San Cipriano Colombia, reserva natural San Cipriano, turismo San Cipriano,
-        Buenaventura turismo, que hacer en Buenaventura, lugares turisticos Buenaventura,
-        Valle del Cauca turismo, destinos Valle del Cauca, ecoturismo Valle del Cauca,
-        cascadas Colombia, charcos naturales Colombia, rios cristalinos Colombia,
-        selva del Pacifico, Pacifico colombiano turismo, costa Pacifica Colombia,
-        brujita San Cipriano, paseo en brujita, tren de la selva Colombia,
-        turismo comunitario Colombia, turismo responsable, turismo sostenible Colombia,
-        Palenque cerca, cultura afro Colombia, comunidades afrocolombianas,
-        piscinas naturales Colombia, balnearios naturales, aguas cristalinas,
-        senderismo Colombia, caminatas ecologicas, trails Colombia,
-        biodiversidad Colombia, flora y fauna Pacifico, aves Colombia,
-        aventura Colombia, ecoaventura, turismo de naturaleza,
-        planes desde Cali, excursiones desde Cali, paseos fin de semana Colombia,
-        hospedaje San Cipriano, donde dormir San Cipriano, cabanas selva,
-        gastronomia Pacifica, comida tipica Buenaventura, mariscos frescos,
-
-        {# ENGLISH - USA, UK, Canada, Australia #}
-        Colombia travel, Colombia tourism, visit Colombia, Colombia vacation,
-        Colombia waterfalls, best waterfalls Colombia, hidden waterfalls South America,
-        Colombia natural pools, swimming holes Colombia, crystal clear rivers Colombia,
-        jungle tour Colombia, rainforest Colombia, Pacific rainforest,
-        Colombia hiking, hiking trails Colombia, nature walks Colombia,
-        ecotourism Colombia, sustainable tourism Colombia, responsible travel Colombia,
-        community tourism, local guides Colombia, authentic Colombia experience,
-        off the beaten path Colombia, hidden gems Colombia, secret places Colombia,
-        Buenaventura tourism, things to do Buenaventura, day trips from Cali,
-        Valle del Cauca attractions, Pacific coast Colombia, Colombia coast,
-        adventure travel Colombia, eco adventure, nature tourism,
-        Colombia wildlife, birdwatching Colombia, biodiversity hotspot,
-        Afro-Colombian culture, Palenque culture, Colombian heritage,
-        train ride jungle, jungle railway, unique transportation Colombia,
-        backpacking Colombia, budget travel Colombia, cheap destinations Colombia,
-        Colombia itinerary, Colombia travel guide, Colombia must see,
-        beautiful places Colombia, Instagram Colombia, photography spots Colombia,
-        river swimming Colombia, natural beauty Colombia, paradise Colombia,
-
-        {# GERMAN - Germany, Austria, Switzerland #}
-        Kolumbien Reisen, Kolumbien Urlaub, Kolumbien Tourismus,
-        Wasserfaelle Kolumbien, Naturpools Kolumbien, kristallklare Fluesse,
-        Dschungel Tour Kolumbien, Regenwald Kolumbien, Wandern Kolumbien,
-        Oekotourismus Kolumbien, nachhaltiger Tourismus, Gemeindetourismus,
-        Abenteuerreisen Kolumbien, Naturreisen, versteckte Orte Kolumbien,
-        Pazifikkueste Kolumbien, Buenaventura Sehenswuerdigkeiten,
-        Vogelbeobachtung Kolumbien, Biodiversitaet, Tierwelt Kolumbien,
-        Backpacking Kolumbien, guenstig reisen Kolumbien, Geheimtipps Kolumbien,
-
-        {# FRENCH - France, Belgium, Switzerland, Canada #}
-        Colombie voyage, tourisme Colombie, visiter Colombie, vacances Colombie,
-        cascades Colombie, piscines naturelles Colombie, rivieres cristallines,
-        jungle Colombie, foret tropicale, randonnee Colombie, sentiers nature,
-        ecotourisme Colombie, tourisme durable, tourisme communautaire,
-        aventure Colombie, destinations nature, lieux secrets Colombie,
-        cote Pacifique Colombie, Buenaventura tourisme, excursions Cali,
-        observation oiseaux Colombie, biodiversite, faune et flore,
-        voyage sac a dos Colombie, voyage pas cher, bons plans Colombie,
-        beaux endroits Colombie, paradis cache, merveilles naturelles,
-
-        {# PORTUGUESE - Brazil, Portugal #}
-        Colombia turismo, viajar Colombia, ferias Colombia, visitar Colombia,
-        cachoeiras Colombia, piscinas naturais Colombia, rios cristalinos,
-        selva Colombia, floresta tropical, trilhas Colombia, caminhadas,
-        ecoturismo Colombia, turismo sustentavel, turismo comunitario,
-        aventura Colombia, destinos natureza, lugares escondidos Colombia,
-        costa Pacifica Colombia, Buenaventura turismo, passeios de Cali,
-        observacao de aves Colombia, biodiversidade, vida selvagem,
-        mochilao Colombia, viagem barata, dicas Colombia,
-        lugares bonitos Colombia, paraiso escondido, belezas naturais,
-
-        {# ITALIAN - Italy #}
-        Colombia viaggio, turismo Colombia, visitare Colombia, vacanze Colombia,
-        cascate Colombia, piscine naturali Colombia, fiumi cristallini,
-        giungla Colombia, foresta pluviale, trekking Colombia, sentieri natura,
-        ecoturismo Colombia, turismo sostenibile, turismo comunitario,
-        avventura Colombia, destinazioni natura, luoghi nascosti Colombia,
-        costa Pacifica Colombia, Buenaventura turismo, escursioni da Cali,
-        birdwatching Colombia, biodiversita, fauna e flora,
-        zaino in spalla Colombia, viaggio economico, consigli Colombia,
-        posti belli Colombia, paradiso nascosto, meraviglie naturali,
-
-        {# DUTCH - Netherlands, Belgium #}
-        Colombia reizen, Colombia toerisme, Colombia vakantie, Colombia bezoeken,
-        watervallen Colombia, natuurlijke zwembaden, kristalheldere rivieren,
-        jungle Colombia, regenwoud, wandelen Colombia, natuurpaden,
-        ecotoerisme Colombia, duurzaam toerisme, gemeenschapstoerisme,
-        avontuur Colombia, natuurbestemmingen, verborgen plekken Colombia,
-        Pacifische kust Colombia, Buenaventura toerisme, dagtochten Cali,
-        vogels kijken Colombia, biodiversiteit, wilde dieren,
-        backpacken Colombia, goedkoop reizen, tips Colombia,
-        mooie plekken Colombia, verborgen paradijs, natuurwonderen,
-
-        {# RUSSIAN - Russia #}
-        Колумбия туризм, путешествие Колумбия, отдых Колумбия,
-        водопады Колумбия, природные бассейны, кристально чистые реки,
-        джунгли Колумбия, тропический лес, походы Колумбия,
-        экотуризм Колумбия, устойчивый туризм, общественный туризм,
-        приключения Колумбия, природные направления, скрытые места,
-        Тихоокеанское побережье Колумбия, Буэнавентура туризм,
-        наблюдение за птицами, биоразнообразие, дикая природа,
-        бюджетные путешествия, советы Колумбия, красивые места,
-
-        {# CHINESE - China #}
-        哥伦比亚旅游, 哥伦比亚观光, 哥伦比亚度假,
-        哥伦比亚瀑布, 天然泳池, 清澈河流,
-        哥伦比亚丛林, 热带雨林, 哥伦比亚徒步,
-        生态旅游, 可持续旅游, 社区旅游,
-        冒险旅行, 自然目的地, 隐藏景点,
-        太平洋海岸, 布埃纳文图拉旅游,
-        观鸟, 生物多样性, 野生动物,
-        背包旅行, 经济实惠旅行, 旅游攻略,
-
-        {# JAPANESE - Japan #}
-        コロンビア旅行, コロンビア観光, コロンビア休暇,
-        コロンビアの滝, 天然プール, 透明な川,
-        ジャングルツアー, 熱帯雨林, ハイキング,
-        エコツーリズム, 持続可能な観光, コミュニティツーリズム,
-        アドベンチャー旅行, 自然の目的地, 隠れた場所,
-        太平洋沿岸, ブエナベンチュラ観光,
-        バードウォッチング, 生物多様性, 野生動物,
-        バックパッカー, 格安旅行, 旅行ガイド,
-
-        {# KOREAN - South Korea #}
-        콜롬비아 여행, 콜롬비아 관광, 콜롬비아 휴가,
-        콜롬비아 폭포, 천연 수영장, 맑은 강,
-        정글 투어, 열대 우림, 하이킹,
-        에코 투어리즘, 지속 가능한 관광, 커뮤니티 관광,
-        모험 여행, 자연 목적지, 숨겨진 장소,
-        태평양 연안, 부에나벤투라 관광,
-        조류 관찰, 생물 다양성, 야생 동물,
-        배낭 여행, 저렴한 여행, 여행 가이드,
-
-        {# SPECIFIC TRAVEL TERMS #}
-        best time visit Colombia, Colombia dry season, Colombia weather,
-        Colombia safety, is Colombia safe, travel tips Colombia,
-        Colombia visa, Colombia entry requirements,
-        Colombia currency, Colombia budget, how much Colombia trip,
-        Colombia airport, fly to Colombia, Cali airport,
-        Colombia hotels, Colombia hostels, Colombia accommodation,
-        Colombia food, Colombian cuisine, what to eat Colombia,
-        Colombia nightlife, Colombia culture, Colombia festivals,
-        Colombia beaches, Colombia mountains, Colombia rivers,
-        Colombia coffee region, Colombia Caribbean, Colombia Amazon,
-        South America travel, Latin America tourism, best of South America
-    {% endblock %}">
-
-    <meta name="author" content="Comunidad de San Cipriano - Official Community Tourism">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <meta name="revisit-after" content="3 days">
-    <meta name="rating" content="general">
-    <meta name="distribution" content="global">
-    <meta name="coverage" content="worldwide">
-    <meta name="target" content="all">
-    <meta name="HandheldFriendly" content="true">
-
-    <!-- Multilingual Alternate Links (hreflang) for International SEO -->
-    <link rel="alternate" hreflang="es" href="{{ request.scheme }}://{{ request.get_host }}/es{{ request.path }}">
-    <link rel="alternate" hreflang="en" href="{{ request.scheme }}://{{ request.get_host }}/en{{ request.path }}">
-    <link rel="alternate" hreflang="fr" href="{{ request.scheme }}://{{ request.get_host }}/fr{{ request.path }}">
-    <link rel="alternate" hreflang="de" href="{{ request.scheme }}://{{ request.get_host }}/de{{ request.path }}">
-    <link rel="alternate" hreflang="pt" href="{{ request.scheme }}://{{ request.get_host }}/pt{{ request.path }}">
-    <link rel="alternate" hreflang="it" href="{{ request.scheme }}://{{ request.get_host }}/it{{ request.path }}">
-    <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}/">
-
-    <!-- Open Graph / Facebook - Enhanced for Social Sharing -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
-    <meta property="og:title" content="{% block og_title %}{{ site_name }} - Hidden Paradise in Colombia | Waterfalls & Natural Pools{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}Discover San Cipriano, a hidden jungle paradise near Buenaventura, Colombia. Crystal-clear natural pools, stunning waterfalls, unique jungle train ride (brujita), hiking trails, and authentic Afro-Colombian culture. Community-based ecotourism at its best!{% endblock %}">
-    <meta property="og:image" content="{% block og_image %}{% static 'images/og-image.jpg' %}{% endblock %}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="San Cipriano natural pool with crystal clear water surrounded by tropical rainforest">
-    <meta property="og:locale" content="{{ LANGUAGE_CODE }}_CO">
-    <meta property="og:locale:alternate" content="en_US">
-    <meta property="og:locale:alternate" content="es_ES">
-    <meta property="og:locale:alternate" content="fr_FR">
-    <meta property="og:locale:alternate" content="de_DE">
-    <meta property="og:locale:alternate" content="pt_BR">
-    <meta property="og:locale:alternate" content="it_IT">
-    <meta property="og:site_name" content="{{ site_name }} - Community Tourism Colombia">
-    <meta property="fb:app_id" content="">
+    <meta property="og:title" content="{% block og_title %}{{ site_name }} - {{ site_tagline }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Reserva natural comunitaria en el Pacífico colombiano. Turismo responsable, biodiversidad única y las famosas brujitas.{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% static 'images/gallery/rio-cristalino.jpg' %}{% endblock %}">
+    <meta property="og:locale" content="{{ LANGUAGE_CODE }}">
+    <meta property="og:locale:alternate" content="es">
+    <meta property="og:locale:alternate" content="en">
+    <meta property="og:locale:alternate" content="fr">
+    <meta property="og:locale:alternate" content="de">
+    <meta property="og:locale:alternate" content="it">
+    <meta property="og:locale:alternate" content="pt">
 
-    <!-- Twitter - Enhanced -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{{ request.build_absolute_uri }}">
-    <meta name="twitter:title" content="{% block twitter_title %}{{ site_name }} - Hidden Paradise in Colombia{% endblock %}">
-    <meta name="twitter:description" content="{% block twitter_description %}Crystal-clear natural pools, waterfalls, jungle train ride & authentic Afro-Colombian culture. Discover Colombia's best-kept secret! #Colombia #Travel #Ecotourism{% endblock %}">
-    <meta name="twitter:image" content="{% block twitter_image %}{% static 'images/og-image.jpg' %}{% endblock %}">
-    <meta name="twitter:image:alt" content="San Cipriano natural paradise in Colombia">
-    <meta name="twitter:creator" content="@sancipriano">
-    <meta name="twitter:site" content="@sancipriano">
+    <meta name="twitter:title" content="{{ site_name }} - {{ site_tagline }}">
+    <meta name="twitter:description" content="Reserva natural comunitaria en el Pacífico colombiano. Turismo responsable y las famosas brujitas.">
 
-    <!-- Pinterest -->
-    <meta name="pinterest" content="nopin" description="San Cipriano Colombia - Natural Paradise">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="{{ request.build_absolute_uri }}">
-
-    <!-- Geo Tags for Local SEO - Enhanced -->
-    <meta name="geo.region" content="CO-VAC">
-    <meta name="geo.placename" content="San Cipriano, Buenaventura, Valle del Cauca, Colombia">
-    <meta name="geo.position" content="3.8167;-76.9167">
-    <meta name="ICBM" content="3.8167, -76.9167">
-    <meta name="DC.title" content="San Cipriano Natural Reserve - Community Tourism">
-    <meta name="DC.creator" content="Comunidad de San Cipriano">
-    <meta name="DC.subject" content="Ecotourism, Nature Reserve, Waterfalls, Natural Pools, Colombia Travel">
-    <meta name="DC.description" content="Official community tourism website for San Cipriano natural reserve">
-    <meta name="DC.publisher" content="Comunidad de San Cipriano">
-    <meta name="DC.language" content="{{ LANGUAGE_CODE }}">
-    <meta name="DC.coverage" content="San Cipriano, Buenaventura, Valle del Cauca, Colombia, South America">
-
-    <title>{% block title %}{{ site_name }}{% endblock %} | {{ site_tagline }}</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}">
-
-    <!-- JSON-LD Structured Data for SEO - Multiple Schemas -->
-
-    <!-- Schema 1: Tourist Attraction -->
+    <!-- Schema.org for Google - TouristAttraction -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "TouristAttraction",
-        "name": "San Cipriano Natural Reserve",
-        "alternateName": ["San Cipriano Colombia", "Reserva San Cipriano", "San Cipriano Jungle Paradise"],
-        "description": "Hidden jungle paradise near Buenaventura, Colombia. Crystal-clear natural pools, stunning waterfalls, unique jungle train ride (brujita), hiking trails through Pacific rainforest, and authentic Afro-Colombian community tourism.",
-        "url": "{{ request.build_absolute_uri }}",
-        "image": [
-            "{% static 'images/og-image.jpg' %}",
-            "{% static 'images/waterfall.jpg' %}",
-            "{% static 'images/natural-pool.jpg' %}",
-            "{% static 'images/brujita.jpg' %}"
-        ],
+        "name": "San Cipriano",
+        "description": "Reserva natural comunitaria en el Pacífico colombiano con ríos cristalinos, biodiversidad única y las famosas brujitas.",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Corregimiento San Cipriano",
-            "addressLocality": "Buenaventura",
+            "addressLocality": "San Cipriano",
             "addressRegion": "Valle del Cauca",
-            "postalCode": "764501",
             "addressCountry": "CO"
         },
         "geo": {
             "@type": "GeoCoordinates",
             "latitude": "3.8167",
-            "longitude": "-76.9167"
+            "longitude": "-76.8833"
         },
-        "telephone": "{{ community_whatsapp }}",
-        "email": "{{ community_email }}",
-        "touristType": [
-            "Ecotourism", "Nature Tourism", "Adventure Tourism",
-            "Community Tourism", "Cultural Tourism", "Sustainable Tourism"
-        ],
-        "amenityFeature": [
-            {"@type": "LocationFeatureSpecification", "name": "Natural Swimming Pools", "value": true},
-            {"@type": "LocationFeatureSpecification", "name": "Waterfalls", "value": true},
-            {"@type": "LocationFeatureSpecification", "name": "Jungle Train Ride (Brujita)", "value": true},
-            {"@type": "LocationFeatureSpecification", "name": "Hiking Trails", "value": true},
-            {"@type": "LocationFeatureSpecification", "name": "Birdwatching", "value": true},
-            {"@type": "LocationFeatureSpecification", "name": "Local Gastronomy", "value": true},
-            {"@type": "LocationFeatureSpecification", "name": "Accommodation", "value": true},
-            {"@type": "LocationFeatureSpecification", "name": "Local Guides", "value": true}
-        ],
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "06:00",
-            "closes": "18:00"
-        },
-        "isAccessibleForFree": false,
-        "publicAccess": true,
-        "slogan": "Hidden Paradise in Colombia's Pacific Rainforest"
+        "touristType": ["Eco-tourists", "Nature lovers", "Bird watchers"],
+        "publicAccess": true
     }
     </script>
 
-    <!-- Schema 2: Organization (Community) -->
+    <!-- Schema.org LocalBusiness for local SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Comunidad de San Cipriano",
-        "alternateName": "San Cipriano Community Tourism",
-        "url": "{{ request.scheme }}://{{ request.get_host }}",
-        "logo": "{% static 'images/logo.png' %}",
-        "description": "Afro-Colombian community managing sustainable ecotourism in San Cipriano natural reserve, Valle del Cauca, Colombia.",
-        "foundingDate": "1990",
+        "@type": "LocalBusiness",
+        "name": "{{ site_name|default:'San Cipriano' }}",
+        "description": "Turismo comunitario responsable en la reserva natural de San Cipriano, Valle del Cauca, Colombia.",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/",
+        "telephone": "{{ community_whatsapp|default:'+573113111669' }}",
+        "email": "{{ community_email|default:'info@sancipriano.com' }}",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "San Cipriano, Buenaventura",
+            "streetAddress": "Reserva Natural San Cipriano",
+            "addressLocality": "San Cipriano",
             "addressRegion": "Valle del Cauca",
-            "addressCountry": "Colombia"
+            "postalCode": "764001",
+            "addressCountry": "CO"
         },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "{{ community_whatsapp }}",
-            "contactType": "reservations",
-            "availableLanguage": ["Spanish", "English"]
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "3.8167",
+            "longitude": "-76.8833"
         },
+        "priceRange": "$$ - $$$",
+        "openingHours": "Mo-Su 06:00-18:00",
+        "paymentAccepted": ["Cash", "Bank Transfer"],
+        "currenciesAccepted": "COP",
         "areaServed": {
             "@type": "GeoCircle",
             "geoMidpoint": {
                 "@type": "GeoCoordinates",
                 "latitude": "3.8167",
-                "longitude": "-76.9167"
+                "longitude": "-76.8833"
             },
             "geoRadius": "50000"
         },
-        "sameAs": []
-    }
-    </script>
-
-    <!-- Schema 3: Place with detailed location -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Place",
-        "name": "San Cipriano",
-        "description": "Natural reserve village in the Pacific rainforest of Colombia, famous for crystal-clear rivers, natural pools, waterfalls, and the unique 'brujita' jungle train.",
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "3.8167",
-            "longitude": "-76.9167"
-        },
-        "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Valle del Cauca",
-            "containedInPlace": {
-                "@type": "Country",
-                "name": "Colombia"
-            }
-        },
-        "containsPlace": [
-            {
-                "@type": "TouristAttraction",
-                "name": "Charco del Amor",
-                "description": "Crystal clear natural swimming pool"
-            },
-            {
-                "@type": "TouristAttraction",
-                "name": "Cascada de San Cipriano",
-                "description": "Beautiful waterfall in the jungle"
-            },
-            {
-                "@type": "TouristAttraction",
-                "name": "Rio San Cipriano",
-                "description": "Pristine river with emerald waters"
-            }
-        ]
-    }
-    </script>
-
-    <!-- Schema 4: FAQPage for common questions -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I get to San Cipriano Colombia?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "From Cali, take a bus to Cordoba station (about 2.5 hours). From there, take the famous 'brujita' jungle train ride (30 minutes) through the rainforest to San Cipriano village."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What is the brujita in San Cipriano?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The brujita is a unique motorcycle-powered rail cart that travels along old train tracks through the jungle. It's the only way to reach San Cipriano and is an adventure experience itself!"
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is San Cipriano safe for tourists?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, San Cipriano is a peaceful community-managed reserve. The local community ensures visitor safety and offers guided tours. It's recommended to hire local guides for the best experience."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What can I do in San Cipriano?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Swim in crystal-clear natural pools, visit waterfalls, hike through the rainforest, enjoy birdwatching, experience the brujita ride, taste local Pacific cuisine, and learn about Afro-Colombian culture."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "When is the best time to visit San Cipriano?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "San Cipriano can be visited year-round. The dry season (December-March and July-August) offers clearer waters, while the rainy season has fuller waterfalls. Weekdays are less crowded than weekends."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How much does it cost to visit San Cipriano?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Budget travelers can visit for around $30-50 USD per day including transportation, accommodation, meals, and activities. The brujita ride costs approximately $3-5 USD each way."
-                }
-            }
-        ]
-    }
-    </script>
-
-    <!-- Schema 5: BreadcrumbList for navigation -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Colombia",
-                "item": "https://colombia.travel"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Valle del Cauca",
-                "item": "https://colombia.travel/en/valle-del-cauca"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Buenaventura",
-                "item": "{{ request.scheme }}://{{ request.get_host }}"
-            },
-            {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "San Cipriano",
-                "item": "{{ request.build_absolute_uri }}"
-            }
-        ]
-    }
-    </script>
-
-    <!-- Schema 6: WebSite with SearchAction -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "San Cipriano - Official Community Tourism",
-        "alternateName": ["San Cipriano Colombia", "Reserva Natural San Cipriano"],
-        "url": "{{ request.scheme }}://{{ request.get_host }}",
-        "description": "Official website of San Cipriano community tourism - natural pools, waterfalls, jungle adventures in Colombia",
-        "inLanguage": ["es", "en", "fr", "de", "pt", "it"],
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "{{ request.scheme }}://{{ request.get_host }}/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-
-    <!-- Schema 7: TouristTrip offerings -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "TouristTrip",
-        "name": "San Cipriano Day Trip Adventure",
-        "description": "Full day adventure including brujita jungle train ride, natural pool swimming, waterfall visit, hiking, and traditional Pacific lunch",
-        "touristType": ["Adventure Seeker", "Nature Lover", "Eco Tourist", "Backpacker"],
-        "itinerary": {
-            "@type": "ItemList",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios Turísticos",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Brujita ride through the jungle"},
-                {"@type": "ListItem", "position": 2, "name": "Swimming in natural pools"},
-                {"@type": "ListItem", "position": 3, "name": "Waterfall visit and hiking"},
-                {"@type": "ListItem", "position": 4, "name": "Traditional Pacific lunch"},
-                {"@type": "ListItem", "position": 5, "name": "Return brujita ride"}
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "TouristTrip",
+                        "name": "Paseo en Brujita",
+                        "description": "Transporte tradicional sobre rieles impulsado por motocicleta"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "LodgingBusiness",
+                        "name": "Hospedaje Comunitario",
+                        "description": "Alojamiento con familias locales de la comunidad"
+                    }
+                }
             ]
-        },
-        "offers": {
-            "@type": "Offer",
-            "priceCurrency": "COP",
-            "price": "150000",
-            "availability": "https://schema.org/InStock"
         }
     }
     </script>
+
+    <title>{% block title %}{{ site_name }}{% endblock %} | {{ site_tagline }}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}">
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -568,162 +188,75 @@
     {% block extra_head %}{% endblock %}
 </head>
 <body class="font-body bg-selva-50 text-gray-800 antialiased">
-    <!-- Language Selector - Floating -->
-    <div class="fixed top-4 right-4 z-50">
-        <div class="relative">
-            <button id="lang-toggle" class="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-lg hover:bg-white transition-all">
-                <svg class="w-5 h-5 text-selva-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-                </svg>
-                <span class="text-sm font-medium text-gray-700">{{ LANGUAGE_CODE|upper }}</span>
-                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-            </button>
-            <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
-                <form action="{% url 'set_language' %}" method="post" id="lang-form">
-                    {% csrf_token %}
-                    <input type="hidden" name="next" value="{{ request.path }}">
-                    {% for lang_code, lang_name in available_languages %}
-                    <button type="submit" name="language" value="{{ lang_code }}"
-                            class="w-full text-left px-4 py-2 text-sm hover:bg-selva-50 transition-colors {% if lang_code == LANGUAGE_CODE %}bg-selva-100 text-selva-700 font-medium{% else %}text-gray-700{% endif %}">
-                        {{ lang_name }}
-                    </button>
-                    {% endfor %}
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-selva-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-white">
+        {% trans "Saltar al contenido principal" %}
+    </a>
 
     <!-- Navigation -->
     <nav class="bg-selva-900/95 backdrop-blur-sm text-white sticky top-0 z-40 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+            <div class="flex items-center justify-between h-14">
                 <!-- Logo -->
-                <a href="{% url 'core:home' %}" class="flex items-center gap-3">
-                    <span class="text-3xl">🌿</span>
-                    <div>
-                        <span class="font-display text-xl font-bold">{{ site_name }}</span>
-                        <span class="hidden sm:inline text-selva-300 text-sm ml-2">| {{ site_tagline }}</span>
+                <a href="{% url 'core:home' %}" class="flex items-center gap-2 flex-shrink-0">
+                    <span class="text-2xl">🌿</span>
+                    <div class="flex flex-col leading-tight">
+                        <span class="font-display text-base font-bold">{{ site_name }}</span>
+                        <span class="hidden lg:block text-selva-400 text-xs">{{ site_tagline }}</span>
                     </div>
                 </a>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-1">
-                    <!-- Dropdown: Explorar -->
-                    <div class="relative group">
-                        <button class="px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors flex items-center gap-1">
-                            {% trans "Explorar" %}
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute left-0 mt-1 w-52 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <a href="{% url 'content:places' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700 rounded-t-lg">
-                                💧 {% trans "Charcos y Cascadas" %}
-                            </a>
-                            <a href="{% url 'content:biodiversity' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🦜 {% trans "Biodiversidad" %}
-                            </a>
-                            <a href="{% url 'content:education' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🎓 {% trans "Centro Educativo" %}
-                            </a>
-                            <a href="{% url 'content:gastronomy' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🍽️ {% trans "Gastronomía" %}
-                            </a>
-                            <a href="{% url 'content:photo_spots' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                📸 {% trans "Spots Fotográficos" %}
-                            </a>
-                            <a href="{% url 'content:gallery' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🖼️ {% trans "Galería" %}
-                            </a>
-                            <a href="{% url 'content:map' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700 rounded-b-lg">
-                                🗺️ {% trans "Mapa" %}
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown: Planificar -->
-                    <div class="relative group">
-                        <button class="px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors flex items-center gap-1">
-                            {% trans "Planificar" %}
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute left-0 mt-1 w-52 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <a href="{% url 'content:reservations' %}" class="block px-4 py-2 text-white bg-selva-600 hover:bg-selva-700 rounded-t-lg font-medium">
-                                📋 {% trans "Reservar Ahora" %}
-                            </a>
-                            <a href="{% url 'content:itineraries' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🗓️ {% trans "Itinerarios" %}
-                            </a>
-                            <a href="{% url 'content:packages' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                📦 {% trans "Paquetes" %}
-                            </a>
-                            <a href="{% url 'content:prices' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                💰 {% trans "Precios" %}
-                            </a>
-                            <a href="{% url 'content:how_to_get_there' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🚌 {% trans "Cómo Llegar" %}
-                            </a>
-                            <a href="{% url 'content:weather' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🌤️ {% trans "Clima" %}
-                            </a>
-                            <a href="{% url 'content:packing_list' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🎒 {% trans "Qué Llevar" %}
-                            </a>
-                            <a href="{% url 'content:certified_guides' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                👨‍🌾 {% trans "Guías Certificados" %}
-                            </a>
-                            <a href="{% url 'content:safety' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700 rounded-b-lg">
-                                ⚠️ {% trans "Seguridad" %}
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown: Conocenos -->
-                    <div class="relative group">
-                        <button class="px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors flex items-center gap-1">
-                            {% trans "Conócenos" %}
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div class="absolute left-0 mt-1 w-48 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <a href="{% url 'content:about' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700 rounded-t-lg">
-                                🌿 {% trans "Sobre Nosotros" %}
-                            </a>
-                            <a href="{% url 'content:history' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                📜 {% trans "Historia" %}
-                            </a>
-                            <a href="{% url 'content:events' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                🎉 {% trans "Eventos" %}
-                            </a>
-                            <a href="{% url 'content:testimonials' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700">
-                                ⭐ {% trans "Testimonios" %}
-                            </a>
-                            <a href="{% url 'content:faq' %}" class="block px-4 py-2 text-gray-700 hover:bg-selva-50 hover:text-selva-700 rounded-b-lg">
-                                ❓ {% trans "Preguntas Frecuentes" %}
-                            </a>
-                        </div>
-                    </div>
-
-                    <a href="{% url 'core:protection' %}" class="px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
+                <div class="hidden lg:flex items-center gap-0.5">
+                    <a href="{% url 'content:about' %}" class="px-3 py-1.5 text-sm rounded-md hover:bg-selva-800 transition-colors">
+                        {% trans "Sobre Nosotros" %}
+                    </a>
+                    <a href="{% url 'core:protection' %}" class="px-3 py-1.5 text-sm rounded-md hover:bg-selva-800 transition-colors">
                         {% trans "Protección" %}
                     </a>
-
-                    <a href="https://wa.me/{{ community_whatsapp|slice:'1:' }}" target="_blank" rel="noopener" class="ml-2 px-5 py-2 bg-green-500 hover:bg-green-600 rounded-lg font-medium transition-colors flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        {% trans "WhatsApp" %}
+                    <a href="{% url 'core:safety' %}" class="px-3 py-1.5 text-sm rounded-md hover:bg-selva-800 transition-colors">
+                        {% trans "Seguridad" %}
                     </a>
+                    <a href="{% url 'content:biodiversity' %}" class="px-3 py-1.5 text-sm rounded-md hover:bg-selva-800 transition-colors">
+                        {% trans "Biodiversidad" %}
+                    </a>
+                    <a href="{% url 'visitors:services' %}" class="px-3 py-1.5 text-sm rounded-md hover:bg-selva-800 transition-colors">
+                        {% trans "Servicios" %}
+                    </a>
+                    <a href="{% url 'visitors:inquiry_form' %}" class="ml-3 px-4 py-1.5 text-sm bg-rio-500 hover:bg-rio-600 rounded-md font-medium transition-colors whitespace-nowrap">
+                        {% trans "Planifica tu Visita" %}
+                    </a>
+
+                    <!-- Language Selector -->
+                    <div class="relative ml-1">
+                        <button id="lang-toggle" class="flex items-center gap-1 px-2 py-1.5 text-xs rounded-md hover:bg-selva-800 transition-colors border border-selva-700" aria-label="{% trans 'Cambiar idioma' %}" aria-expanded="false" aria-haspopup="true">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
+                            <span class="font-medium">{{ LANGUAGE_CODE|upper }}</span>
+                            <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="lang-dropdown" class="hidden absolute right-0 mt-1 w-36 bg-white rounded-md shadow-xl border border-gray-100 overflow-hidden z-50">
+                            {% for lang in languages_with_urls %}
+                            <form action="{% url 'set_language' %}" method="post" style="margin:0;">
+                                {% csrf_token %}
+                                <input type="hidden" name="next" value="{{ lang.url }}">
+                                <input type="hidden" name="language" value="{{ lang.code }}">
+                                <button type="submit"
+                                        class="w-full text-left px-3 py-1.5 text-xs hover:bg-selva-50 transition-colors {% if lang.code == LANGUAGE_CODE %}bg-selva-100 text-selva-700 font-medium{% else %}text-gray-700{% endif %}">
+                                    {{ lang.name }}
+                                </button>
+                            </form>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-selva-800 transition-colors" aria-label="{% trans 'Abrir menú de navegación' %}" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -731,98 +264,47 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-selva-800">
-            <div class="px-4 py-3 space-y-1">
-                <!-- Explorar -->
-                <p class="text-selva-400 text-xs uppercase tracking-wider px-4 pt-2">{% trans "Explorar" %}</p>
-                <a href="{% url 'content:places' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    💧 {% trans "Charcos y Cascadas" %}
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-selva-800">
+            <div class="px-4 py-3 space-y-2">
+                <a href="{% url 'content:about' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
+                    {% trans "Sobre Nosotros" %}
+                </a>
+                <a href="{% url 'core:protection' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
+                    {% trans "Protección" %}
+                </a>
+                <a href="{% url 'core:safety' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
+                    {% trans "Seguridad" %}
                 </a>
                 <a href="{% url 'content:biodiversity' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🦜 {% trans "Biodiversidad" %}
+                    {% trans "Biodiversidad" %}
                 </a>
-                <a href="{% url 'content:gastronomy' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🍽️ {% trans "Gastronomía" %}
+                <a href="{% url 'visitors:services' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
+                    {% trans "Servicios" %}
                 </a>
-                <a href="{% url 'content:photo_spots' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    📸 {% trans "Spots Fotográficos" %}
-                </a>
-                <a href="{% url 'content:gallery' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🖼️ {% trans "Galería" %}
-                </a>
-                <a href="{% url 'content:map' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🗺️ {% trans "Mapa" %}
+                <a href="{% url 'visitors:inquiry_form' %}" class="block px-4 py-3 bg-rio-500 hover:bg-rio-600 rounded-lg font-medium text-center transition-colors">
+                    {% trans "Planifica tu Visita" %}
                 </a>
 
-                <!-- Planificar -->
-                <p class="text-selva-400 text-xs uppercase tracking-wider px-4 pt-4">{% trans "Planificar" %}</p>
-                <a href="{% url 'content:reservations' %}" class="block px-4 py-2 rounded-lg bg-selva-700 hover:bg-selva-600 transition-colors font-medium">
-                    📋 {% trans "Reservar Ahora" %}
-                </a>
-                <a href="{% url 'content:itineraries' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🗓️ {% trans "Itinerarios" %}
-                </a>
-                <a href="{% url 'content:packages' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    📦 {% trans "Paquetes" %}
-                </a>
-                <a href="{% url 'content:prices' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    💰 {% trans "Precios" %}
-                </a>
-                <a href="{% url 'content:how_to_get_there' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🚌 {% trans "Cómo Llegar" %}
-                </a>
-                <a href="{% url 'content:weather' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🌤️ {% trans "Clima" %}
-                </a>
-                <a href="{% url 'content:packing_list' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🎒 {% trans "Qué Llevar" %}
-                </a>
-                <a href="{% url 'content:certified_guides' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    👨‍🌾 {% trans "Guías Certificados" %}
-                </a>
-
-                <!-- Conócenos -->
-                <p class="text-selva-400 text-xs uppercase tracking-wider px-4 pt-4">{% trans "Conócenos" %}</p>
-                <a href="{% url 'content:about' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🌿 {% trans "Sobre Nosotros" %}
-                </a>
-                <a href="{% url 'content:history' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    📜 {% trans "Historia" %}
-                </a>
-                <a href="{% url 'content:events' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🎉 {% trans "Eventos" %}
-                </a>
-                <a href="{% url 'content:testimonials' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    ⭐ {% trans "Testimonios" %}
-                </a>
-                <a href="{% url 'content:faq' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    ❓ {% trans "Preguntas Frecuentes" %}
-                </a>
-
-                <!-- Otros -->
-                <p class="text-selva-400 text-xs uppercase tracking-wider px-4 pt-4">{% trans "Más" %}</p>
-                <a href="{% url 'core:protection' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    🛡️ {% trans "Protección" %}
-                </a>
-                <a href="{% url 'content:safety' %}" class="block px-4 py-2 rounded-lg hover:bg-selva-800 transition-colors">
-                    ⚠️ {% trans "Seguridad" %}
-                </a>
-
-                <!-- WhatsApp CTA -->
-                <div class="pt-4">
-                    <a href="https://wa.me/{{ community_whatsapp|slice:'1:' }}" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 px-4 py-3 bg-green-500 hover:bg-green-600 rounded-lg font-medium text-center transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        {% trans "Contactar por WhatsApp" %}
-                    </a>
+                <!-- Mobile Language Selector -->
+                <div class="mt-4 pt-4 border-t border-selva-800 flex flex-wrap gap-2">
+                    {% for lang in languages_with_urls %}
+                    <form action="{% url 'set_language' %}" method="post" style="margin:0;">
+                        {% csrf_token %}
+                        <input type="hidden" name="next" value="{{ lang.url }}">
+                        <input type="hidden" name="language" value="{{ lang.code }}">
+                        <button type="submit"
+                                class="px-3 py-1 text-sm rounded-lg transition-colors {% if lang.code == LANGUAGE_CODE %}bg-selva-600 text-white{% else %}bg-selva-800 text-selva-300 hover:bg-selva-700{% endif %}">
+                            {{ lang.code|upper }}
+                        </button>
+                    </form>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         {% block content %}{% endblock %}
     </main>
 
@@ -845,8 +327,9 @@
 
     <!-- WhatsApp Button - Floating -->
     <a href="https://wa.me/{{ community_whatsapp|slice:'1:' }}" target="_blank" rel="noopener"
-       class="fixed bottom-4 right-4 z-40 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+       class="fixed bottom-4 right-4 z-40 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
+       aria-label="{% trans 'Contactar por WhatsApp' %}">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
@@ -854,7 +337,7 @@
     <!-- Footer -->
     <footer class="bg-selva-900 text-white mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- About -->
                 <div>
                     <div class="flex items-center gap-2 mb-4">
@@ -868,24 +351,12 @@
 
                 <!-- Quick Links -->
                 <div>
-                    <h3 class="font-semibold mb-4">{% trans "Explorar" %}</h3>
+                    <h3 class="font-semibold mb-4">{% trans "Enlaces" %}</h3>
                     <ul class="space-y-2 text-selva-300">
-                        <li><a href="{% url 'content:places' %}" class="hover:text-white transition-colors">{% trans "Charcos y Cascadas" %}</a></li>
+                        <li><a href="{% url 'content:about' %}" class="hover:text-white transition-colors">{% trans "Sobre Nosotros" %}</a></li>
+                        <li><a href="{% url 'core:protection' %}" class="hover:text-white transition-colors">{% trans "Protección de la Reserva" %}</a></li>
+                        <li><a href="{% url 'core:safety' %}" class="hover:text-white transition-colors">{% trans "Seguridad y Normas" %}</a></li>
                         <li><a href="{% url 'content:biodiversity' %}" class="hover:text-white transition-colors">{% trans "Biodiversidad" %}</a></li>
-                        <li><a href="{% url 'content:gallery' %}" class="hover:text-white transition-colors">{% trans "Galería" %}</a></li>
-                        <li><a href="{% url 'content:map' %}" class="hover:text-white transition-colors">{% trans "Cómo Llegar" %}</a></li>
-                        <li><a href="{% url 'content:history' %}" class="hover:text-white transition-colors">{% trans "Historia" %}</a></li>
-                    </ul>
-                </div>
-
-                <!-- Plan Your Visit -->
-                <div>
-                    <h3 class="font-semibold mb-4">{% trans "Planifica" %}</h3>
-                    <ul class="space-y-2 text-selva-300">
-                        <li><a href="{% url 'content:packages' %}" class="hover:text-white transition-colors">{% trans "Paquetes Turísticos" %}</a></li>
-                        <li><a href="{% url 'content:prices' %}" class="hover:text-white transition-colors">{% trans "Precios" %}</a></li>
-                        <li><a href="{% url 'content:budget_calculator' %}" class="hover:text-white transition-colors">{% trans "Calculadora" %}</a></li>
-                        <li><a href="{% url 'content:guides' %}" class="hover:text-white transition-colors">{% trans "Guías Locales" %}</a></li>
                         <li><a href="{% url 'content:faq' %}" class="hover:text-white transition-colors">{% trans "Preguntas Frecuentes" %}</a></li>
                     </ul>
                 </div>
@@ -913,6 +384,19 @@
             <div class="border-t border-selva-800 mt-8 pt-8 text-center text-selva-400 text-sm">
                 <p>© {% now "Y" %} {{ site_name }}. {% trans "Sitio oficial de la comunidad." %}</p>
                 <p class="mt-1">{% trans "Turismo comunitario y conservación ambiental." %}</p>
+                <div class="mt-4 flex flex-wrap justify-center gap-4">
+                    <a href="{% url 'core:terms' %}" class="hover:text-white transition-colors underline">
+                        {% trans "Términos y Condiciones" %}
+                    </a>
+                    <span class="text-selva-600">•</span>
+                    <a href="{% url 'core:privacy' %}" class="hover:text-white transition-colors underline">
+                        {% trans "Política de Privacidad" %}
+                    </a>
+                    <span class="text-selva-600">•</span>
+                    <a href="{% url 'core:cookies' %}" class="hover:text-white transition-colors underline">
+                        {% trans "Cookies" %}
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -926,13 +410,25 @@
 
         // Language dropdown toggle
         document.getElementById('lang-toggle').addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
             document.getElementById('lang-dropdown').classList.toggle('hidden');
         });
 
         // Close dropdown when clicking outside
-        document.addEventListener('click', function() {
-            document.getElementById('lang-dropdown').classList.add('hidden');
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('lang-dropdown');
+            const toggle = document.getElementById('lang-toggle');
+            if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // Prevent language form submissions from bubbling to other forms
+        document.querySelectorAll('#lang-dropdown form').forEach(function(form) {
+            form.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
         });
 
         // Animate visitor counter on load
