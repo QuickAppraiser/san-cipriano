@@ -60,35 +60,43 @@
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Nature Card -->
-            <div class="bg-selva-50 rounded-2xl p-6 border border-selva-100 hover:shadow-lg transition-shadow">
-                <div class="w-14 h-14 bg-selva-100 rounded-xl flex items-center justify-center text-3xl mb-4">
-                    🌳
+            <div class="bg-selva-50 rounded-2xl overflow-hidden border border-selva-100 hover:shadow-lg transition-shadow">
+                <div class="h-40 overflow-hidden">
+                    <img src="{% static 'images/gallery/cascada.jpg' %}"
+                         alt="{% trans 'Reserva Natural - selva y cascadas' %}"
+                         class="w-full h-full object-cover">
                 </div>
-                <h3 class="font-display text-xl font-bold text-selva-900 mb-2">
-                    {% trans "Reserva Natural" %}
-                </h3>
-                <p class="text-gray-600">
-                    {% trans "Un santuario de biodiversidad en el Pacífico colombiano, hogar de cientos de especies de aves, anfibios y flora única." %}
-                </p>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-selva-900 mb-2">
+                        {% trans "Reserva Natural" %}
+                    </h3>
+                    <p class="text-gray-600">
+                        {% trans "Un santuario de biodiversidad en el Pacífico colombiano, hogar de cientos de especies de aves, anfibios y flora única." %}
+                    </p>
+                </div>
             </div>
 
             <!-- Community Card -->
-            <div class="bg-tierra-50 rounded-2xl p-6 border border-tierra-100 hover:shadow-lg transition-shadow">
-                <div class="w-14 h-14 bg-tierra-100 rounded-xl flex items-center justify-center text-3xl mb-4">
-                    👨‍👩‍👧‍👦
+            <div class="bg-tierra-50 rounded-2xl overflow-hidden border border-tierra-100 hover:shadow-lg transition-shadow">
+                <div class="h-40 overflow-hidden">
+                    <img src="{% static 'images/gallery/brujitas-real.jpg' %}"
+                         alt="{% trans 'Turismo Comunitario - familias locales' %}"
+                         class="w-full h-full object-cover">
                 </div>
-                <h3 class="font-display text-xl font-bold text-tierra-900 mb-2">
-                    {% trans "Turismo Comunitario" %}
-                </h3>
-                <p class="text-gray-600">
-                    {% trans "Cada visita apoya directamente a las familias locales. El turismo es gestionado por y para la comunidad." %}
-                </p>
+                <div class="p-6">
+                    <h3 class="font-display text-xl font-bold text-tierra-900 mb-2">
+                        {% trans "Turismo Comunitario" %}
+                    </h3>
+                    <p class="text-gray-600">
+                        {% trans "Cada visita apoya directamente a las familias locales. El turismo es gestionado por y para la comunidad." %}
+                    </p>
+                </div>
             </div>
 
             <!-- River Card - Las Brujitas -->
             <div class="bg-rio-50 rounded-2xl overflow-hidden border border-rio-100 hover:shadow-lg transition-shadow">
                 <div class="h-40 overflow-hidden">
-                    <img src="{% static 'images/gallery/brujitas-real.jpg' %}"
+                    <img src="{% static 'images/gallery/estacion-nueva.jpg' %}"
                          alt="{% trans 'Las Brujitas - carros sobre rieles' %}"
                          class="w-full h-full object-cover">
                 </div>
