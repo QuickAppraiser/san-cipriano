@@ -54,6 +54,22 @@ class TermsView(TemplateView):
     template_name = "core/terms.html"
 
 
+class PrivacyView(TemplateView):
+    """
+    Privacy policy page - data protection and user rights.
+    """
+
+    template_name = "core/privacy.html"
+
+
+class CookiesView(TemplateView):
+    """
+    Cookie policy page - cookie usage and management.
+    """
+
+    template_name = "core/cookies.html"
+
+
 class SitemapView(View):
     """
     XML Sitemap for SEO - lists all public pages.
@@ -77,6 +93,8 @@ class SitemapView(View):
             {"url": "/contenido/preguntas-frecuentes/", "priority": "0.7", "changefreq": "monthly"},
             {"url": "/visitantes/contacto/", "priority": "0.7", "changefreq": "monthly"},
             {"url": "/terminos/", "priority": "0.5", "changefreq": "yearly"},
+            {"url": "/privacidad/", "priority": "0.5", "changefreq": "yearly"},
+            {"url": "/cookies/", "priority": "0.3", "changefreq": "yearly"},
         ]
 
         # Build XML
