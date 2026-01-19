@@ -1211,3 +1211,31 @@ msgstr "EMPFOHLEN!"
 
 msgid "Los demás servicios (brujitas, parqueadero, entrada) se pagan por separado según los precios indicados arriba."
 msgstr "Die anderen Dienste (Brujitas, Parkplatz, Eintritt) werden separat gemäß den oben angegebenen Preisen bezahlt."
+
+# About page - Combined experience section
+msgid "La Experiencia San Cipriano"
+msgstr "Das San Cipriano Erlebnis"
+
+msgid "Desde el viaje en brujita hasta los ríos cristalinos, cada momento es una aventura inolvidable."
+msgstr "Von der Brujita-Fahrt bis zu den kristallklaren Flüssen ist jeder Moment ein unvergessliches Abenteuer."
+
+msgid "El viaje en Brujita"
+msgstr "Die Brujita-Fahrt"
+
+msgid "15-20 minutos de aventura"
+msgstr "15-20 Minuten Abenteuer"
+
+msgid "Tu aventura comienza en las famosas 'brujitas': pequeños carros sobre rieles impulsados por motocicletas. Atraviesas la selva, cruzas puentes sobre ríos y llegas a un mundo alejado del ruido de la ciudad."
+msgstr "Ihr Abenteuer beginnt mit den berühmten 'Brujitas': kleine Schienenfahrzeuge, die von Motorrädern angetrieben werden. Sie durchqueren den Dschungel, überqueren Brücken über Flüsse und erreichen eine Welt fernab vom Stadtlärm."
+
+msgid "Selva tropical"
+msgstr "Tropischer Regenwald"
+
+msgid "Puentes sobre ríos"
+msgstr "Brücken über Flüsse"
+
+msgid "Aguas cristalinas"
+msgstr "Kristallklares Wasser"
+
+msgid "Una experiencia inolvidable. Los ríos cristalinos, la selva, las cascadas... San Cipriano es un paraíso escondido."
+msgstr "Ein unvergessliches Erlebnis. Die kristallklaren Flüsse, der Dschungel, die Wasserfälle... San Cipriano ist ein verstecktes Paradies."

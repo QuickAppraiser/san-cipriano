@@ -113,14 +113,14 @@
         <div class="text-center mb-10">
             <span class="inline-block text-5xl mb-4">✨</span>
             <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
-                {% trans "Experiencias de Visitantes" %}
+                {% trans "La Experiencia San Cipriano" %}
             </h2>
             <p class="text-rio-100 max-w-2xl mx-auto text-lg">
-                {% trans "Descubre lo que nuestros visitantes viven en San Cipriano: avistamientos de aves, paisajes increíbles, ríos cristalinos, cascadas mágicas, caminatas por la selva y una conexión profunda con la naturaleza." %}
+                {% trans "Desde el viaje en brujita hasta los ríos cristalinos, cada momento es una aventura inolvidable." %}
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
             <!-- Video testimonial -->
             <div class="rounded-2xl overflow-hidden shadow-2xl">
                 <video controls playsinline poster="{% static 'images/gallery/rio-cristalino.jpg' %}" class="w-full aspect-video">
@@ -129,27 +129,50 @@
                 </video>
             </div>
 
-            <!-- Testimonial text -->
+            <!-- Experience highlights -->
             <div class="text-white">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <span class="text-2xl">👤</span>
+                        <span class="text-2xl">🚃</span>
                     </div>
                     <div>
-                        <p class="font-semibold text-lg">Diana</p>
-                        <p class="text-rio-200 text-sm">{% trans "Visitante" %}</p>
+                        <p class="font-semibold text-lg">{% trans "El viaje en Brujita" %}</p>
+                        <p class="text-rio-200 text-sm">{% trans "15-20 minutos de aventura" %}</p>
                     </div>
                 </div>
-                <blockquote class="text-lg text-rio-100 italic mb-6">
-                    "{% trans "Una experiencia inolvidable. Los ríos cristalinos, la selva, las cascadas... San Cipriano es un paraíso escondido que todos deberían conocer." %}"
-                </blockquote>
-                <div class="flex flex-wrap gap-3">
-                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🦜 {% trans "Avistamiento de aves" %}</span>
-                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">💧 {% trans "Ríos cristalinos" %}</span>
-                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🌊 {% trans "Cascadas" %}</span>
-                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🥾 {% trans "Caminatas" %}</span>
-                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🌿 {% trans "Naturaleza" %}</span>
+                <p class="text-rio-100 mb-4">
+                    {% trans "Tu aventura comienza en las famosas 'brujitas': pequeños carros sobre rieles impulsados por motocicletas. Atraviesas la selva, cruzas puentes sobre ríos y llegas a un mundo alejado del ruido de la ciudad." %}
+                </p>
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🌿 {% trans "Selva tropical" %}</span>
+                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🌉 {% trans "Puentes sobre ríos" %}</span>
+                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">💧 {% trans "Aguas cristalinas" %}</span>
+                    <span class="bg-white/10 backdrop-blur px-3 py-1 rounded-full text-sm">🦜 {% trans "Biodiversidad" %}</span>
                 </div>
+
+                <!-- Diana's quote -->
+                <div class="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/20">
+                    <blockquote class="text-rio-100 italic text-sm">
+                        "{% trans "Una experiencia inolvidable. Los ríos cristalinos, la selva, las cascadas... San Cipriano es un paraíso escondido." %}"
+                    </blockquote>
+                    <p class="text-rio-200 text-xs mt-2">— Diana, {% trans "Visitante" %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional testimonials placeholder -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square rounded-xl overflow-hidden bg-white/10">
+                <img src="{% static 'images/gallery/rio-cristalino.jpg' %}" alt="{% trans 'Río cristalino' %}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden bg-white/10">
+                <img src="{% static 'images/gallery/cascada.jpg' %}" alt="{% trans 'Cascada' %}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden bg-white/10">
+                <img src="{% static 'images/gallery/pozos-naturales.jpg' %}" alt="{% trans 'Pozos naturales' %}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="aspect-square rounded-xl overflow-hidden bg-white/10">
+                <img src="{% static 'images/gallery/brujita-operador.jpg' %}" alt="{% trans 'Brujita' %}" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity">
             </div>
         </div>
     </div>
@@ -201,31 +224,6 @@
                 </h3>
                 <p class="text-gray-600">
                     {% trans "Cada peso que gastas aquí se queda en la comunidad. Apoyas a familias locales, no a corporaciones externas." %}
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Brujitas Section -->
-<section class="py-16 px-4 bg-rio-50">
-    <div class="max-w-4xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="rounded-2xl h-64 overflow-hidden shadow-lg">
-                <img src="{% static 'images/gallery/brujita-operador.jpg' %}"
-                     alt="{% trans 'Operador de brujita en San Cipriano' %}"
-                     class="w-full h-full object-cover">
-            </div>
-            <div>
-                <span class="text-4xl mb-4 block">✨</span>
-                <h2 class="font-display text-3xl font-bold text-rio-900 mb-4">
-                    {% trans "Las Brujitas" %}
-                </h2>
-                <p class="text-gray-600 mb-4">
-                    {% trans "Un símbolo de San Cipriano son las 'brujitas': pequeños carros sobre rieles impulsados por motocicletas. Este medio de transporte único nació de la creatividad de nuestra comunidad." %}
-                </p>
-                <p class="text-gray-600">
-                    {% trans "El viaje en brujita es una experiencia inolvidable: atraviesas la selva, cruzas puentes sobre ríos y llegas a un mundo alejado del ruido de la ciudad." %}
                 </p>
             </div>
         </div>
