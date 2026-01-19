@@ -23,37 +23,28 @@
     </div>
 </section>
 
-<!-- Pricing Reference Banner -->
-<section class="bg-selva-50 border-b border-selva-200 py-6 px-4">
-    <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-4">
-            <h3 class="text-lg font-semibold text-selva-800">{% trans "Precios de Referencia (por persona)" %}</h3>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div class="bg-white rounded-lg p-3 border border-selva-100">
-                <span class="text-2xl block mb-1">🏠</span>
-                <p class="text-xs text-gray-600">{% trans "Hospedaje" %}</p>
-                <p class="font-bold text-selva-700">$60,000 - $100,000</p>
-            </div>
-            <div class="bg-white rounded-lg p-3 border border-selva-100">
-                <span class="text-2xl block mb-1">🍽️</span>
-                <p class="text-xs text-gray-600">{% trans "Alimentación" %}</p>
-                <p class="font-bold text-selva-700">$25,000 - $45,000</p>
-            </div>
-            <div class="bg-white rounded-lg p-3 border border-selva-100">
-                <span class="text-2xl block mb-1">🚃</span>
-                <p class="text-xs text-gray-600">{% trans "Brujita (ida y vuelta)" %}</p>
-                <p class="font-bold text-selva-700">$24,000</p>
-            </div>
-            <div class="bg-white rounded-lg p-3 border border-selva-100">
-                <span class="text-2xl block mb-1">🧭</span>
-                <p class="text-xs text-gray-600">{% trans "Tour guiado" %}</p>
-                <p class="font-bold text-selva-700">$80,000 - $100,000</p>
-            </div>
-        </div>
-        <p class="text-center text-sm text-gray-600 mt-3">
-            {% trans "Precios en pesos colombianos (COP). Un fin de semana completo: aproximadamente $229,000 COP por persona." %}
+<!-- Book in Advance Banner -->
+<section class="bg-gradient-to-r from-selva-600 to-selva-700 border-b border-selva-800 py-8 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+        <span class="text-4xl block mb-3">💰</span>
+        <h3 class="text-xl md:text-2xl font-bold text-white mb-3">{% trans "¡Reserva con anticipación y ahorra!" %}</h3>
+        <p class="text-selva-100 text-base md:text-lg mb-4">
+            {% trans "Al reservar con nosotros garantizas tu lugar, evitas sobrecostos de temporada alta y obtienes los mejores precios directamente con la comunidad." %}
         </p>
+        <div class="flex flex-wrap justify-center gap-4 text-selva-100 text-sm">
+            <div class="flex items-center gap-2">
+                <span class="text-green-300">✓</span>
+                <span>{% trans "Mejores precios garantizados" %}</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-green-300">✓</span>
+                <span>{% trans "Hospedaje asegurado" %}</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-green-300">✓</span>
+                <span>{% trans "Sin sorpresas al llegar" %}</span>
+            </div>
+        </div>
     </div>
 </section>
 
