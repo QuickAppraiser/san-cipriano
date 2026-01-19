@@ -96,111 +96,103 @@
     <div class="max-w-3xl mx-auto space-y-4">
         {% if faqs %}
             {% for faq in faqs %}
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onclick="this.parentElement.classList.toggle('open')">
+            <details class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
+                <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     <span class="font-semibold text-gray-900">{{ faq.question }}</span>
-                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </button>
-                <div class="faq-content px-6 pb-4 hidden">
+                </summary>
+                <div class="px-6 pb-4">
                     <p class="text-gray-600">{{ faq.answer }}</p>
                 </div>
-            </div>
+            </details>
             {% endfor %}
         {% else %}
-            <!-- Default FAQs -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden open">
-                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onclick="this.parentElement.classList.toggle('open')">
+            <!-- Default FAQs using semantic details/summary for accessibility -->
+            <details class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group" open>
+                <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     <span class="font-semibold text-gray-900">{% trans "¿Cómo llego a San Cipriano?" %}</span>
-                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </button>
-                <div class="faq-content px-6 pb-4">
+                </summary>
+                <div class="px-6 pb-4">
                     <p class="text-gray-600">{% trans "Las indicaciones exactas de llegada se proporcionan después de completar el formulario de registro. Esto nos ayuda a proteger la reserva y garantizar una visita organizada." %}</p>
                 </div>
-            </div>
+            </details>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onclick="this.parentElement.classList.toggle('open')">
+            <details class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
+                <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     <span class="font-semibold text-gray-900">{% trans "¿Cuánto cuesta visitar San Cipriano?" %}</span>
-                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </button>
-                <div class="faq-content px-6 pb-4 hidden">
+                </summary>
+                <div class="px-6 pb-4">
                     <p class="text-gray-600">{% trans "Los costos varían según los servicios que necesites, el número de personas y la duración de tu estadía. Una vez completes el formulario, te enviaremos información personalizada con precios exactos." %}</p>
                 </div>
-            </div>
+            </details>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onclick="this.parentElement.classList.toggle('open')">
+            <details class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
+                <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     <span class="font-semibold text-gray-900">{% trans "¿Necesito reservar con anticipación?" %}</span>
-                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </button>
-                <div class="faq-content px-6 pb-4 hidden">
+                </summary>
+                <div class="px-6 pb-4">
                     <p class="text-gray-600">{% trans "Sí, recomendamos contactarnos con al menos una semana de anticipación, especialmente en temporada alta y fines de semana. Esto nos permite organizar mejor tu experiencia." %}</p>
                 </div>
-            </div>
+            </details>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onclick="this.parentElement.classList.toggle('open')">
+            <details class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
+                <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     <span class="font-semibold text-gray-900">{% trans "¿Puedo llevar niños?" %}</span>
-                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </button>
-                <div class="faq-content px-6 pb-4 hidden">
+                </summary>
+                <div class="px-6 pb-4">
                     <p class="text-gray-600">{% trans "Sí, San Cipriano es apto para familias. Sin embargo, los niños deben estar siempre supervisados por un adulto y usar chaleco salvavidas en todas las actividades acuáticas." %}</p>
                 </div>
-            </div>
+            </details>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onclick="this.parentElement.classList.toggle('open')">
+            <details class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
+                <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     <span class="font-semibold text-gray-900">{% trans "¿Qué debo llevar?" %}</span>
-                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </button>
-                <div class="faq-content px-6 pb-4 hidden">
+                </summary>
+                <div class="px-6 pb-4">
                     <p class="text-gray-600">{% trans "Recomendamos: ropa cómoda de colores claros, manga larga para protección contra insectos, zapatos para agua, traje de baño, gorra o sombrero (NO protector solar ni repelente químico - contaminan el río), careta de snorkel, toalla, y una bolsa para tu basura." %}</p>
                 </div>
-            </div>
+            </details>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onclick="this.parentElement.classList.toggle('open')">
+            <details class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
+                <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     <span class="font-semibold text-gray-900">{% trans "¿Hay señal de celular?" %}</span>
-                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </button>
-                <div class="faq-content px-6 pb-4 hidden">
+                </summary>
+                <div class="px-6 pb-4">
                     <p class="text-gray-600">{% trans "La señal de celular es limitada en San Cipriano. Esto es parte de la experiencia de desconexión con la naturaleza. Algunos hospedajes tienen WiFi básico." %}</p>
                 </div>
-            </div>
+            </details>
 
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <button class="faq-toggle w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
-                        onclick="this.parentElement.classList.toggle('open')">
+            <details class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group">
+                <summary class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     <span class="font-semibold text-gray-900">{% trans "¿Qué son las 'brujitas'?" %}</span>
-                    <svg class="w-5 h-5 text-gray-500 transform transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
-                </button>
-                <div class="faq-content px-6 pb-4 hidden">
+                </summary>
+                <div class="px-6 pb-4">
                     <p class="text-gray-600">{% trans "Las brujitas son pequeños carros sobre rieles impulsados por motocicletas. Son el transporte tradicional para llegar a San Cipriano y una experiencia única en sí misma." %}</p>
                 </div>
-            </div>
+            </details>
         {% endif %}
     </div>
 </section>
@@ -231,25 +223,3 @@
 </section>
 {% endblock %}
 
-{% block extra_js %}
-<script>
-    // FAQ toggle functionality
-    document.querySelectorAll('.faq-toggle').forEach(button => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('.faq-icon');
-
-            content.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
-        });
-    });
-
-    // Initialize open FAQs
-    document.querySelectorAll('.open').forEach(faq => {
-        const content = faq.querySelector('.faq-content');
-        const icon = faq.querySelector('.faq-icon');
-        if (content) content.classList.remove('hidden');
-        if (icon) icon.classList.add('rotate-180');
-    });
-</script>
-{% endblock %}

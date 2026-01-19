@@ -28,7 +28,7 @@
     <meta name="twitter:title" content="{{ site_name }} - {{ site_tagline }}">
     <meta name="twitter:description" content="Reserva natural comunitaria en el Pacífico colombiano. Turismo responsable y las famosas brujitas.">
 
-    <!-- Schema.org for Google -->
+    <!-- Schema.org for Google - TouristAttraction -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -49,6 +49,67 @@
         },
         "touristType": ["Eco-tourists", "Nature lovers", "Bird watchers"],
         "publicAccess": true
+    }
+    </script>
+
+    <!-- Schema.org LocalBusiness for local SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "{{ site_name|default:'San Cipriano' }}",
+        "description": "Turismo comunitario responsable en la reserva natural de San Cipriano, Valle del Cauca, Colombia.",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/",
+        "telephone": "{{ community_whatsapp|default:'+573113111669' }}",
+        "email": "{{ community_email|default:'info@sancipriano.com' }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Reserva Natural San Cipriano",
+            "addressLocality": "San Cipriano",
+            "addressRegion": "Valle del Cauca",
+            "postalCode": "764001",
+            "addressCountry": "CO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "3.8167",
+            "longitude": "-76.8833"
+        },
+        "priceRange": "$$ - $$$",
+        "openingHours": "Mo-Su 06:00-18:00",
+        "paymentAccepted": ["Cash", "Bank Transfer"],
+        "currenciesAccepted": "COP",
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "3.8167",
+                "longitude": "-76.8833"
+            },
+            "geoRadius": "50000"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios Turísticos",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "TouristTrip",
+                        "name": "Paseo en Brujita",
+                        "description": "Transporte tradicional sobre rieles impulsado por motocicleta"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "LodgingBusiness",
+                        "name": "Hospedaje Comunitario",
+                        "description": "Alojamiento con familias locales de la comunidad"
+                    }
+                }
+            ]
+        }
     }
     </script>
 
@@ -127,6 +188,11 @@
     {% block extra_head %}{% endblock %}
 </head>
 <body class="font-body bg-selva-50 text-gray-800 antialiased">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-selva-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-white">
+        {% trans "Saltar al contenido principal" %}
+    </a>
+
     <!-- Navigation -->
     <nav class="bg-selva-900/95 backdrop-blur-sm text-white sticky top-0 z-40 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,7 +304,7 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         {% block content %}{% endblock %}
     </main>
 
