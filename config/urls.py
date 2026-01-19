@@ -7,8 +7,18 @@ from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
+
+from apps.core.sitemaps import HomeSitemap, StaticViewSitemap
+from apps.core.views import GoogleVerificationView, RobotsTxtView
+
+# Sitemaps configuration
+sitemaps = {
+    'home': HomeSitemap,
+    'static': StaticViewSitemap,
+}
 
 # Admin customization
 admin.site.site_header = "San Cipriano - Administración"
@@ -17,6 +27,13 @@ admin.site.index_title = "Panel de Administración Comunitaria"
 
 # Non-i18n URLs
 urlpatterns = [
+    # SEO - Sitemap and robots.txt
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
+    path("robots.txt", RobotsTxtView.as_view(), name="robots_txt"),
+
+    # Google Search Console verification (dynamic URL)
+    path("<str:verification_code>.html", GoogleVerificationView.as_view(), name="google_verification"),
+
     # API Documentation
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
