@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% block meta_description %}San Cipriano - Reserva natural comunitaria en Colombia. Turismo responsable y conservación ambiental.{% endblock %}">
-    <meta name="keywords" content="San Cipriano, turismo Colombia, ecoturismo, reserva natural, Valle del Cauca, Buenaventura, brujitas, turismo comunitario, biodiversidad">
+    <meta name="keywords" content="San Cipriano, turismo Colombia, ecoturismo, reserva natural, Valle del Cauca, Buenaventura, brujitas, turismo comunitario, biodiversidad, ríos cristalinos, Pacífico colombiano, naturaleza Colombia, excursiones San Cipriano, hospedaje San Cipriano, cascadas Colombia">
     <meta name="author" content="Comunidad de San Cipriano">
     <meta name="robots" content="index, follow">
 
@@ -65,6 +65,7 @@
         "url": "{{ request.scheme }}://{{ request.get_host }}/",
         "telephone": "{{ community_whatsapp|default:'+573113111669' }}",
         "email": "{{ community_email|default:'info@sanciprianoreserva.com' }}",
+        "image": "{% static 'images/gallery/rio-cristalino.jpg' %}",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Reserva Natural San Cipriano",
@@ -112,6 +113,34 @@
                     }
                 }
             ]
+        },
+        "sameAs": [
+            "https://www.instagram.com/sanciprianoreserva",
+            "https://www.facebook.com/sanciprianoreserva"
+        ]
+    }
+    </script>
+
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Comunidad de San Cipriano",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/",
+        "logo": "{% static 'images/favicon.svg' %}",
+        "description": "Comunidad local que gestiona el turismo responsable en la Reserva Natural de San Cipriano, Colombia.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Cipriano",
+            "addressRegion": "Valle del Cauca",
+            "addressCountry": "CO"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "{{ community_whatsapp|default:'+573113111669' }}",
+            "contactType": "reservations",
+            "availableLanguage": ["Spanish", "English"]
         }
     }
     </script>
