@@ -16,6 +16,8 @@ ALLOWED_HOSTS = [
     ".onrender.com",
     "localhost",
     "127.0.0.1",
+    "sanciprianoreserva.com",
+    "www.sanciprianoreserva.com",
 ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
@@ -149,11 +151,15 @@ CSRF_COOKIE_SECURE = True
 CSRF_TRUSTED_ORIGINS = [
     "https://*.onrender.com",
     "https://san-cipriano.onrender.com",
+    "https://sanciprianoreserva.com",
+    "https://www.sanciprianoreserva.com",
 ]
 
 # CORS - Restringido a dominios específicos
 CORS_ALLOWED_ORIGINS = [
     "https://san-cipriano.onrender.com",
+    "https://sanciprianoreserva.com",
+    "https://www.sanciprianoreserva.com",
 ]
 CORS_ALLOW_ALL_ORIGINS = False
 
