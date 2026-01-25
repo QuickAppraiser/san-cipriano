@@ -5,9 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% block meta_description %}San Cipriano - Reserva natural comunitaria en Colombia. Turismo responsable y conservación ambiental.{% endblock %}">
-    <meta name="keywords" content="San Cipriano, turismo Colombia, ecoturismo, reserva natural, Valle del Cauca, Buenaventura, brujitas, turismo comunitario, biodiversidad, ríos cristalinos, Pacífico colombiano, naturaleza Colombia, excursiones San Cipriano, hospedaje San Cipriano, cascadas Colombia">
+    <meta name="keywords" content="San Cipriano, reserva natural Colombia, ecoturismo Colombia, turismo Colombia, cascadas Colombia, ríos cristalinos Colombia, agua cristalina Colombia, naturaleza Colombia, selva tropical Colombia, Pacífico colombiano, Valle del Cauca turismo, Buenaventura turismo, brujitas San Cipriano, turismo comunitario Colombia, biodiversidad Colombia, avistamiento de aves Colombia, senderismo Colombia, hospedaje ecológico Colombia, vacaciones naturaleza Colombia, destinos ecológicos Colombia, lugares para visitar en Colombia, mejores cascadas Colombia, ríos más limpios Colombia, paraíso natural Colombia, turismo sostenible Colombia, comunidad afrodescendiente Colombia, cultura palenquera, ecoturismo Pacífico, aventura Colombia, tubing Colombia, charcos naturales Colombia, piscinas naturales Colombia, excursiones desde Cali, que hacer en Buenaventura, lugares cerca de Cali, weekend getaway Colombia, nature tourism Colombia, Colombia waterfalls, crystal clear rivers Colombia, ecotourism South America, best nature destinations Colombia, off the beaten path Colombia, hidden gems Colombia, sustainable tourism Colombia, community tourism Colombia, Chocó biogeográfico">
     <meta name="author" content="Comunidad de San Cipriano">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Geo-targeting for Colombia and worldwide -->
+    <meta name="geo.region" content="CO-VAC">
+    <meta name="geo.placename" content="San Cipriano, Buenaventura, Valle del Cauca, Colombia">
+    <meta name="geo.position" content="3.8167;-76.8833">
+    <meta name="ICBM" content="3.8167, -76.8833">
+    <meta name="language" content="Spanish, English, French, German, Italian, Portuguese">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="3 days">
 
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="kHDMNs05GGcwYVNr55wp5GDeNNDX8hTYroikAKgbAlg" />
@@ -145,11 +156,128 @@
     }
     </script>
 
+    <!-- Schema.org NaturalFeature for Rivers and Waterfalls -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NaturalFeature",
+        "name": "Ríos Cristalinos de San Cipriano",
+        "description": "Ríos de agua cristalina en la selva del Pacífico colombiano, considerados entre los más limpios de Colombia. Ideales para nadar, tubing y observar la naturaleza.",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "3.8167",
+            "longitude": "-76.8833"
+        },
+        "containedInPlace": {
+            "@type": "Place",
+            "name": "Reserva Natural San Cipriano",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "San Cipriano",
+                "addressRegion": "Valle del Cauca",
+                "addressCountry": "Colombia"
+            }
+        }
+    }
+    </script>
+
+    <!-- Schema.org Place for better geographic SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "name": "San Cipriano - Reserva Natural",
+        "description": "Reserva natural comunitaria con cascadas, ríos cristalinos y biodiversidad única en el Pacífico colombiano. Hogar de las famosas brujitas.",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/",
+        "telephone": "+573113111669",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "3.8167",
+            "longitude": "-76.8833"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Reserva Natural San Cipriano",
+            "addressLocality": "Buenaventura",
+            "addressRegion": "Valle del Cauca",
+            "postalCode": "764001",
+            "addressCountry": "CO"
+        },
+        "hasMap": "https://www.google.com/maps?q=3.8167,-76.8833",
+        "isAccessibleForFree": false,
+        "maximumAttendeeCapacity": 500,
+        "publicAccess": true,
+        "smokingAllowed": false,
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Ríos cristalinos", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Cascadas naturales", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Senderos ecológicos", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Transporte en brujitas", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Hospedaje comunitario", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Restaurantes locales", "value": true},
+            {"@type": "LocationFeatureSpecification", "name": "Guías turísticos", "value": true}
+        ],
+        "keywords": "cascadas Colombia, ríos cristalinos, agua cristalina, naturaleza Colombia, ecoturismo, reserva natural, brujitas, Pacífico colombiano, turismo comunitario"
+    }
+    </script>
+
+    <!-- Schema.org for Travel/Tourism specific -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TouristDestination",
+        "name": "San Cipriano",
+        "description": "Destino ecoturístico único en Colombia con ríos de agua cristalina, cascadas naturales, y las famosas brujitas. Turismo comunitario en el Pacífico colombiano.",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/",
+        "touristType": [
+            "Eco-tourists",
+            "Nature lovers",
+            "Adventure seekers",
+            "Bird watchers",
+            "Photographers",
+            "Families",
+            "Backpackers",
+            "Cultural tourists"
+        ],
+        "includesAttraction": [
+            {
+                "@type": "TouristAttraction",
+                "name": "Ríos Cristalinos",
+                "description": "Ríos de agua transparente perfectos para nadar y hacer tubing"
+            },
+            {
+                "@type": "TouristAttraction",
+                "name": "Las Brujitas",
+                "description": "Transporte único sobre rieles impulsado por motocicleta"
+            },
+            {
+                "@type": "TouristAttraction",
+                "name": "Cascadas Naturales",
+                "description": "Múltiples cascadas en medio de la selva tropical"
+            },
+            {
+                "@type": "TouristAttraction",
+                "name": "Selva Tropical",
+                "description": "Bosque húmedo tropical con biodiversidad única"
+            }
+        ]
+    }
+    </script>
+
     <title>{% block title %}{{ site_name }}{% endblock %} | {{ site_tagline }}</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}">
     <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    <!-- Alternate languages for international SEO -->
+    <link rel="alternate" hreflang="es" href="{{ request.scheme }}://{{ request.get_host }}{% url 'core:home' %}?lang=es">
+    <link rel="alternate" hreflang="en" href="{{ request.scheme }}://{{ request.get_host }}{% url 'core:home' %}?lang=en">
+    <link rel="alternate" hreflang="fr" href="{{ request.scheme }}://{{ request.get_host }}{% url 'core:home' %}?lang=fr">
+    <link rel="alternate" hreflang="de" href="{{ request.scheme }}://{{ request.get_host }}{% url 'core:home' %}?lang=de">
+    <link rel="alternate" hreflang="it" href="{{ request.scheme }}://{{ request.get_host }}{% url 'core:home' %}?lang=it">
+    <link rel="alternate" hreflang="pt" href="{{ request.scheme }}://{{ request.get_host }}{% url 'core:home' %}?lang=pt">
+    <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{% url 'core:home' %}">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
