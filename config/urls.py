@@ -9,7 +9,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from apps.core.views import GoogleVerificationView, RobotsTxtView, SitemapView
+from apps.core.views import BingSiteAuthView, GoogleVerificationView, RobotsTxtView, SitemapView
 
 # Admin customization
 admin.site.site_header = "San Cipriano - Administración"
@@ -21,6 +21,7 @@ urlpatterns = [
     # SEO files (must be at root, no language prefix)
     path("sitemap.xml", SitemapView.as_view(), name="sitemap"),
     path("robots.txt", RobotsTxtView.as_view(), name="robots_txt"),
+    path("BingSiteAuth.xml", BingSiteAuthView.as_view(), name="bing_site_auth"),
 
     # Google Search Console verification (dynamic URL)
     path("<str:verification_code>.html", GoogleVerificationView.as_view(), name="google_verification"),

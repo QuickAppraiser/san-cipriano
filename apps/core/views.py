@@ -113,6 +113,19 @@ class GoogleVerificationView(View):
         return HttpResponse(content, content_type="text/html")
 
 
+class BingSiteAuthView(View):
+    """
+    Bing Webmaster Tools verification file.
+    """
+
+    def get(self, request):
+        content = """<?xml version="1.0"?>
+<users>
+	<user>302923EC95C786683432ED786D51C3FF</user>
+</users>"""
+        return HttpResponse(content, content_type="application/xml")
+
+
 class SitemapView(View):
     """
     XML Sitemap for SEO - lists all public pages.
