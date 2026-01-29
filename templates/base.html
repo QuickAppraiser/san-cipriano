@@ -23,6 +23,15 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="kHDMNs05GGcwYVNr55wp5GDeNNDX8hTYroikAKgbAlg" />
 
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF0LX57FWQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FF0LX57FWQ');
+    </script>
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ request.build_absolute_uri }}">
