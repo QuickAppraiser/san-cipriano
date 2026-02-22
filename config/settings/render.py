@@ -170,7 +170,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 SITE_NAME = "San Cipriano"
 SITE_TAGLINE = "Reserva Natural Comunitaria"
 COMMUNITY_EMAIL = "lordmauricio22@gmail.com"
-COMMUNITY_WHATSAPP = "+573113111669"
+COMMUNITY_WHATSAPP = "+573188383917"
 VISITOR_COUNTER_INITIAL = 45
 
 # Logging

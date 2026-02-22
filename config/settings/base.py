@@ -194,13 +194,13 @@ ANYMAIL = {
 WHATSAPP_API_URL = config("WHATSAPP_API_URL", default="")
 WHATSAPP_API_TOKEN = config("WHATSAPP_API_TOKEN", default="")
 WHATSAPP_PHONE_ID = config("WHATSAPP_PHONE_ID", default="")
-WHATSAPP_COMMUNITY_NUMBER = config("WHATSAPP_COMMUNITY_NUMBER", default="+573113111669")
+WHATSAPP_COMMUNITY_NUMBER = config("WHATSAPP_COMMUNITY_NUMBER", default="+573188383917")
 
 # Site Configuration
 SITE_NAME = "San Cipriano"
 SITE_TAGLINE = "Reserva Natural Comunitaria"
 COMMUNITY_EMAIL = config("COMMUNITY_EMAIL", default="lordmauricio22@gmail.com")
-COMMUNITY_WHATSAPP = config("COMMUNITY_WHATSAPP", default="+573113111669")
+COMMUNITY_WHATSAPP = config("COMMUNITY_WHATSAPP", default="+573188383917")
 
 # Visitor Counter Initial Value
 VISITOR_COUNTER_INITIAL = config("VISITOR_COUNTER_INITIAL", default=180, cast=int)

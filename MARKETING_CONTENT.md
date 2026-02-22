@@ -12,7 +12,7 @@ Este archivo contiene todo el contenido listo para copiar y pegar en las diferen
 - **Categorías adicionales:** Eco Tourism Service, Nature Preserve, Tour Agency
 - **Dirección:** San Cipriano, Buenaventura, Valle del Cauca, Colombia
 - **Coordenadas:** 3.8167, -76.8833
-- **Teléfono:** +57 311 311 1669
+- **Teléfono:** +57 318 838 3917
 - **Sitio web:** https://sanciprianoreserva.com
 - **Horario:** Lunes a Domingo, 6:00 AM - 6:00 PM
 
@@ -161,7 +161,7 @@ NUESTROS SERVICIOS:
 ✅ Senderismo a cascadas
 ✅ Tubing en el río
 
-📞 WhatsApp: +57 311 311 1669
+📞 WhatsApp: +57 318 838 3917
 🌐 Web: https://sanciprianoreserva.com
 📍 San Cipriano, Buenaventura, Valle del Cauca, Colombia
 
@@ -186,7 +186,7 @@ San Cipriano estrena página web oficial para que planifiques tu visita de forma
 
 💚 Recuerda: Cada visita apoya directamente a las familias de nuestra comunidad.
 
-¿Tienes preguntas? Escríbenos al WhatsApp: +57 311 311 1669
+¿Tienes preguntas? Escríbenos al WhatsApp: +57 318 838 3917
 
 #SanCipriano #TurismoComunitario #Colombia #NuevaWeb
 ```
@@ -210,7 +210,7 @@ San Cipriano estrena página web oficial para que planifiques tu visita de forma
 Reserva aquí 👇
 https://sanciprianoreserva.com
 
-WhatsApp: +57 311 311 1669
+WhatsApp: +57 318 838 3917
 ```
 
 ### Mensaje completo (para grupos)
@@ -242,7 +242,7 @@ WhatsApp: +57 311 311 1669
 *Reserva con anticipación y ahorra hasta 25%*
 
 🔗 *Web:* https://sanciprianoreserva.com
-📱 *WhatsApp:* +57 311 311 1669
+📱 *WhatsApp:* +57 318 838 3917
 
 ¡Te esperamos! 🌿
 ```
@@ -353,7 +353,7 @@ Usamos ropa de manga larga en vez de repelente 😊
 San Cipriano - Reserva Natural Comunitaria
 🌿 Turismo responsable en el Pacífico colombiano
 
-📱 WhatsApp: +57 311 311 1669
+📱 WhatsApp: +57 318 838 3917
 🌐 Web: https://sanciprianoreserva.com
 📍 San Cipriano, Valle del Cauca, Colombia
 

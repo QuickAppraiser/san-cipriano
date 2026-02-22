@@ -40,7 +40,7 @@ class SiteConfiguration(models.Model):
     community_whatsapp = models.CharField(
         _("WhatsApp de la comunidad"),
         max_length=20,
-        default="+573113111669"
+        default="+573188383917"
     )
     community_email = models.EmailField(
         _("correo de la comunidad"),

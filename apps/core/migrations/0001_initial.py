@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('site_name', models.CharField(default='San Cipriano', max_length=100, verbose_name='nombre del sitio')),
                 ('tagline', models.CharField(default='Reserva Natural Comunitaria', max_length=200, verbose_name='eslogan')),
                 ('welcome_message', models.TextField(default='Bienvenidos a San Cipriano, una reserva natural cuidada por su comunidad.', verbose_name='mensaje de bienvenida')),
-                ('community_whatsapp', models.CharField(default='+573113111669', max_length=20, verbose_name='WhatsApp de la comunidad')),
+                ('community_whatsapp', models.CharField(default='+573188383917', max_length=20, verbose_name='WhatsApp de la comunidad')),
                 ('community_email', models.EmailField(default='contacto@sancipriano.co', max_length=254, verbose_name='correo de la comunidad')),
                 ('visitor_counter_base', models.PositiveIntegerField(default=180, help_text='Número base para el contador de visitantes interesados', verbose_name='contador base de visitantes')),
                 ('is_active', models.BooleanField(default=True, verbose_name='activo')),

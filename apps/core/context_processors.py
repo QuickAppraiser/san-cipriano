@@ -58,7 +58,7 @@ def site_settings(request):
         "site_config": config,
         "site_name": getattr(config, "site_name", None) or getattr(settings, "SITE_NAME", "San Cipriano"),
         "site_tagline": getattr(config, "tagline", None) or getattr(settings, "SITE_TAGLINE", "Reserva Natural Comunitaria"),
-        "community_whatsapp": getattr(config, "community_whatsapp", None) or getattr(settings, "COMMUNITY_WHATSAPP", "+573113111669"),
+        "community_whatsapp": getattr(config, "community_whatsapp", None) or getattr(settings, "COMMUNITY_WHATSAPP", "+573188383917"),
         "community_email": getattr(config, "community_email", None) or getattr(settings, "COMMUNITY_EMAIL", "lordmauricio22@gmail.com"),
         "available_languages": getattr(settings, "LANGUAGES", [("es", "Español")]),
         "languages_with_urls": languages_with_urls,

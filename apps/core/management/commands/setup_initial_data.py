@@ -22,7 +22,7 @@ class Command(BaseCommand):
                 "site_name": "San Cipriano",
                 "tagline": "Reserva Natural Comunitaria",
                 "welcome_message": "Bienvenidos a San Cipriano, una reserva natural cuidada por su comunidad.",
-                "community_whatsapp": "+573113111669",
+                "community_whatsapp": "+573188383917",
                 "community_email": "lordmauricio22@gmail.com",
                 "visitor_counter_base": 45,
             }

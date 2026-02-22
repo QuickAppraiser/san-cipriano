@@ -19,7 +19,7 @@ Personas: {{ inquiry.number_of_people }}{% if inquiry.number_of_children %} ({{ 
 📌 IMPORTANTE: Te recomendamos revisar nuestras normas de seguridad y reglas de protección antes de tu visita.
 
 Si tienes alguna pregunta urgente, no dudes en contactarnos por WhatsApp:
-📱 +57 311 311 1669
+📱 +57 318 838 3917
 
 ---
 ¡Te esperamos en San Cipriano!
