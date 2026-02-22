@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% block meta_description %}San Cipriano - Reserva natural comunitaria en Colombia. Turismo responsable y conservación ambiental.{% endblock %}">
-    <meta name="keywords" content="San Cipriano, reserva natural Colombia, ecoturismo Colombia, turismo Colombia, cascadas Colombia, ríos cristalinos Colombia, agua cristalina Colombia, naturaleza Colombia, selva tropical Colombia, Pacífico colombiano, Valle del Cauca turismo, Buenaventura turismo, brujitas San Cipriano, turismo comunitario Colombia, biodiversidad Colombia, avistamiento de aves Colombia, senderismo Colombia, hospedaje ecológico Colombia, vacaciones naturaleza Colombia, destinos ecológicos Colombia, lugares para visitar en Colombia, mejores cascadas Colombia, ríos más limpios Colombia, paraíso natural Colombia, turismo sostenible Colombia, comunidad afrodescendiente Colombia, cultura palenquera, ecoturismo Pacífico, aventura Colombia, tubing Colombia, charcos naturales Colombia, piscinas naturales Colombia, excursiones desde Cali, que hacer en Buenaventura, lugares cerca de Cali, weekend getaway Colombia, nature tourism Colombia, Colombia waterfalls, crystal clear rivers Colombia, ecotourism South America, best nature destinations Colombia, off the beaten path Colombia, hidden gems Colombia, sustainable tourism Colombia, community tourism Colombia, Chocó biogeográfico">
+    <meta name="keywords" content="San Cipriano, reserva natural Colombia, ecoturismo Colombia, turismo Colombia, cascadas Colombia, ríos cristalinos Colombia, agua cristalina Colombia, naturaleza Colombia, selva tropical Colombia, Pacífico colombiano, Valle del Cauca turismo, Buenaventura turismo, brujitas San Cipriano, turismo comunitario Colombia, biodiversidad Colombia, avistamiento de aves Colombia, senderismo Colombia, hospedaje ecológico Colombia, vacaciones naturaleza Colombia, destinos ecológicos Colombia, lugares para visitar en Colombia, mejores cascadas Colombia, ríos más limpios Colombia, paraíso natural Colombia, turismo sostenible Colombia, comunidad afrodescendiente Colombia, cultura palenquera, ecoturismo Pacífico, aventura Colombia, tubing Colombia, charcos naturales Colombia, piscinas naturales Colombia, excursiones desde Cali, que hacer en Buenaventura, lugares cerca de Cali, weekend getaway Colombia, nature tourism Colombia, Colombia waterfalls, crystal clear rivers Colombia, ecotourism South America, best nature destinations Colombia, off the beaten path Colombia, hidden gems Colombia, sustainable tourism Colombia, community tourism Colombia, Chocó biogeográfico, planes desde Cali, paseos cerca de Cali, fincas cerca de Cali, ríos cerca de Cali, balnearios naturales Colombia, turismo rural Colombia, viajes económicos Colombia, planes fin de semana Colombia, plan todo incluido San Cipriano, paquetes turísticos Valle del Cauca, destinos baratos Colombia, vacaciones familiares Colombia, luna de miel naturaleza Colombia, qué hacer cerca de Buenaventura, playas y ríos Colombia, Colombia eco travel, Colombia nature vacation, things to do near Cali Colombia, best rivers in Colombia, Colombia jungle tour, Colombia adventure travel, unique experiences Colombia, Colombia travel guide 2026, donde ir en Colombia, mejores destinos Colombia 2026, turismo de naturaleza Colombia, Colombia biodiversity tourism, rainforest Colombia tour, San Cipriano how to get there, San Cipriano tours, San Cipriano prices">
     <meta name="author" content="Comunidad de San Cipriano">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -54,14 +54,59 @@
     <meta name="twitter:title" content="{{ site_name }} - {{ site_tagline }}">
     <meta name="twitter:description" content="Reserva natural comunitaria en el Pacífico colombiano. Turismo responsable y las famosas brujitas.">
 
+    <!-- Schema.org WebSite - Enables Google Sitelinks Search Box -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "San Cipriano - Reserva Natural Comunitaria",
+        "alternateName": ["San Cipriano Reserva", "Reserva Natural San Cipriano", "San Cipriano Colombia"],
+        "url": "{{ request.scheme }}://{{ request.get_host }}/",
+        "inLanguage": ["es", "en", "fr", "de", "it", "pt"],
+        "description": "Sitio web oficial de la Reserva Natural Comunitaria de San Cipriano, Colombia. Ecoturismo, ríos cristalinos, cascadas y las famosas brujitas.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Comunidad de San Cipriano"
+        }
+    }
+    </script>
+
+    <!-- Schema.org BreadcrumbList - Better navigation in search results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "{{ request.scheme }}://{{ request.get_host }}/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "{% block breadcrumb_name %}San Cipriano{% endblock %}",
+                "item": "{{ request.build_absolute_uri }}"
+            }
+        ]
+    }
+    </script>
+
     <!-- Schema.org for Google - TouristAttraction -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "TouristAttraction",
         "name": "San Cipriano",
-        "description": "Reserva natural comunitaria en el Pacífico colombiano con ríos cristalinos, biodiversidad única y las famosas brujitas.",
+        "alternateName": ["Reserva Natural San Cipriano", "San Cipriano Nature Reserve"],
+        "description": "Reserva natural comunitaria en el Pacífico colombiano con ríos cristalinos, biodiversidad única y las famosas brujitas. Uno de los mejores destinos de ecoturismo en Colombia.",
         "url": "{{ request.scheme }}://{{ request.get_host }}/",
+        "image": [
+            "{% static 'images/gallery/rio-cristalino.jpg' %}",
+            "{% static 'images/gallery/cascada.jpg' %}",
+            "{% static 'images/gallery/rio-selva.jpg' %}"
+        ],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "San Cipriano",
@@ -73,8 +118,10 @@
             "latitude": "3.8167",
             "longitude": "-76.8833"
         },
-        "touristType": ["Eco-tourists", "Nature lovers", "Bird watchers"],
-        "publicAccess": true
+        "touristType": ["Eco-tourists", "Nature lovers", "Bird watchers", "Adventure seekers", "Families", "Backpackers"],
+        "publicAccess": true,
+        "isAccessibleForFree": false,
+        "availableLanguage": ["Spanish", "English", "French", "German", "Italian", "Portuguese"]
     }
     </script>
 

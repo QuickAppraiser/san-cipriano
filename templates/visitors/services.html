@@ -1,9 +1,35 @@
 {% extends "base.html" %}
 {% load static i18n %}
 
-{% block title %}{% trans "Servicios y Precios" %}{% endblock %}
+{% block title %}{% trans "Servicios, Precios y Paquetes Turísticos" %}{% endblock %}
 
-{% block meta_description %}{% trans "Precios de hospedaje, alimentación, brujitas y tours en San Cipriano. Desde $229,000 COP un fin de semana. Reserva y ahorra hasta 25%." %}{% endblock %}
+{% block meta_description %}{% trans "Precios y paquetes todo incluido en San Cipriano 2026: hospedaje, alimentación, paseo en brujitas y tours desde $229,000 COP. Plan fin de semana cerca de Cali. Reserva y ahorra hasta 25%." %}{% endblock %}
+
+{% block breadcrumb_name %}{% trans "Servicios y Precios" %}{% endblock %}
+
+{% block extra_head %}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Paquete Turístico San Cipriano",
+    "description": "Paquete todo incluido: hospedaje comunitario, alimentación típica del Pacífico, paseo en brujita y tours guiados por la reserva natural.",
+    "brand": {
+        "@type": "Brand",
+        "name": "San Cipriano Reserva Natural"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "229000",
+        "highPrice": "500000",
+        "priceCurrency": "COP",
+        "availability": "https://schema.org/InStock",
+        "offerCount": "5"
+    },
+    "image": "{% static 'images/gallery/rio-cristalino.jpg' %}"
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Header with Background Image -->

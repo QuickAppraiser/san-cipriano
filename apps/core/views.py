@@ -132,36 +132,46 @@ class SitemapView(View):
     """
 
     def get(self, request):
+        from datetime import date
         # Build base URL
         protocol = "https" if request.is_secure() else "http"
         host = request.get_host()
         base_url = f"{protocol}://{host}"
+        today = date.today().isoformat()
 
         # Define all pages with their priorities and change frequencies
         pages = [
-            {"url": "/", "priority": "1.0", "changefreq": "weekly"},
-            {"url": "/contenido/sobre-nosotros/", "priority": "0.9", "changefreq": "monthly"},
-            {"url": "/visitantes/servicios/", "priority": "0.9", "changefreq": "monthly"},
-            {"url": "/contenido/biodiversidad/", "priority": "0.8", "changefreq": "monthly"},
-            {"url": "/proteccion/", "priority": "0.8", "changefreq": "monthly"},
-            {"url": "/seguridad/", "priority": "0.8", "changefreq": "monthly"},
-            {"url": "/visitantes/consulta/", "priority": "0.9", "changefreq": "monthly"},
-            {"url": "/contenido/preguntas-frecuentes/", "priority": "0.7", "changefreq": "monthly"},
-            {"url": "/visitantes/contacto/", "priority": "0.7", "changefreq": "monthly"},
-            {"url": "/terminos/", "priority": "0.5", "changefreq": "yearly"},
-            {"url": "/privacidad/", "priority": "0.5", "changefreq": "yearly"},
-            {"url": "/cookies/", "priority": "0.3", "changefreq": "yearly"},
+            {"url": "/", "priority": "1.0", "changefreq": "weekly", "lastmod": today},
+            {"url": "/contenido/sobre-nosotros/", "priority": "0.9", "changefreq": "monthly", "lastmod": today},
+            {"url": "/visitantes/servicios/", "priority": "0.9", "changefreq": "weekly", "lastmod": today},
+            {"url": "/contenido/biodiversidad/", "priority": "0.8", "changefreq": "monthly", "lastmod": today},
+            {"url": "/proteccion/", "priority": "0.8", "changefreq": "monthly", "lastmod": today},
+            {"url": "/seguridad/", "priority": "0.8", "changefreq": "monthly", "lastmod": today},
+            {"url": "/visitantes/consulta/", "priority": "0.9", "changefreq": "monthly", "lastmod": today},
+            {"url": "/contenido/preguntas-frecuentes/", "priority": "0.7", "changefreq": "monthly", "lastmod": today},
+            {"url": "/visitantes/contacto/", "priority": "0.7", "changefreq": "monthly", "lastmod": today},
+            {"url": "/terminos/", "priority": "0.5", "changefreq": "yearly", "lastmod": "2026-01-01"},
+            {"url": "/privacidad/", "priority": "0.5", "changefreq": "yearly", "lastmod": "2026-01-01"},
+            {"url": "/cookies/", "priority": "0.3", "changefreq": "yearly", "lastmod": "2026-01-01"},
         ]
 
-        # Build XML
+        # Supported languages for hreflang
+        languages = ["es", "en", "fr", "de", "it", "pt"]
+
+        # Build XML with xhtml namespace for hreflang
         xml_content = '<?xml version="1.0" encoding="UTF-8"?>\n'
-        xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        xml_content += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
 
         for page in pages:
             xml_content += "  <url>\n"
             xml_content += f"    <loc>{base_url}{page['url']}</loc>\n"
+            xml_content += f"    <lastmod>{page['lastmod']}</lastmod>\n"
             xml_content += f"    <changefreq>{page['changefreq']}</changefreq>\n"
             xml_content += f"    <priority>{page['priority']}</priority>\n"
+            # Add hreflang alternates for each page
+            for lang in languages:
+                xml_content += f'    <xhtml:link rel="alternate" hreflang="{lang}" href="{base_url}/{lang}{page["url"]}"/>\n'
+            xml_content += f'    <xhtml:link rel="alternate" hreflang="x-default" href="{base_url}{page["url"]}"/>\n'
             xml_content += "  </url>\n"
 
         xml_content += "</urlset>"
